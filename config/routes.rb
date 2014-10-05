@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :products
+  get 'homes/welcome', to: 'homes#welcome'
 
-  root to: "products#index"
+  root to: "homes#welcome"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
