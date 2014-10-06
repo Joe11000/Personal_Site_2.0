@@ -62,7 +62,6 @@ group :test do
   gem 'factory_girl_rails'
   #gem 'rspec-mocks'
   gem 'shoulda'
-  gem 'turnip', '~> 1.2.4'
   gem 'launchy'
 end
 

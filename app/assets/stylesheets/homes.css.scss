@@ -4,7 +4,7 @@
 
 
 #top_div {
-  height: 500px;
+  height: 600px;
   width: 100%;
   background-color: black;
 }
@@ -24,3 +24,28 @@ body{
 // background-image: url(../../social_media/facebook.png);
 }
 
+
+#blog, #bio, #resume, #interests{
+  display: inline;
+  width: 110px;
+  line-height: 25px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.social_media_icons {
+  height: 100px;
+}
+
+#projects {
+  height: 200px;
+}
+
+#projects.header {
+  background-color: red;
+}
+
+.col-xs-1 {
+  height: 30px;
+  border: 1px solid red;
+}

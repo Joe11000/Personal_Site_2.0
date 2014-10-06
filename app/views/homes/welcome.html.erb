@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
-     <div id="top_div" class="">
+     <div id="top_div">
      </div>
-     <!-- <div class="clearfix visible-lg-block"></div> -->
+     <!-- <div class="clearfix visible-xs-block"></div> -->
   </div>
 
 <!--   <svg width="400" height="180">
@@ -10,32 +10,81 @@
   style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
 </svg> -->
 
-  <div class="row-fluid">
-    <div class="col-lg-4">
-      <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
-        <%= image_tag "social_media/facebook.png", size: "75x75" %>
+<!-- <div z-index="11">
+  <svg z-index="inherit" height="210" width="500" >
+    <polygon points="300,-110 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+  </svg>
+</div> -->
+
+  <div class="row social_media_icons">
+    <div class="col-xs-offset-2 col-xs-3  col-md-offset-4 col-md-1 col-lg-offset-3 col-lg-1 social_media_icon">
+      <%= link_to "https://github.com/joe11000" do %>
+        <%= image_tag "social_media/github.png", size: "75x75" %>
       <% end %>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-xs-3 col-md-1  col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1 social_media_icon">
       <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
         <%= image_tag "social_media/linkedin.png", size: "75x75" %>
       <% end %>
     </div>
 
-    <div class="col-lg-4">
-      <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
+    <div class="col-xs-3 col-md-1  col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1 social_media_icon">
+      <%= link_to "http://www.twitter.com/LiveItUp227" do %>
         <%= image_tag "social_media/twitter.png", size: "75x75" %>
       <% end %>
     </div>
 
-    <div class="clearfix visible-lg-block"></div>
+    <div class="col-xs-offset-2"></div>
+
+    <div class="clearfix visible-xs-block"></div>
 
   </div>
 
+  <div class="row">
+    <div class="col-md-offset-1">
+      <%= button_to "Blog", "http://www.chicagobears.com", class: "btn btn-info col-md-offset-1 col-md-1", id: "blog" %>
+    </div>
+
+    <div class="col-md-offset-1">
+      <%= button_to "Bio", "http://www.nfl.com", class: "btn btn-info col-md-offset-1 col-md-1", id: "bio" %>
+    </div>
+
+    <div class="col-md-offset-1">
+      <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info col-md-offset-1 col-md-1", id: "resume" %>
+    </div>
+
+    <div class="col-md-offset-1">
+      <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info col-md-offset-1 col-md-1", id: "interests" %>
+    </div>
+
+  </div>
+
+
+  <div id="projects">
+    <div class="row header col-xs-12">
+      <p>Projects</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="clearfix visible-lg-block"></div>
+
+
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+    <div class="col-xs-1 col-lg-2"></div>
+  </div>
+
+  <div class="clearfix visible-xs-block"></div>
+
 </div>
-
-
-
-
-
