@@ -11,24 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004225848) do
+ActiveRecord::Schema.define(version: 20141007030948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_tags", force: true do |t|
+  create_table "blog_comments", force: true do |t|
+    t.string   "author_name"
+    t.text     "body"
+    t.integer  "blog_entries_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "products", force: true do |t|
-    t.string   "name"
-    t.decimal  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tags", force: true do |t|
+  create_table "blog_entries", force: true do |t|
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

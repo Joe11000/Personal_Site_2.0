@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#Bypass mass-assignment
+Blog::Entry.attr_accessible :title, :body
+Blog::Comment.attr_accessible :author_name, :body
+
+
+1.upto(4) do |num|
+  e = Blog::Entry.create(title: "Entry_#{num}", body: "#{100 - (num)} bottles of ginger beer")
+  e.comments.create(author_name: "author_#{num}", body: 'I am the ##{num} nerd')
+end
+

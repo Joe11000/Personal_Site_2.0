@@ -1,25 +1,6 @@
 class Blog::CommentsController < ApplicationController
-  before_action :set_blog_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog_comment, only: [:edit, :update, :destroy]
 
-  # GET /blog/comments
-  # GET /blog/comments.json
-  def index
-    @blog_comments = Blog::Comment.all
-  end
-
-  # GET /blog/comments/1
-  # GET /blog/comments/1.json
-  def show
-  end
-
-  # GET /blog/comments/new
-  def new
-    @blog_comment = Blog::Comment.new
-  end
-
-  # GET /blog/comments/1/edit
-  def edit
-  end
 
   # POST /blog/comments
   # POST /blog/comments.json
