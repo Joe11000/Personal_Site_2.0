@@ -8,17 +8,13 @@ feature "Homes", :type => :feature do
 
   context "Visitors can" do
     scenario "visit home page" do
-      debugger
       visit root_url
       expect(page).to have_css "#top_div"
     end
 
   end
 
-
-
   def set_host (host)
-    # host! host
     default_url_options[:host] = host
     Capybara.app_host = "http://" + host
   end
