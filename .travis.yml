@@ -13,3 +13,30 @@ before_script:
 # - RAILS_ENV=test bundle exec rake db:migrate --trace
 # - bundle exec rake db:test:prepare
 # - bundle exec rake
+
+
+
+# language: ruby
+# before_install:
+# - gem install bundler
+# rvm:
+# - 1.9.3
+# before_script:
+# - psql -c 'create database pbp_test;' -U postgres
+# script:
+# - RAILS_ENV=test bundle exec rake db:migrate --trace
+# - bundle exec rake db:test:prepare
+# - bundle exec rake
+# env:
+#   global:
+#     secure: dySkedt3UsGY/k1Gf4773871T3Twe+jyaFlFPOjvSO51k1bpqvy9koHSSa/emOawTgeTtIzSNC6nOkiHsqwXS2iJeL6GmKC4S3wbPYx3E8i7huXd573AjouNSrliqPl3KRYLNTTwn6lB6RFv36WRs0s+6goKCM0uEHB60Cyt9Vc=
+deploy:
+  provider: heroku
+  api_key: d45b5c5d-139a-4cba-97b7-cd979cf199dd
+    # secure: PiLjCqurCh7j6z7aU2oOAFO5Rry2jAcghQ/CFDXPfD5O1x4lLMDq9vMWYnFyvUJCOW8CPtdHatj4AIM2MvHPOJWnI4p+u6QGTCe0BAkeBovbu5pDbvVWLXRY82gf1/BJSrpoZbwY5xYzkMomAqZv+1ou6Zz3Lf5ingzXGncweZw=
+  app: joe-noonan-102
+  on:
+    branch: master
+    rvm: 2.1.1
+    repo: joe11000/update-personal-site
+  run: rake db:migrate
