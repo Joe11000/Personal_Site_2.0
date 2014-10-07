@@ -5,7 +5,7 @@ class Blog::EntriesController < ApplicationController
   # GET /blog/entries/1
   # GET /blog/entries/1.json
   def show
-    Blog::Entry.includes(:blog_comments).where(blog_entries: @blog_entry.id).order('')
+    @blog_entry_w_comments = Blog::Entry.includes(:comments).where("blog_entries.id = ?",  @blog_entry.id ).limit(1).first #.order('created_at ASC')
   end
 
   # # GET /blog/entries/new
