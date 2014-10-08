@@ -1,50 +1,86 @@
 <div id="blog_site">
-  <div class="container" id="blog_book">
+  <div class="back_button">
+    <%= link_to :back do %>
+      <%= image_tag "Blog/prev_site.png", size: "60x60", id: "prev_site" %>
+    <% end %>
+  </div>
 
-    <div class="row">
-      <div class="back_button col-lg-1 ">
-        <%= link_to :back do %>
-          <%= image_tag "Blog/back_arrow.png", size: "60x60", id: "back_arrow" %>
+
+<div class="container"  >
+
+  <div class="row" id="blog_book" style="padding-top: 30px;">
+    <div id="comments_page" class="col-lg-5 col-lg-offset-1">
+      <div class="<%= "hidden" if @is_first_entry %>" id="back_arrows">
+        <%= link_to blog_entry_path(1) do %>
+          <%= image_tag "Blog/double_arrow.png", size: "30x30", id: "back_double_arrow" %>
+        <% end %>
+        <%= link_to blog_entry_path(@blog_entry_w_comments.id - 1) do %>
+          <%= image_tag "Blog/arrow.png", size: "30x30", id: "back_arrow" %>
+        <% end %>
+      </div>
+
+      <div id="comments_list">
+        <% @blog_entry_w_comments.comments.each do |comment| %>
+          <div class="col-lg-12" id="comment_body">
+            <p class="comments_body" ><%= comment.body %></p>
+          </div>
+          <div class="col-lg-12">
+            <div class="col-lg-6">
+              <p class="log_date_time"><%= reformat_date_time(comment.created_at) %></p>
+            </div>
+
+            <div class="col-lg-6">
+              <p class="author_name">by: <%= comment.author_name %></p>
+            </div>
+
+            <div class="clearfix visible-lg-block"></div>
+          </div>
+            <br>
         <% end %>
       </div>
     </div>
 
-    <div class="clearfix visible-lg-block"></div>
 
-    <div class="comments_page col-lg-6">
-        <%= link_to :back do %>
-          <%= image_tag "Blog/arrow.png", size: "60x60", id: "back_arrow" %>
-        <% end %>
-    </div>
+  <!-- <div class="row"> -->
+    <div id="entries_page" class="col-lg-5" >
 
-
-    <div class="row">
-      <div class="entries_page col-lg-5">
-
-        <div class="col-lg-2 col-lg-offset-10">
-        <%= image_tag "Blog/arrow.png", size: "60x60", id: "forward_arrow" %>
+        <div id="forward_arrows">
+          <div class="<%= "hidden" if @is_latest_entry %>">
+            <%= link_to(blog_entry_path(0)) do%>
+              <%= image_tag "Blog/double_arrow.png", size: "30x30", id: "forward_double_arrow" %>
+            <% end %>
+            <%= link_to(blog_entry_path(@blog_entry_w_comments.id + 1)) do%>
+              <%= image_tag "Blog/arrow.png", size: "30x30", id: "forward_arrow" %>
+            <% end %>
+          </div>
         </div>
-    <div class="clearfix visible-lg-block"></div>
 
 
-        <h1 class="joe-font"><%= @blog_entry_w_comments.title %></h1>
+      <div class="row">
+
+        <div class="col-lg-12" id="entry_title">
+          <p class="joe-font"><%= @blog_entry_w_comments.title %></p>
+          <p class="log_date_time"><%= reformat_date(@blog_entry_w_comments.created_at) %></p>
+
+        </div>
 
         <!-- put blog_tags here -->
 
-        <div id="entry_body">
+        <div class="col-lg-12" id="entry_body">
           <p class="joe-font">
             <%= @blog_entry_w_comments.body %>
           </p>
-        </div>
+      </div>
 
-        <div id="page_number">
+      <div class="clearfix visible-lg-block"></div>
+
+        <div class="col-lg-1 col-lg-offset-10 pull-right" id="page_number">
           <%= @blog_entry_w_comments.id %>
         </div>
-      </div>
-    </div>
 
-    <%= link_to 'Back', blog_entries_path %>
-</div>
+    </div>
+  </div>
+<!-- </div> -->
 
 
         <!-- <p id="notice"><%= notice %></p> -->

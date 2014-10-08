@@ -1,31 +1,134 @@
-#forward_arrow{
-  -ms-transform: rotate(180deg); /* IE 9 */
-  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-  transform: rotate(180deg);
+body
+{
+  background-color: #fff333;
 }
 
-#entry_body{
 
+
+#comments_page, #entries_page
+{
+  padding-top:  35px;
 }
 
-#blog_site {
-  background: #fff333 url('../OpenBook.jpg') no-repeat center center;
-  margin: auto 10%;
-  // height: 800px;
-  // height: inherit;
-  // width: inherit;
 
-  h1 {
-    text-align: center;
-    // position: fixed;
+#blog_site
+{
+  background: url('../OpenBook.jpg') no-repeat center center;
+
+  #blog_book
+  {
+    height: 800px;
+
+    #comments_page
+    {
+      #back_arrows{
+        position: absolute;
+        top: 45px;
+        left: 15px;
+        z-index: 2;
+      }
+
+      #back_arrow, #back_double_arrow
+      {
+        float: left;
+        margin-bottom: 0px;
+        display: inline;
+      }
+
+      #comments_list
+      {
+        padding-top: 60px;
+
+        .comments_body
+        {
+          p { margin: 0px; }
+        }
+
+        .author_name{
+          text-align: left;
+          font-size: 12px;
+        }
+
+
+
+        .log_date_time {
+          text-align: right;
+        }
+
+        .log_date_time {
+          font-size: 12px;
+        }
+      }
+    }
+
+    #entries_page
+    {
+      #forward_arrows{
+        position: absolute;
+        top: 45px;
+        right: 15px;
+        z-index: 2;
+      }
+
+
+      #forward_arrow, #forward_double_arrow
+      {
+        float: right;
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+
+        // position: absolute;
+        // margin-top: 60px;
+        margin-bottom: 0px;
+        display: inline;
+        // width: inherit;
+      }
+      #entry_title
+      {
+        text-align: center;
+        margin-bottom: 0px;
+      }
+
+
+        #entry_body
+        {
+          height: 595px;
+          overflow: scroll;
+        }
+    }
+
+    #page_number
+    {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      font-size: 18px;
+    }
+
+    .log_date {
+      font-size: 16px;
+    }
   }
 }
 
-#entries_page{
-  overflow: scroll;
 
+#prev_site
+{
+  display: inline-block;
+  position: absolute ;
+  top: 40px;
+  left: 40px;
 }
 
-#back_button{
-  display: block;
+
+
+.log_date_time{
+  font-size: 15px;
+  margin-top: 0px;
+}
+
+
+.hidden {
+  visibility: hidden;
 }
