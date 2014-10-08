@@ -1,4 +1,6 @@
 require 'rails_helper'
+include Capybara::DSL
+
 
 feature "Homes", :type => :feature do
 

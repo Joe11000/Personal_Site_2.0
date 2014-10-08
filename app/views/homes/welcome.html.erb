@@ -41,9 +41,9 @@
 
   </div>
 
-  <div class="row">
+  <div class="row categories">
     <div class="col-md-offset-1">
-      <%= button_to "Blog", "http://www.chicagobears.com", class: "btn btn-info col-md-offset-1 col-md-1", id: "blog" %>
+      <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info col-md-offset-1 col-md-1", id: "blog",  method: :get %>
     </div>
 
     <div class="col-md-offset-1">

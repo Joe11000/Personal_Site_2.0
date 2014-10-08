@@ -1,31 +1,52 @@
-<div class="container">
+<div id="blog_site">
+  <div class="container" id="blog_book">
 
-  <%= image_tag "arrow.png", size: "60x60", id: "forward_arrow" %>
+    <div class="row">
+      <div class="back_button col-lg-1 ">
+        <%= link_to :back do %>
+          <%= image_tag "Blog/back_arrow.png", size: "60x60", id: "back_arrow" %>
+        <% end %>
+      </div>
+    </div>
 
-  <p id="notice"><%= notice %></p>
+    <div class="clearfix visible-lg-block"></div>
 
-  <%#= render partial: "blog/entries/form" %>
+    <div class="comments_page col-lg-6">
+        <%= link_to :back do %>
+          <%= image_tag "Blog/arrow.png", size: "60x60", id: "back_arrow" %>
+        <% end %>
+    </div>
 
-  <h1><%= @blog_entry_w_comments.title %></h1>
 
-  <!-- put blog_tags here -->
+    <div class="row">
+      <div class="entries_page col-lg-5">
 
-  <div id="blog_entry_body">
-    <p class="joe_font">
-      <%= @blog_entry_w_comments.body %>
-    </p>
-  </div>
+        <div class="col-lg-2 col-lg-offset-10">
+        <%= image_tag "Blog/arrow.png", size: "60x60", id: "forward_arrow" %>
+        </div>
+    <div class="clearfix visible-lg-block"></div>
 
-  <div id="page_number">
-    <%= @blog_entry_w_comments.id %>
-  </div>
 
-  <%= link_to 'Back', blog_entries_path %>
+        <h1 class="joe-font"><%= @blog_entry_w_comments.title %></h1>
 
+        <!-- put blog_tags here -->
+
+        <div id="entry_body">
+          <p class="joe-font">
+            <%= @blog_entry_w_comments.body %>
+          </p>
+        </div>
+
+        <div id="page_number">
+          <%= @blog_entry_w_comments.id %>
+        </div>
+      </div>
+    </div>
+
+    <%= link_to 'Back', blog_entries_path %>
 </div>
 
 
+        <!-- <p id="notice"><%= notice %></p> -->
 
-
-<%#= link_to 'Edit', edit_blog_entry_path(@blog_entry_w_comments) %> |
-<%= link_to 'Back', :back %>
+        <%#= render partial: "blog/entries/form" %>

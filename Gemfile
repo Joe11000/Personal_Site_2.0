@@ -57,7 +57,6 @@ end
 group :test do
   gem 'selenium-webdriver', require: false
   gem 'poltergeist', require: false
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   #gem 'rspec-mocks'
