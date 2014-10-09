@@ -5,6 +5,8 @@ class Blog::CommentsController < ApplicationController
   # POST /blog/comments
   # POST /blog/comments.json
   def create
+    debugger
+    debugger
     @blog_comment = Blog::Comment.new(blog_comment_params)
 
     respond_to do |format|

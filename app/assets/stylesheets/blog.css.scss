@@ -1,14 +1,9 @@
 body
 {
-  background-color: #fff333;
+  background: url('../lap.jpg') no-repeat center center;
 }
 
-
-
-#comments_page, #entries_page
-{
-  padding-top:  35px;
-}
+#comments_page, #entries_page { padding-top: 35px; }
 
 
 #blog_site
@@ -21,7 +16,11 @@ body
 
     #comments_page
     {
-      #back_arrows{
+
+      #new_comment { margin-top: 60px; }
+
+      #back_arrows
+      {
         position: absolute;
         top: 45px;
         left: 15px;
@@ -37,33 +36,30 @@ body
 
       #comments_list
       {
-        padding-top: 60px;
+        margin-top: 30px;
 
         .comments_body
         {
+          margin: 0px;
           p { margin: 0px; }
         }
 
-        .author_name{
+        .author_name
+        {
           text-align: left;
           font-size: 12px;
         }
 
+        .log_date_time { text-align: right; }
 
-
-        .log_date_time {
-          text-align: right;
-        }
-
-        .log_date_time {
-          font-size: 12px;
-        }
+        .log_date_time { font-size: 12px; }
       }
     }
 
     #entries_page
     {
-      #forward_arrows{
+      #forward_arrows
+      {
         position: absolute;
         top: 45px;
         right: 15px;
@@ -84,6 +80,7 @@ body
         display: inline;
         // width: inherit;
       }
+
       #entry_title
       {
         text-align: center;
@@ -91,11 +88,11 @@ body
       }
 
 
-        #entry_body
-        {
-          height: 595px;
-          overflow: scroll;
-        }
+      #entry_body
+      {
+        height: 595px;
+        overflow: scroll;
+      }
     }
 
     #page_number
@@ -106,9 +103,7 @@ body
       font-size: 18px;
     }
 
-    .log_date {
-      font-size: 16px;
-    }
+    .log_date { font-size: 16px; }
   }
 }
 
@@ -121,14 +116,11 @@ body
   left: 40px;
 }
 
-
-
-.log_date_time{
+.log_date_time
+{
   font-size: 15px;
   margin-top: 0px;
 }
 
 
-.hidden {
-  visibility: hidden;
-}
+.hidden { visibility: hidden; }
