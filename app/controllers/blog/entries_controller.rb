@@ -8,6 +8,7 @@ class Blog::EntriesController < ApplicationController
     @blog_entry_w_comments = Blog::Entry.includes(:comments).where("blog_entries.id = ?",  @blog_entry.id ).limit(1).first #.order('created_at ASC')
     @is_first_entry = (@blog_entry_w_comments.id == 1)
     @is_latest_entry = (@blog_entry_w_comments.id == Blog::Entry.count)
+    @comment = Blog::Comment.new
     # debugger
     # debugger
   end

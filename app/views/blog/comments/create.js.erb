@@ -1,0 +1,6 @@
+$('div#comments_list').prepend("<%= escape_javascript render(:partial => 'blog/comments/form') %>")
+
+// clear the form
+$("textarea#blog_comment_body").val("");
+$("input#blog_comment_author_name").val("");
+
