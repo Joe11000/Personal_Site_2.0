@@ -3,4 +3,12 @@ $('div#comments_list').prepend("<%= escape_javascript render(:partial => 'blog/c
 // clear the form
 $("textarea#blog_comment_body").val("");
 $("input#blog_comment_author_name").val("");
+// $('div.comment:eq(0)').css("background-color", "red")
+
+$('div#comments_list').animate({scrollTop: 0}, '2000', 'swing', function() {
+//   $('div.comment:eq(0)').animate({ backgroundColor: "#000000" }, "slow", function() {
+
+//   });
+//      // alert("Finished animating");
+});
 

@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 ## I ADDED THESE BELOW
 gem 'thin'
 gem 'jquery-ui-rails'
+gem 'jquery-color', '~> 2.1.2'
 
 gem "protected_attributes"
 gem 'foreman', '~> 0.74.0'
