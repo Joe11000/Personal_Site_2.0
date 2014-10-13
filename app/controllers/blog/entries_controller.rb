@@ -1,6 +1,7 @@
 class Blog::EntriesController < ApplicationController
   before_action :set_blog_entry, only: [:show, :edit, :update, :destroy]
 
+  layout "blog_application"
 
   # GET /blog/entries/1
   # GET /blog/entries/1.json
@@ -66,7 +67,14 @@ class Blog::EntriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog_entry
       # 0 returns the latest entry available. Otherwise it goes in   take the entry id they give
-      @blog_entry = Blog::Entry.find( (params[:id].to_i > 0) ? params[:id].to_i : Blog::Entry.last.id )
+
+      id_to_find = params[:id].to_i
+
+      if not (1 <= id_to_find  && id_to_find <= Blog::Entry.last.id) # if id doesn't exist
+        id_to_find = Blog::Entry.last.id
+      end
+
+      @blog_entry = Blog::Entry.find( id_to_find )
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
