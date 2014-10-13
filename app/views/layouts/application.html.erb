@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UpgradePersonalSite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- # generic assets, styles, and js needed for all pages -->
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true , debug: true%>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true , debug: true%>
+
+
+  <!-- # page specific assets, styles, and js needed per page -->
+  <% if params[:controller] == "homes" %>
+      <%= stylesheet_link_tag  'homes/homes', media: 'all', 'data-turbolinks-track' => true , debug: true%>
+      <%= javascript_include_tag 'homes/homes', 'data-turbolinks-track' => true , debug: true%>
+      <title>Joe Noonan 101</title>
+
+    <% elsif params[:controller] == "blog/entries" %>
+      <%= stylesheet_link_tag  'blog/blog_stylesheet', 'data-turbolinks-track' => true , debug: true%>
+
+      <%= javascript_include_tag 'blog/comments', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'blog/entries', 'data-turbolinks-track' => true %>
+      <title>Blog</title>
+
+    <% else %>
+      <h1><%= params[:controller] %> is not a real controller</h1>
+    <% end %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>

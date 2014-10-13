@@ -13550,15 +13550,16 @@ return jQuery;
   };
 
 }).call(this);
-// # Place all the behaviors and hooks related to the matching controller here.
-// # All this logic will automatically be available in application.js.
-// # You can use CoffeeScript in this file: http://coffeescript.org/
+(function() {
+  jQuery(function() {
+    $("a[rel~=popover], .has-popover").popover();
+    return $("a[rel~=tooltip], .has-tooltip").tooltip();
+  });
 
-;
-// # Place all the behaviors and hooks related to the matching controller here.
-// # All this logic will automatically be available in application.js.
-// # You can use CoffeeScript in this file: http://coffeescript.org/
-
+}).call(this);
+$(function(){
+  alert('Globals loaded')
+})
 ;
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
@@ -13572,6 +13573,8 @@ return jQuery;
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
 
 
 

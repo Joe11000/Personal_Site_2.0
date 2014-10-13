@@ -1,0 +1,53 @@
+/* line 6, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#top_div {
+  height: 600px;
+  width: 100%;
+  background-color: black;
+}
+
+/* line 12, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#joe_pic_slide_show {
+  background-color: green;
+}
+
+/* line 16, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#business_card {
+  width: 250px;
+  height: 150px;
+  background-color: green;
+}
+
+/* line 22, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+body {
+  background-color: lightblue;
+}
+
+/* line 29, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#blog, #bio, #resume, #interests {
+  display: inline;
+  width: 110px;
+  line-height: 25px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* line 37, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+.social_media_icons {
+  height: 100px;
+}
+
+/* line 41, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#projects {
+  height: 200px;
+}
+
+/* line 45, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+#projects.header {
+  background-color: red;
+}
+
+/* line 49, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/homes/homes.css.scss */
+.col-xs-1 {
+  height: 30px;
+  border: 1px solid red;
+}

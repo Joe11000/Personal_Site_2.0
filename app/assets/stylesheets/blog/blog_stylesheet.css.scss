@@ -1,14 +1,23 @@
 body
 {
-  background: url('../lap.jpg') no-repeat center center;
+   background: image-url('blog/lap.jpg')  no-repeat center center;
+}
+ @font-face {
+      font-family: joe_font;
+      src: asset-url('Joe_Font_4.ttf');
+  }
+
+.joe-font{
+  font-family: joe_font;
+  color: green;
+  font-size: 30px;
 }
 
 #comments_page, #entries_page { padding-top: 35px; }
 
-
 #blog_site
 {
-  background: url('../OpenBook.jpg') no-repeat center center;
+  background: image-url('blog/OpenBook.jpg') no-repeat center center;
 
   #blog_book
   {
@@ -49,7 +58,7 @@ body
           // overflow: auto;
           min-height: 45px;
           border-radius: 10px;
-          // &:even {
+          // & > :even {
           //   background-color: rgba(255,255,255, .3);
           // }
 

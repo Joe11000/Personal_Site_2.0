@@ -15,5 +15,6 @@
 //= require twitter/bootstrap
 //= require turbolinks
 
-//= require globals
+//= require_directory .
+
 

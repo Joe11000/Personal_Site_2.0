@@ -1,8 +1,6 @@
 class Blog::EntriesController < ApplicationController
   before_action :set_blog_entry, only: [:show, :edit, :update, :destroy]
 
-  layout "blog_application"
-
   # GET /blog/entries/1
   # GET /blog/entries/1.json
   def show
