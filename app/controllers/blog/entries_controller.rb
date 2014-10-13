@@ -62,20 +62,17 @@ class Blog::EntriesController < ApplicationController
   # end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog_entry
       # 0 returns the latest entry available. Otherwise it goes in   take the entry id they give
-
+    def set_blog_entry
       id_to_find = params[:id].to_i
 
       if not (1 <= id_to_find  && id_to_find <= Blog::Entry.last.id) # if id doesn't exist
-        id_to_find = Blog::Entry.last.id
+        redirect_to Blog::Entry.last and return
       end
 
       @blog_entry = Blog::Entry.find( id_to_find )
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def blog_entry_params
       params.require(:blog_entry).permit(:title, :body)
     end

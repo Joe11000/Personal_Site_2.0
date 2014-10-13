@@ -5,28 +5,11 @@ rvm:
 before_script:
   - psql -c 'create database upgrade_personal_site_test;' -U postgres
 
-# test:
-#   adapter: postgresql
-#   database: upgrade_personal_site_test
-
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rspec spec
 
-
-
-# language: ruby
-# before_install:
-# - gem install bundler
-# rvm:
-# - 1.9.3
-# before_script:
-# - psql -c 'create database pbp_test;' -U postgres
-# script:
-# - RAILS_ENV=test bundle exec rake db:migrate --trace
-# - bundle exec rake db:test:prepare
-# - bundle exec rake
 # env:
 #   global:
 #     secure: dySkedt3UsGY/k1Gf4773871T3Twe+jyaFlFPOjvSO51k1bpqvy9koHSSa/emOawTgeTtIzSNC6nOkiHsqwXS2iJeL6GmKC4S3wbPYx3E8i7huXd573AjouNSrliqPl3KRYLNTTwn6lB6RFv36WRs0s+6goKCM0uEHB60Cyt9Vc=
@@ -38,5 +21,7 @@ deploy:
   on:
     branch: master
     rvm: 2.1.1
-    repo: joe11000/update-personal-site
-  run: rake db:migrate
+    repo: joe11000/Personal_Site_2.0
+  run:
+      - rake db:migrate
+      - rake db:seed
