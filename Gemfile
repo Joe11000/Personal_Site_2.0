@@ -35,6 +35,7 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'travis'
 ## I ADDED THESE BELOW
 gem 'thin'
 gem 'jquery-ui-rails'
