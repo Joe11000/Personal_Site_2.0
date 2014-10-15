@@ -1,14 +1,24 @@
 <div class="container-fluid">
-  <div class="row">
-    <div id="top_div">
-      <div class="col-sm-8">
-        <%= image_tag "Formal_Me/1.jpg" %>
+  <div id="top_div">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-7" id="formal_me_pics">
+        <%= image_tag "background_1.jpg" %>
       </div>
 
-      <div class="col-sm-4 center">
-        <%= link_to "https://github.com/joe11000" do %>
-          <%= image_tag "social_media/github.png" %>
-        <% end %>
+      <div class="clearfix visible-xs-block visible-sm-block"></div>
+
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div id="business_card_container center">
+          <div id="business_card" class="shadow">
+            <div class="front face">
+              <%= image_tag "Formal_Me/1.jpg", size: '480x281' %>
+            </div>
+            <div class="back face">
+              <%= image_tag "Formal_Me/2.jpg", size: '480x281' %>
+            </div>
+          </div>
+        </div>
+
       </div>
 
 
@@ -61,7 +71,7 @@
 
   <div class="row categories">
 
-    <div class="col-sm-offset-2 col-sm-8">
+    <div class="col-sm-offset-2 col-sm-7">
 
       <div class="row">
 
@@ -86,14 +96,26 @@
 
 
   <div id="projects" class="row">
-    <div class="row header col-xs-12">
-      <p class='joe-font'>Projects</p>
+
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2">
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-2 col-sm-10"></div>
+
+      </div>
     </div>
   </div>
 
 
-<div class="row footer">
-  <div class="col-sm-12"> <p>Don't touch that dial</p></div>
+
+
+
+
 
   <div class="row">
     <div class="col-xs-1 col-lg-2"></div>
@@ -130,14 +152,4 @@
 
 
 
-<div id="f1_container">
-<div id="f1_card" class="shadow">
-  <div class="front face">
-    <img src="/images/Cirques.jpg"/>
-  </div>
-  <div class="back face center">
-    <p>This is nice for exposing more information about an image.</p>
-    <p>Any content can go here.</p>
-  </div>
-</div>
-</div>
+

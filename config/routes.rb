@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   # resources :resumes,   only: [:index]
   # resources :interests, only: [:index]
 
+
+  # get '/print/resume', to: "prints#resume"
+  # get '/print/business_card', to: "prints#business_card"
+
 end
