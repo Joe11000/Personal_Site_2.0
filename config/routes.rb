@@ -11,4 +11,15 @@ Rails.application.routes.draw do
 
   get "/status", to: "homes#status"
 
+
+
+
+
+
+
+
+  # resources :bios,      only: [:index]
+  # resources :resumes,   only: [:index]
+  # resources :interests, only: [:index]
+
 end
