@@ -67,6 +67,7 @@ body{
 
 
 
+
 #formal_me_pics{
   height: $top-div-height;
   // width: auto;
@@ -84,30 +85,70 @@ body{
 
 
 
-#business_card_container
-{
-  position: relative;
-  top: 50%;
-  // vertical-align: center;
-  // text-align: center;
-  padding: 0px;
-  // margin: 0px;
-  margin-top: $top-div-height;
 
-  height: $top-div-height;
-  width: auto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Flipping content
+// Flipping a simple image to a div (transitions and 3d transforms)
+// Plan
+// Put an image on top of a div inside a container.
+// Put that in another container with perspective defined.
+// When hovering on the outside container, add a rotate around the Y axis to the inside container.
+// Demo
+
+// This is nice for exposing more information about an image.
+
+// Any content can go here.
+
+// Code
+// First, the markup.
+
+// <div id="business_card_container">
+// <div id="business_card" class="shadow">
+//   <div class="front face">
+//     <img src="/images/Cirques.jpg"/>
+//   </div>
+//   <div class="back face center">
+//     <p>This is nice for exposing more information about an image.</p>
+//     <p>Any content can go here.</p>
+//   </div>
+// </div>
+// </div>
+// Then the CSS, stripped of the vendor prefixes to keep it clean.
+
+#business_card_container {
+  position: relative;
+  margin: 10px auto;
+  width: 480px;
+  height: 281px;
   z-index: 1;
-  overflow: hidden;
+}
+#business_card_container {
   perspective: 1000;
 }
+#business_card {
 
-#business_card
-{
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
-  border: 4px silver inset;
+  div {
+    border: 4px silver inset;
+  }
 }
 #business_card_container:hover #business_card {
   transform: rotateY(180deg);
@@ -115,16 +156,15 @@ body{
 }
 .face {
   position: absolute;
-  // width: 100%;
-  // height: 100%;
-
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
 }
 .face.back {
   display: block;
   transform: rotateY(180deg);
   box-sizing: border-box;
-  background-color: #aaa;
-
+  text-align: center;
+  // background-color: #aaa;
 }
 
