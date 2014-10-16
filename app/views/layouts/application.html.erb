@@ -8,9 +8,9 @@
 
 
   <!-- # page specific assets, styles, and js needed per page -->
-  <% if params[:controller] == "homes" %>
-      <%= stylesheet_link_tag  'homes/homes', media: 'all', 'data-turbolinks-track' => true , debug: true%>
-      <%= javascript_include_tag 'homes/homes', 'data-turbolinks-track' => true , debug: true%>
+  <% if params[:controller] == "home/homes" %>
+      <%= stylesheet_link_tag  'home/homes', media: 'all', 'data-turbolinks-track' => true , debug: true%>
+      <%= javascript_include_tag 'home/homes', 'data-turbolinks-track' => true , debug: true%>
       <title>Joe Noonan 101</title>
 
     <% elsif params[:controller] == "blog/entries" %>

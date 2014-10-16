@@ -1,4 +1,4 @@
-class Resume::ResumeController < ApplicationController
+class Resume::ResumesController < ApplicationController
   before_action :resume_params, only: [:download]
 
 

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'homes/welcome', to: 'homes#welcome'
+namespace :home do
+  get '/', to: 'homes#welcome'
+end
 
-  root to: "homes#welcome"
+  root to: "home/homes#welcome"
 
   namespace :blog do
     resources :entries, except: :index, shallow: true do
@@ -13,9 +15,9 @@ Rails.application.routes.draw do
 
 
   namespace :resume do
-    get '',                      to: "resume#overview"
-    get '/download/:references', to: "resume#download"
-    get '/download',             to: "resume#download", references: "false"
+    get '',                      to: "resumes#overview"
+    get '/download/:references', to: "resumes#download"
+    get '/download',             to: "resumes#download", references: "false"
   end
 
 
@@ -32,5 +34,5 @@ Rails.application.routes.draw do
 
   # get '/print/business_card', to: "prints#business_card"
 
-  get "/status", to: "homes#status"
+  # get "/status", to: "homes/homes#status"
 end

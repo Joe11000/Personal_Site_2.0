@@ -1,4 +1,4 @@
-class HomesController < ApplicationController
+class Home::HomesController < ApplicationController
   def welcome
   end
 
