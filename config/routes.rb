@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :home do
+  get 'projects/show'
+  end
+
 namespace :home do
   get '/', to: 'homes#welcome'
 end

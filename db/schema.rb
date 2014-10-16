@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20141016043439) do
     t.string   "name"
     t.text     "language"
     t.text     "description"
+    t.text     "images",      default: [], array: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
