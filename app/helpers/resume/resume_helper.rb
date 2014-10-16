@@ -1,0 +1,2 @@
+module Resume::ResumeHelper
+end
