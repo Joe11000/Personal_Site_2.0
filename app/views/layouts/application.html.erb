@@ -20,6 +20,12 @@
       <%= javascript_include_tag 'blog/entries', 'data-turbolinks-track' => true %>
       <title>Blog</title>
 
+    <% elsif params[:controller] == "resume/resume" %>
+      <%= stylesheet_link_tag  'resume/resume', 'data-turbolinks-track' => true , debug: true%>
+
+      <%= javascript_include_tag 'resume/resume', 'data-turbolinks-track' => true %>
+      <title>Blog</title>
+
     <% else %>
       <h1><%= params[:controller] %> is not a real controller</h1>
     <% end %>

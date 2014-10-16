@@ -3,6 +3,6 @@ class HomesController < ApplicationController
   end
 
   def status
-    render text: "15%" and return
+    render text: "19%" and return
   end
 end
