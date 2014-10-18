@@ -2,15 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$top-container-height: 800px;
+$top-container-width: 1000px;
+
+$projects-container-height: 800px;
+$projects-container-width: 1000px;
+$projects-top-padding: 300px;
+
+$business_card_height: 281px;
+$business_card_width: 480px;
+
+
+svg{
+  z-index: 11;
+  position: relative;
+  top: -225px;
+
+  fill:red;
+  stroke:black;
+  stroke-width:5;
+  opacity:0.5
+}
 
 .container-fluid { margin: 0px; padding: 0px; }
 
-$top-div-height: 800px;
+
 
 #top_div {
-  height: $top-div-height;
-  width: auto;
-  background-color: image-url("background_1.jpg");
+  height: $top-container-height;
+  width: 1000;
+  background: #fff image-url("background_1.jpg");
   overflow: hidden;
   background-repeat: repeat;
 }
@@ -37,29 +58,16 @@ body{
   height: 100px;
 }
 
-#projects {
-  height: 200px;
-}
 
-#projects.header {
-  background-color: red;
-}
+
+
+
+
+
 
 .col-xs-1 {
   height: 30px;
   border: 1px solid red;
-}
-
-
-
-#projects{
-  margin-top: 30px;
-  background-color: #551A8B;
-  height: 1000px;
-}
-
-#projects_side_column {
-
 }
 
 .center
@@ -69,16 +77,13 @@ body{
 }
 
 
-
-
-
 #formal_me_pics{
-  height: $top-div-height;
-  // width: auto;
+  height: $top-container-height;
+  width: $top-container-width;
   img
   {
-    height: $top-div-height;
-    width: auto;
+    height: $top-container-height;
+    width: $top-container-width;
   }
 }
 
@@ -91,10 +96,68 @@ body{
 
 
 
+#projects_container{
+  padding-top: $projects-top-padding;
+  background-color: #551A8B;
+
+  height: $projects-container-height;
+
+  h1{
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  #projects
+  {
+    #projects_side_column {
+      height: $projects-container-height;
+
+      .coding_language {
+        padding: auto;
+        height: 30px;
+        display: block;
+        background-color: orange;
+        color: black;
+        text-align: center;
+        vertical-align: center;
+        border-bottom: 2px black solid;
+      }
+      .coding_language:last-child {
+        border-bottom: 0px black solid;
+      }
+      .coding_language:hover {
+
+      }
+      .coding_language.active{
+        background-color: purple;
+
+      }
+    }
+
+    #project_title {
+      background-color: red;
+    }
+
+    #project_body{
+      background-color: green;
+    }
+  }
+}
 
 
 
 
+
+
+// <ul class="list_of_coding_languages">
+//   <% @coding_languages.each do |coding_language| %>
+//     <li class="coding_language">
+//       <span><%= coding_language %></span>
+//     </li>
+//   <% end %>
+// </ul>
 
 
 
@@ -136,18 +199,19 @@ body{
 
 #business_card_container {
   position: relative;
-  margin: 10px auto;
-  width: 480px;
-  height: 281px;
-  z-index: 1;
+  height: $business_card_height;
+  width: $business_card_width;
+  margin: 0px auto;
+  top: $projects-container-height / 2 - $business_card_height / 2;
+
 }
 #business_card_container {
   perspective: 1000;
 }
 #business_card {
 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
   div {
@@ -168,7 +232,7 @@ body{
   display: block;
   transform: rotateY(180deg);
   box-sizing: border-box;
-  text-align: center;
+  // text-align: center;
   // background-color: #aaa;
 }
 

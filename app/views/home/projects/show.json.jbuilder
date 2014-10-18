@@ -1,1 +1,3 @@
-json.extract! @blog_entry, :title, :description, :images
+json.(@project, :title, :language, :description, :images)
+
+debugger

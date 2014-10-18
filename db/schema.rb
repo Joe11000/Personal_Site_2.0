@@ -35,7 +35,8 @@ ActiveRecord::Schema.define(version: 20141016043439) do
     t.string   "name"
     t.text     "language"
     t.text     "description"
-    t.text     "images",      default: [], array: true
+    t.text     "images",             default: [], null: false, array: true
+    t.integer  "coding_language_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
