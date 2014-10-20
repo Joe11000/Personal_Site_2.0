@@ -13,16 +13,6 @@ $business_card_height: 281px;
 $business_card_width: 480px;
 
 
-svg{
-  z-index: 11;
-  position: relative;
-  top: -225px;
-
-  fill:red;
-  stroke:black;
-  stroke-width:5;
-  opacity:0.9;
-}
 
 .container-fluid { margin: 0px; padding: 0px; }
 
@@ -40,10 +30,60 @@ svg{
   background-color: green;
 }
 
-body{
-  background-color: lightblue;
-  // background: image-url('herp.jpg') no-repeat center center;
+// body{
+//   background-color: lightblue;
+//   // background: image-url('herp.jpg') no-repeat center center;
+// }
+
+
+
+#banner{
+
+
+
+  svg{
+    z-index: 2;
+    position: relative;
+    top: -225px;
+
+    // fill: black;
+    stroke:red;
+    stroke-width: 5;
+    stroke-dasharray: 0 1;
+    // animation-play-state: running;
+    animation-delay: 11s;
+    opacity:0.9;
+
+    animation: draw_intro 3s 1;  // animation-name: draw_intro;
+
+     // animation-iteration-count: 3;
+    // animation-direction: normal;
+    // animation-duration: 5s;
+    animation-timing-function: linear;
+
+
+  }
+    p{
+      position: relative;
+      top: -275px;
+
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      display: inline;
+      text-align: center;
+      vertical-align: center
+    }
+
 }
+
+
+@keyframes draw_intro{
+  0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
+  75% { stroke-dasharray: 2200 1;  fill: rgba(0, 0, 0,  0);}
+  100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
+}
+
 
 
 #blog, #bio, #resume, #interests{

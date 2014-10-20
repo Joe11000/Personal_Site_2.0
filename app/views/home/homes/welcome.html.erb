@@ -24,15 +24,21 @@
      <!-- <div class="clearfix visible-xs-block"></div> -->
   </div>
 
-  <svg width="400" height="180">
-  <rect x="50" y="20" rx="20" ry="20" width="150" height="150" />
-</svg>
 
-<div>
-  <svg z-index="inherit" height="210" width="500" >
-    <polygon points="300,-110 250,190 160,210"  />
-  </svg>
+<div id="banner">
+  <!--   <svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150" />
+  </svg> -->
+
+  <div>
+    <svg z-index="1" height="500" width="800" >
+      <polygon points="100,50 200,400 700,400 800,50" />
+    </svg>
+      <p>This can go here</p>
+  </div>
 </div>
+
+
 
   <div class="row">
     <div class=" col-sm-6 col-sm-offset-3 social_media_icon">
@@ -136,4 +142,40 @@
 </div>
 
 </div>
+
+
+
+
+
+
+
+<!--
+
+<style>
+  #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+
+<script>
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="assets/printer.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+ -->
 

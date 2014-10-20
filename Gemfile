@@ -76,6 +76,7 @@ end
   gem 'less-rails-bootstrap'
 # end
 
+gem 'stellar-js-rails' # parallax effect
 
 
 
