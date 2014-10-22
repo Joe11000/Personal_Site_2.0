@@ -44,10 +44,10 @@ $what_i_does_font_size: 38px;
   padding: 100px 0px 250px 0px;
 
 
+
   #formal_pictures_container {
-    margin-bottom: 250px;;
+    margin-bottom: 250px;
     border: 2px silver inset;
-    // max-height: $top_container_height;
     height: $formal_images_height;
     width: $formal_images_width;
     margin: auto;
@@ -58,15 +58,24 @@ $what_i_does_font_size: 38px;
     }
   }
 
+.business_col{
+  height: $formal_images_height;
+}
 
 
+.business_col:nth-child(2){
+  min-width: $business_card_width + 8;
+}
   #business_card_container {
     $business_card_border_thickness: 4px;
-    position: absolute;
-    height: $business_card_height;
+    // position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $business_card_height / 2;
+    height: $business_card_height + ($business_card_border_thickness * 2);
     width: $business_card_width + ($business_card_border_thickness * 2);
     // padding: auto auto auto 0px;
-    margin-top: 25%;
+    // margin: auto;
 
     perspective: 1000;
 
