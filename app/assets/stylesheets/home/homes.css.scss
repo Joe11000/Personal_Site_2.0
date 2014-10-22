@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 // TOP CONTAINER VARIABLES
-$top_container_height: 800px;
+// $top_container_height: 800px;
 $top_container_width: 100%;
 
 $formal_images_height: 510px;
 $formal_images_width: 355px;
+$formal_images_border_thickness: 4px;
+$formal_images_container_height: $formal_images_height + ($formal_images_border_thickness * 2);
+$formal_images_container_width: $formal_images_width + ($formal_images_border_thickness * 2);
+
 //
 
 // PROJECT CONTAINER VARIABLES
@@ -17,9 +20,13 @@ $projects-container-width: 100%;
 $projects_top_padding: 300px;
 //
 
+
 // BUSINESS CARD VARIABLES
 $business_card_height: 247px;
 $business_card_width: 433px;
+$business_card_border_thickness: 4px;
+$business_card_container_height: $business_card_height + ($business_card_border_thickness * 2);
+$business_card_container_width: $business_card_width + ($business_card_border_thickness * 2);
 //
 
 
@@ -35,14 +42,10 @@ $what_i_does_font_size: 38px;
 .container-fluid { margin: 0px; padding: 0px; }
 
 
-
-
 //  BUSINESS CARD
 #top_container {
   background: #fff image-url("background_1.jpg") repeat;
-
   padding: 100px 0px 250px 0px;
-
 
 
   #formal_pictures_container {
@@ -67,15 +70,11 @@ $what_i_does_font_size: 38px;
   min-width: $business_card_width + 8;
 }
   #business_card_container {
-    $business_card_border_thickness: 4px;
-    // position: absolute;
     margin-left: auto;
     margin-right: auto;
     margin-top: $business_card_height / 2;
     height: $business_card_height + ($business_card_border_thickness * 2);
     width: $business_card_width + ($business_card_border_thickness * 2);
-    // padding: auto auto auto 0px;
-    // margin: auto;
 
     perspective: 1000;
 
@@ -116,104 +115,94 @@ $what_i_does_font_size: 38px;
 }
 
 
+// #banner_container{
+//     z-index: 3;
+//     position: absolute;
+//     top: $top_container_height - ($svg_height / 2);
+//     width: $svg_width;
+//     margin: auto;
+//     overflow: hidden;
 
-// body{
-//   background-color: lightblue;
-//   // background: image-url('herp.jpg') no-repeat center center;
+
+//     #banner_text_container {
+//       // max-width: 800px;
+//       // margin-right: auto;
+//       // margin-left: auto;
+//       position: absolute;
+//       top: 0px;
+//       max-width: $svg_width;
+//       height: $svg_height;
+
+
+//       p#joe_noonan, p#what_i_does{
+//         position: absolute;
+//         margin-bottom: 0px;
+//         height: $svg_height / 2;
+//         color: white;
+//         font-weight: bold;
+//         bottom: 0px;
+//         // text-align: bottom !important;
+//         // vertical-align: middle !important;
+//       }
+
+//       #joe_noonan{
+//         // top: ($svg_height / 2) - ($name_font_size / 2);
+//         font-size: $name_font_size;
+//         background-color: green;
+//       }
+//       #what_i_does{
+//         font-size: $what_i_does_font_size;
+//         background-color: orange;
+//         top: ($svg_height / 2)
+//       }
+//     }
+//     svg{
+//       position: absolute;
+//       height: $svg_height;
+//       width: $svg_width;
+//       stroke:red;
+//       stroke-width: 5;
+//       stroke-dasharray: 0 3000;
+//       opacity:0.9;
+//       -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
+//       -webkit-animation-timing-function: linear;
+//       // animation-delay: 11s;
+//       // animation-play-state: running;
+//       // animation-iteration-count: 3;
+//       // animation-direction: normal;
+//       // animation-duration: 5s;
+//     }
+// }
+
+// @keyframes draw_intro{
+//   0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
+//   75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
+//   100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
 // }
 
 
 
 
 
-#banner_container{
-    z-index: 3;
-    position: absolute;
-    top: $top_container_height - ($svg_height / 2);
-    width: $svg_width;
-    margin: auto;
-    overflow: hidden;
-
-
-    #banner_text_container {
-      // max-width: 800px;
-      // margin-right: auto;
-      // margin-left: auto;
-      position: absolute;
-      top: 0px;
-      max-width: $svg_width;
-      height: $svg_height;
-
-
-      p#joe_noonan, p#what_i_does{
-        position: absolute;
-        margin-bottom: 0px;
-        height: $svg_height / 2;
-        color: white;
-        font-weight: bold;
-        bottom: 0px;
-        // text-align: bottom !important;
-        // vertical-align: middle !important;
-      }
-
-      #joe_noonan{
-        // top: ($svg_height / 2) - ($name_font_size / 2);
-        font-size: $name_font_size;
-        background-color: green;
-      }
-      #what_i_does{
-        font-size: $what_i_does_font_size;
-        background-color: orange;
-        top: ($svg_height / 2)
-      }
-    }
-    svg{
-      position: absolute;
-      height: $svg_height;
-      width: $svg_width;
-      stroke:red;
-      stroke-width: 5;
-      stroke-dasharray: 0 3000;
-      opacity:0.9;
-      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
-      -webkit-animation-timing-function: linear;
-      // animation-delay: 11s;
-      // animation-play-state: running;
-      // animation-iteration-count: 3;
-      // animation-direction: normal;
-      // animation-duration: 5s;
-    }
-}
-
-@keyframes draw_intro{
-  0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
-  75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
-  100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
-}
 
 
 
 
 
 
+// #middle_portion{
+//   #blog, #bio, #resume, #interests{
+//     display: inline;
+//     width: 110px;
+//     line-height: 25px;
+//     font-weight: 700;
+//     font-size: 20px;
+//   }
 
-
-
-
-
-#middle_portion{
-  #blog, #bio, #resume, #interests{
-    display: inline;
-    width: 110px;
-    line-height: 25px;
-    font-weight: 700;
-    font-size: 20px;
-  }
-
-  .social_media_icons {
-    height: 100px;
-  }
-}
+//   .social_media_icons {
+//     height: 100px;
+//   }
+// }
 
 
 
@@ -228,56 +217,56 @@ $what_i_does_font_size: 38px;
 
 
 
-// Projects
-#projects_container{
-  padding-top: $projects_top_padding;
-  background-color: #551A8B;
+// // Projects
+// #projects_container{
+//   padding-top: $projects_top_padding;
+//   background-color: #551A8B;
 
-  height: $projects_container_height;
-  width: $projects-container-width;
+//   height: $projects_container_height;
+//   width: $projects-container-width;
 
-  h1{
-    text-align: center;
-    vertical-align: center;
-    color: white;
-    font-weight: bold;
-  }
+//   h1{
+//     text-align: center;
+//     vertical-align: center;
+//     color: white;
+//     font-weight: bold;
+//   }
 
-  #projects
-  {
-    #projects_side_column {
-      height: $projects_container_height;
+//   #projects
+//   {
+//     #projects_side_column {
+//       height: $projects_container_height;
 
-      .coding_language {
-        padding: auto;
-        height: 30px;
-        display: block;
-        background-color: orange;
-        color: black;
-        text-align: center;
-        vertical-align: center;
-        border-bottom: 2px black solid;
-      }
-      .coding_language:last-child {
-        border-bottom: 0px black solid;
-      }
-      .coding_language:hover {
+//       .coding_language {
+//         padding: auto;
+//         height: 30px;
+//         display: block;
+//         background-color: orange;
+//         color: black;
+//         text-align: center;
+//         vertical-align: center;
+//         border-bottom: 2px black solid;
+//       }
+//       .coding_language:last-child {
+//         border-bottom: 0px black solid;
+//       }
+//       .coding_language:hover {
 
-      }
-      .coding_language.active{
-        background-color: purple;
-      }
-    }
+//       }
+//       .coding_language.active{
+//         background-color: purple;
+//       }
+//     }
 
-    #project_title {
-      background-color: red;
-    }
+//     #project_title {
+//       background-color: red;
+//     }
 
-    #project_body{
-      background-color: green;
-    }
-  }
-}
+//     #project_body{
+//       background-color: green;
+//     }
+//   }
+// }
 
 
 
