@@ -31,8 +31,8 @@ $business_card_container_width: $business_card_width + ($business_card_border_th
 
 
 // SVG VARIABLES
-$svg_height: 300px;
-$svg_width: 600px; // $svg_max_width: 800px; // $svg_min_width: 400px;
+$svg_height: 400px;
+$svg_width: 800px; // $svg_max_width: 800px; // $svg_min_width: 400px;
 $name_font_size: 50px;
 $what_i_does_font_size: 38px;
 //
@@ -120,7 +120,7 @@ $what_i_does_font_size: 38px;
 #banner_container{
     z-index: 3;
     position: relative;
-    top:   ($svg_height / 2);
+    top:   -200px;
     width: $svg_width;
     margin: auto;
     // overflow: hidden;
@@ -166,8 +166,8 @@ $what_i_does_font_size: 38px;
       stroke-width: 5;
       stroke-dasharray: 0 3000;
       opacity:0.9;
-      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
       -webkit-animation-timing-function: linear;
+      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
       // animation-delay: 11s;
       // animation-play-state: running;
       // animation-iteration-count: 3;
