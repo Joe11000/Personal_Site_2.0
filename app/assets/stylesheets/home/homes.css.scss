@@ -31,8 +31,8 @@ $business_card_container_width: $business_card_width + ($business_card_border_th
 
 
 // SVG VARIABLES
-$svg_height: 400px;
-$svg_width: 700px; // $svg_max_width: 800px; // $svg_min_width: 400px;
+$svg_height: 300px;
+$svg_width: 600px; // $svg_max_width: 800px; // $svg_min_width: 400px;
 $name_font_size: 50px;
 $what_i_does_font_size: 38px;
 //
@@ -45,14 +45,14 @@ $what_i_does_font_size: 38px;
 //  BUSINESS CARD
 #top_container {
   background: #fff image-url("background_1.jpg") repeat;
-  padding: 100px 0px 250px 0px;
+  padding: 50px 0px 225px 0px;
 
 
   #formal_pictures_container {
     margin-bottom: 250px;
-    border: 2px silver inset;
-    height: $formal_images_height;
-    width: $formal_images_width;
+    border: $formal_images_border_thickness silver inset;
+    height: $formal_images_container_height;
+    width: $formal_images_container_width;
     margin: auto;
 
     img {
