@@ -2,15 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$top-container-height: 800px;
-$top-container-width: 1000px;
 
-$projects-container-height: 800px;
-$projects-container-width: 1000px;
-$projects-top-padding: 300px;
+// TOP CONTAINER VARIABLES
+$top_container_height: 800px;
+$top_container_width: 100%;
 
-$business_card_height: 281px;
-$business_card_width: 480px;
+$formal_images_height: 510px;
+$formal_images_width: 355px;
+//
+
+// PROJECT CONTAINER VARIABLES
+$projects_container_height: 800px;
+$projects-container-width: 100%;
+$projects_top_padding: 300px;
+//
+
+// BUSINESS CARD VARIABLES
+$business_card_height: 247px;
+$business_card_width: 433px;
+//
+
+
+// SVG VARIABLES
+$svg_height: 400px;
+$svg_width: 700px; // $svg_max_width: 800px; // $svg_min_width: 400px;
+$name_font_size: 50px;
+$what_i_does_font_size: 38px;
+//
 
 
 
@@ -18,17 +36,71 @@ $business_card_width: 480px;
 
 
 
-#top_div {
-  height: $top-container-height;
-  width: 1000;
-  background: #fff image-url("background_1.jpg");
-  overflow: hidden;
-  background-repeat: repeat;
+
+//  BUSINESS CARD
+#top_container {
+  background: #fff image-url("background_1.jpg") repeat;
+
+  #formal_pictures_container {
+    margin-bottom: 250px;;
+    border: 2px silver inset;
+    max-height: $top_container_height;
+    height: $formal_images_height;
+    width: $formal_images_width;
+    margin: auto;
+
+    img {
+      height: $formal_images_height;
+      width: $formal_images_width;
+    }
+  }
+
+
+  #business_card_container {
+    // position: absolute;
+    height: $formal_images_height;
+    width: $business_card_width;
+    // padding: auto auto auto 0px;
+    margin-top: ($projects_container_height / 2 - $business_card_height / 2);
+    perspective: 1000;
+
+    #business_card {
+
+      transform-style: preserve-3d;
+      transition: all 1.0s linear;
+      div {
+        height: inherit;
+        width: inherit;
+
+        border: 4px silver inset;
+      }
+    }
+  }
+
+  #business_card_container:hover #business_card {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+  }
+  .face {
+
+    position: absolute;
+    // width: 100%;
+    // height: 100%;
+    backface-visibility: hidden;
+
+    img{
+      height: $business_card_height;
+      width: $business_card_width;
+    }
+  }
+  .face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+  }
 }
 
-#joe_pic_slide_show {
-  background-color: green;
-}
+
 
 // body{
 //   background-color: lightblue;
@@ -37,66 +109,75 @@ $business_card_width: 480px;
 
 
 
-#banner{
 
 
-
-  svg{
-    z-index: 2;
-    position: relative;
-    top: -225px;
-
-    // fill: black;
-    stroke:red;
-    stroke-width: 5;
-    stroke-dasharray: 0 1;
-    // animation-play-state: running;
-    animation-delay: 11s;
-    opacity:0.9;
-
-    animation: draw_intro 3s 1;  // animation-name: draw_intro;
-
-     // animation-iteration-count: 3;
-    // animation-direction: normal;
-    // animation-duration: 5s;
-    animation-timing-function: linear;
+#banner_container{
+    z-index: 3;
+    position: absolute;
+    top: $top_container_height - ($svg_height / 2);
+    width: $svg_width;
+    margin: auto;
+    overflow: hidden;
 
 
-  }
-    p{
-      position: relative;
-      top: -275px;
+    #banner_text_container {
+      // max-width: 800px;
+      // margin-right: auto;
+      // margin-left: auto;
+      position: absolute;
+      top: 0px;
+      max-width: $svg_width;
+      height: $svg_height;
 
-      background-color: green;
-      color: white;
-      font-weight: bold;
-      display: inline;
-      text-align: center;
-      vertical-align: center
+
+      p#joe_noonan, p#what_i_does{
+        position: absolute;
+        margin-bottom: 0px;
+        height: $svg_height / 2;
+        color: white;
+        font-weight: bold;
+        bottom: 0px;
+        // text-align: bottom !important;
+        // vertical-align: middle !important;
+      }
+
+      #joe_noonan{
+        // top: ($svg_height / 2) - ($name_font_size / 2);
+        font-size: $name_font_size;
+        background-color: green;
+      }
+      #what_i_does{
+        font-size: $what_i_does_font_size;
+        background-color: orange;
+        top: ($svg_height / 2)
+      }
     }
-
+    svg{
+      position: absolute;
+      height: $svg_height;
+      width: $svg_width;
+      stroke:red;
+      stroke-width: 5;
+      stroke-dasharray: 0 3000;
+      opacity:0.9;
+      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
+      -webkit-animation-timing-function: linear;
+      // animation-delay: 11s;
+      // animation-play-state: running;
+      // animation-iteration-count: 3;
+      // animation-direction: normal;
+      // animation-duration: 5s;
+    }
 }
-
 
 @keyframes draw_intro{
   0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
-  75% { stroke-dasharray: 2200 1;  fill: rgba(0, 0, 0,  0);}
+  75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
   100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
 }
 
 
 
-#blog, #bio, #resume, #interests{
-  display: inline;
-  width: 110px;
-  line-height: 25px;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.social_media_icons {
-  height: 100px;
-}
 
 
 
@@ -105,25 +186,17 @@ $business_card_width: 480px;
 
 
 
-.col-xs-1 {
-  height: 30px;
-  border: 1px solid red;
-}
+#middle_portion{
+  #blog, #bio, #resume, #interests{
+    display: inline;
+    width: 110px;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 20px;
+  }
 
-.center
-{
-  text-align: center;
-  vertical-align: center;
-}
-
-
-#formal_me_pics{
-  height: $top-container-height;
-  width: $top-container-width;
-  img
-  {
-    height: $top-container-height;
-    width: $top-container-width;
+  .social_media_icons {
+    height: 100px;
   }
 }
 
@@ -136,11 +209,17 @@ $business_card_width: 480px;
 
 
 
+
+
+
+
+// Projects
 #projects_container{
-  padding-top: $projects-top-padding;
+  padding-top: $projects_top_padding;
   background-color: #551A8B;
 
-  height: $projects-container-height;
+  height: $projects_container_height;
+  width: $projects-container-width;
 
   h1{
     text-align: center;
@@ -152,7 +231,7 @@ $business_card_width: 480px;
   #projects
   {
     #projects_side_column {
-      height: $projects-container-height;
+      height: $projects_container_height;
 
       .coding_language {
         padding: auto;
@@ -172,7 +251,6 @@ $business_card_width: 480px;
       }
       .coding_language.active{
         background-color: purple;
-
       }
     }
 
@@ -188,91 +266,4 @@ $business_card_width: 480px;
 
 
 
-
-
-
-// <ul class="list_of_coding_languages">
-//   <% @coding_languages.each do |coding_language| %>
-//     <li class="coding_language">
-//       <span><%= coding_language %></span>
-//     </li>
-//   <% end %>
-// </ul>
-
-
-
-
-
-
-
-
-
-
-
-// Flipping content
-// Flipping a simple image to a div (transitions and 3d transforms)
-// Plan
-// Put an image on top of a div inside a container.
-// Put that in another container with perspective defined.
-// When hovering on the outside container, add a rotate around the Y axis to the inside container.
-// Demo
-
-// This is nice for exposing more information about an image.
-
-// Any content can go here.
-
-// Code
-// First, the markup.
-
-// <div id="business_card_container">
-// <div id="business_card" class="shadow">
-//   <div class="front face">
-//     <img src="/images/Cirques.jpg"/>
-//   </div>
-//   <div class="back face center">
-//     <p>This is nice for exposing more information about an image.</p>
-//     <p>Any content can go here.</p>
-//   </div>
-// </div>
-// </div>
-// Then the CSS, stripped of the vendor prefixes to keep it clean.
-
-#business_card_container {
-  position: relative;
-  height: $business_card_height;
-  width: $business_card_width;
-  margin: 0px auto;
-  top: $projects-container-height / 2 - $business_card_height / 2;
-
-}
-#business_card_container {
-  perspective: 1000;
-}
-#business_card {
-
-  // width: 100%;
-  // height: 100%;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-  div {
-    border: 4px silver inset;
-  }
-}
-#business_card_container:hover #business_card {
-  transform: rotateY(180deg);
-  box-shadow: -5px 5px 5px #aaa;
-}
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.face.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  // text-align: center;
-  // background-color: #aaa;
-}
 
