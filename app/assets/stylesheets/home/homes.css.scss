@@ -32,7 +32,9 @@ $business_card_container_width: $business_card_width + ($business_card_border_th
 
 // SVG VARIABLES
 $svg_height: 400px;
-$svg_width: 800px; // $svg_max_width: 800px; // $svg_min_width: 400px;
+$svg_min_height: 300px;
+$svg_max_height: 400px;
+// $svg_width: 800px; // $svg_max_width: 800px; // $svg_min_width: 400px;
 $name_font_size: 50px;
 $what_i_does_font_size: 38px;
 //
@@ -49,7 +51,7 @@ $what_i_does_font_size: 38px;
 
 
   #formal_pictures_container {
-    margin-bottom: 250px;
+    // margin-bottom: 250px;
     border: $formal_images_border_thickness silver inset;
     height: $formal_images_container_height;
     width: $formal_images_container_width;
@@ -121,7 +123,7 @@ $what_i_does_font_size: 38px;
     z-index: 3;
     position: relative;
     top:   -200px;
-    width: $svg_width;
+    width: 100%;
     margin: auto;
     // overflow: hidden;
 
@@ -130,19 +132,28 @@ $what_i_does_font_size: 38px;
       // max-width: 800px;
       // margin-right: auto;
       // margin-left: auto;
-      position: absolute;
-      top: 0px;
-      max-width: $svg_width;
-      height: $svg_height;
+      position: relative;
+      top: 140px;
+      margin: auto;
+      // left: 25%;
+
+      // text-align: center;
+      // max-width: $svg_width;
+      // height: $svg_height;
 
 
       p#joe_noonan, p#what_i_does{
-        position: absolute;
+        // position: absolute;
         margin-bottom: 0px;
-        height: $svg_height / 2;
+        // padding: 0px;
+        // margin: 0px;
+        text-align: center;
+
+        // top: 0px;
+        // height: $svg_height / 2;
         color: white;
         font-weight: bold;
-        bottom: 0px;
+        // bottom: 0px;
         // text-align: bottom !important;
         // vertical-align: middle !important;
       }
@@ -150,22 +161,24 @@ $what_i_does_font_size: 38px;
       #joe_noonan{
         // top: ($svg_height / 2) - ($name_font_size / 2);
         font-size: $name_font_size;
-        background-color: green;
+        // background-color: green;
       }
       #what_i_does{
         font-size: $what_i_does_font_size;
-        background-color: orange;
-        top: ($svg_height / 2)
+        // background-color: orange;
+        // top: ($svg_height / 2)
       }
     }
     svg{
       position: absolute;
       height: $svg_height;
-      width: $svg_width;
-      stroke:red;
+      width: 100%;
+      min-height: $svg_min_height;
+
+      stroke: red;
       stroke-width: 5;
       stroke-dasharray: 0 3000;
-      opacity:0.9;
+      // opacity:0.95;
       -webkit-animation-timing-function: linear;
       -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
       // animation-delay: 11s;
