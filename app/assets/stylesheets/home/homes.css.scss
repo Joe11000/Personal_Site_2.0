@@ -115,70 +115,72 @@ $what_i_does_font_size: 38px;
 }
 
 
-// #banner_container{
-//     z-index: 3;
-//     position: absolute;
-//     top: $top_container_height - ($svg_height / 2);
-//     width: $svg_width;
-//     margin: auto;
-//     overflow: hidden;
 
 
-//     #banner_text_container {
-//       // max-width: 800px;
-//       // margin-right: auto;
-//       // margin-left: auto;
-//       position: absolute;
-//       top: 0px;
-//       max-width: $svg_width;
-//       height: $svg_height;
+#banner_container{
+    z-index: 3;
+    position: relative;
+    top:   ($svg_height / 2);
+    width: $svg_width;
+    margin: auto;
+    // overflow: hidden;
 
 
-//       p#joe_noonan, p#what_i_does{
-//         position: absolute;
-//         margin-bottom: 0px;
-//         height: $svg_height / 2;
-//         color: white;
-//         font-weight: bold;
-//         bottom: 0px;
-//         // text-align: bottom !important;
-//         // vertical-align: middle !important;
-//       }
+    #banner_text_container {
+      // max-width: 800px;
+      // margin-right: auto;
+      // margin-left: auto;
+      position: absolute;
+      top: 0px;
+      max-width: $svg_width;
+      height: $svg_height;
 
-//       #joe_noonan{
-//         // top: ($svg_height / 2) - ($name_font_size / 2);
-//         font-size: $name_font_size;
-//         background-color: green;
-//       }
-//       #what_i_does{
-//         font-size: $what_i_does_font_size;
-//         background-color: orange;
-//         top: ($svg_height / 2)
-//       }
-//     }
-//     svg{
-//       position: absolute;
-//       height: $svg_height;
-//       width: $svg_width;
-//       stroke:red;
-//       stroke-width: 5;
-//       stroke-dasharray: 0 3000;
-//       opacity:0.9;
-//       -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
-//       -webkit-animation-timing-function: linear;
-//       // animation-delay: 11s;
-//       // animation-play-state: running;
-//       // animation-iteration-count: 3;
-//       // animation-direction: normal;
-//       // animation-duration: 5s;
-//     }
-// }
 
-// @keyframes draw_intro{
-//   0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
-//   75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
-//   100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
-// }
+      p#joe_noonan, p#what_i_does{
+        position: absolute;
+        margin-bottom: 0px;
+        height: $svg_height / 2;
+        color: white;
+        font-weight: bold;
+        bottom: 0px;
+        // text-align: bottom !important;
+        // vertical-align: middle !important;
+      }
+
+      #joe_noonan{
+        // top: ($svg_height / 2) - ($name_font_size / 2);
+        font-size: $name_font_size;
+        background-color: green;
+      }
+      #what_i_does{
+        font-size: $what_i_does_font_size;
+        background-color: orange;
+        top: ($svg_height / 2)
+      }
+    }
+    svg{
+      position: absolute;
+      height: $svg_height;
+      width: $svg_width;
+      stroke:red;
+      stroke-width: 5;
+      stroke-dasharray: 0 3000;
+      opacity:0.9;
+      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
+      -webkit-animation-timing-function: linear;
+      // animation-delay: 11s;
+      // animation-play-state: running;
+      // animation-iteration-count: 3;
+      // animation-direction: normal;
+      // animation-duration: 5s;
+    }
+}
+
+@keyframes draw_intro{
+  0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
+  75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
+  100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
+}
 
 
 
