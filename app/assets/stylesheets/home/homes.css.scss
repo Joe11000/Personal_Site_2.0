@@ -41,10 +41,13 @@ $what_i_does_font_size: 38px;
 #top_container {
   background: #fff image-url("background_1.jpg") repeat;
 
+  padding: 100px 0px 250px 0px;
+
+
   #formal_pictures_container {
     margin-bottom: 250px;;
     border: 2px silver inset;
-    max-height: $top_container_height;
+    // max-height: $top_container_height;
     height: $formal_images_height;
     width: $formal_images_width;
     margin: auto;
@@ -56,12 +59,15 @@ $what_i_does_font_size: 38px;
   }
 
 
+
   #business_card_container {
-    // position: absolute;
-    height: $formal_images_height;
-    width: $business_card_width;
+    $business_card_border_thickness: 4px;
+    position: absolute;
+    height: $business_card_height;
+    width: $business_card_width + ($business_card_border_thickness * 2);
     // padding: auto auto auto 0px;
-    margin-top: ($projects_container_height / 2 - $business_card_height / 2);
+    margin-top: 25%;
+
     perspective: 1000;
 
     #business_card {
@@ -79,7 +85,7 @@ $what_i_does_font_size: 38px;
 
   #business_card_container:hover #business_card {
     transform: rotateY(180deg);
-    box-shadow: -5px 5px 5px #aaa;
+    // box-shadow: -5px 5px 5px #aaa;
   }
   .face {
 

@@ -1,25 +1,31 @@
 <div class="container-fluid">
   <div id="top_container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-7 business_col">
-        <div id="formal_pictures_container"><%= image_tag "Formal_Me/1.jpg" %></div>
-      </div>
+<!--     <div class="row">
+      <div class="col-xs-12 col-sm-12" id="toptop"> -->
 
-      <div class="clearfix visible-xs-block visible-sm-block"></div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-7 business_col">
+            <div id="formal_pictures_container"><%= image_tag "Formal_Me/1.jpg" %></div>
+          </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-5 business_col" >
-        <div id="business_card_container">
-          <div id="business_card" class="shadow">
-            <div class="front face">
-              <%= image_tag "Formal_Me/business_card_front_big.jpg" %>
-            </div>
-            <div class="back face">
-              <%= image_tag "Formal_Me/business_card_back_big.jpg"%>
+          <div class="clearfix visible-xs-block visible-sm-block"></div>
+
+          <div class="col-xs-12 col-sm-12 col-md-4 business_col" >
+            <div id="business_card_container">
+              <div id="business_card" class="shadow">
+                <div class="front face">
+                  <%= image_tag "Formal_Me/business_card_front_big.jpg" %>
+                </div>
+                <div class="back face">
+                  <%= image_tag "Formal_Me/business_card_back_big.jpg"%>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+      <!--   </div>
+      </div> -->
     </div>
+
      <!-- <div class="clearfix visible-xs-block"></div> -->
   </div>
 
@@ -38,104 +44,5 @@
     </div>
   </div>
 
-
-
-    <div class="row" id="middle_portion">
-    <div class=" col-sm-6 col-sm-offset-3 social_media_icon">
-
-      <div class="row">
-
-        <div class="col-sm-4 social_media_icons center">
-          <%= link_to "https://github.com/joe11000" do %>
-            <%= image_tag "social_media/github.png", size: "75x75" %>
-          <% end %>
-        </div>
-
-        <div class="col-sm-4 social_media_icons center">
-          <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
-            <%= image_tag "social_media/linkedin.png", size: "75x75" %>
-          <% end %>
-        </div>
-
-        <div class="col-sm-4 social_media_icons center">
-          <%= link_to "http://www.twitter.com/LiveItUp227" do %>
-            <%= image_tag "social_media/twitter.png", size: "75x75" %>
-          <% end %>
-        </div>
-
-        <div class="clearfix visible-xs-block visible-sm-block"></div>
-      </div>
-      <!-- <div class="col-xs-offset-2"></div>
-    </div> -->
-
-
-  <div class="row categories">
-
-    <div class="col-sm-offset-2 col-sm-7">
-
-      <div class="row">
-
-        <div class="col-sm-3 center">
-          <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info", id: "blog",  method: :get %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Bio", "http://www.nfl.com", class: "btn btn-info", id: "bio" %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info", id: "resume" %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info", id: "interests" %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
- <div id="projects_container">
-  <h1>Projects</h1>
-
-  <div id="projects" class="row">
-    <div class="col-xs-2 col-sm-2">
-      <div class="row" id="projects_side_column">
-        <div class="col-xs-12 col-sm-12">
-          <ul class="list_of_coding_languages">
-            <% @coding_languages.each do |coding_language| %>
-              <li class="coding_language">
-                <span><%= coding_language %></span>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-
-
-    <div class="col-xs-10 col-sm-10">
-      <div class="row">
-        <div class="col-xs-10 col-sm-10" id="project_title">
-        </div>
-
-        <div class="clearfix"></div>
-
-        <div class="col-xs-10 col-sm-10" id="project_body">
-        </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
 </div>
-
-
-</div>
-
-
-
-
-
-
 
