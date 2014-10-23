@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// TOP CONTAINER VARIABLES
-// $top_container_height: 800px;
-$top_container_width: 100%;
-$top_padding_bottom: 200px;
+
 
 
 $formal_images_height: 510px;
@@ -41,19 +38,81 @@ $name_font_size: 50px;
 $what_i_does_font_size: 38px;
 //
 
-
+// TOP CONTAINER VARIABLES
+// $top_container_height: 800px;
+$top_container_width: 100%;
+$top_container_top_padding: ($svg_height / 2);
 
 .container-fluid { margin: 0px; padding: 0px; }
+
+
+
+
+#banner_row{
+  height: $svg_height / 2;
+
+  #banner_container{
+      z-index: 1;
+
+      position: relative;
+      top:   0px;
+      width: 100%;
+      margin: auto;
+      // overflow: hidden;
+
+
+      #banner_text_container {
+        position: relative;
+        top: 140px;
+        margin: auto;
+
+        p#joe_noonan, p#what_i_does{
+          margin-bottom: 0px;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+        }
+
+        #joe_noonan{ font-size: $name_font_size; }
+
+        #what_i_does{ font-size: $what_i_does_font_size; }
+      }
+      svg{
+        position: absolute;
+        top: 0px;
+        height: $svg_height;
+        width: 100%;
+        min-height: $svg_min_height;
+
+        stroke: red;
+        stroke-width: 5;
+        stroke-dasharray: 0 3000;
+        // opacity:0.95;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation: draw_intro 4s 1;  // animation-name: draw_intro;
+        // animation-delay: 11s;
+        // animation-play-state: running;
+        // animation-iteration-count: 3;
+        // animation-direction: normal;
+        // animation-duration: 5s;
+      }
+  }
+}
+
+@keyframes draw_intro{
+  0% { stroke-dasharray: 1 2200 ;     fill: rgba(241, 158, 26,  0); }
+  75% { stroke-dasharray: 2200 2200;  fill: rgba(241, 158, 26,  0);}
+  100% { stroke-dasharray: 2200 2200; fill: rgba(241, 158, 26, .9); }
+}
+
 
 
 //  BUSINESS CARD
 #top_container {
   background: #fff image-url("background_1.jpg") repeat;
-  padding: 50px 0px $top_padding_bottom 0px;
-
+  padding: $top_container_top_padding 0px 25px 0px;
 
   #formal_pictures_container {
-    // margin-bottom: 250px;
     border: $formal_images_border_thickness silver inset;
     height: $formal_images_container_height;
     width: $formal_images_container_width;
@@ -97,13 +156,10 @@ $what_i_does_font_size: 38px;
 
   #business_card_container:hover #business_card {
     transform: rotateY(180deg);
-    // box-shadow: -5px 5px 5px #aaa;
   }
   .face {
 
     position: absolute;
-    // width: 100%;
-    // height: 100%;
     backface-visibility: hidden;
 
     img{
@@ -120,82 +176,6 @@ $what_i_does_font_size: 38px;
 
 
 
-
-#banner_container{
-    z-index: 3;
-    position: relative;
-    top:   -200px;
-    width: 100%;
-    margin: auto;
-    // overflow: hidden;
-
-
-    #banner_text_container {
-      // max-width: 800px;
-      // margin-right: auto;
-      // margin-left: auto;
-      position: relative;
-      top: 140px;
-      margin: auto;
-      // left: 25%;
-
-      // text-align: center;
-      // max-width: $svg_width;
-      // height: $svg_height;
-
-
-      p#joe_noonan, p#what_i_does{
-        // position: absolute;
-        margin-bottom: 0px;
-        // padding: 0px;
-        // margin: 0px;
-        text-align: center;
-
-        // top: 0px;
-        // height: $svg_height / 2;
-        color: white;
-        font-weight: bold;
-        // bottom: 0px;
-        // text-align: bottom !important;
-        // vertical-align: middle !important;
-      }
-
-      #joe_noonan{
-        // top: ($svg_height / 2) - ($name_font_size / 2);
-        font-size: $name_font_size;
-        // background-color: green;
-      }
-      #what_i_does{
-        font-size: $what_i_does_font_size;
-        // background-color: orange;
-        // top: ($svg_height / 2)
-      }
-    }
-    svg{
-      position: absolute;
-      height: $svg_height;
-      width: 100%;
-      min-height: $svg_min_height;
-
-      stroke: red;
-      stroke-width: 5;
-      stroke-dasharray: 0 3000;
-      // opacity:0.95;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation: draw_intro 4s 1;  // animation-name: draw_intro;
-      // animation-delay: 11s;
-      // animation-play-state: running;
-      // animation-iteration-count: 3;
-      // animation-direction: normal;
-      // animation-duration: 5s;
-    }
-}
-
-@keyframes draw_intro{
-  0% { stroke-dasharray: 1 2200 ;     fill: rgba(0, 0, 0,  0); }
-  75% { stroke-dasharray: 2200 2200;  fill: rgba(0, 0, 0,  0);}
-  100% { stroke-dasharray: 2200 2200; fill: rgba(0, 0, 0, .9); }
-}
 
 
 
