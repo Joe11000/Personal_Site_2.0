@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+$banner_height: 450px;
 
 
 $formal_images_height: 510px;
@@ -41,7 +41,7 @@ $what_i_does_font_size: 38px;
 // TOP CONTAINER VARIABLES
 // $top_container_height: 800px;
 $top_container_width: 100%;
-$top_container_top_padding: ($svg_height / 2);
+$top_container_top_padding: ($svg_height / 2) + 50;
 
 .container-fluid { margin: 0px; padding: 0px; }
 
@@ -49,8 +49,10 @@ $top_container_top_padding: ($svg_height / 2);
 
 
 #banner_row{
-  height: $svg_height / 2;
+  // height: $svg_height / 2;
   z-index: 2;
+  position: absolute;
+  width: 100%;
 
   #banner_container{
 
@@ -60,35 +62,6 @@ $top_container_top_padding: ($svg_height / 2);
       margin: auto;
       // overflow: hidden;
 
-
-      #banner_text_container
-      {
-        position: relative;
-        top: 140px;
-        margin: auto;
-
-        p#joe_noonan, p#what_i_does{
-          margin-bottom: 0px;
-          text-align: center;
-          color: white;
-          font-weight: bold;
-        }
-
-        #joe_noonan{ font-size: $name_font_size; }
-
-        #what_i_does{ font-size: $what_i_does_font_size; }
-
-        #social_media_row{
-          // top: 0;
-          text-align: center;
-          height: 50px;
-
-          .topic{
-            position: relative;
-            top: 85px;
-          }
-        }
-      }
       svg{
         position: absolute;
         top: 0px;
@@ -108,6 +81,31 @@ $top_container_top_padding: ($svg_height / 2);
         // animation-direction: normal;
         // animation-duration: 5s;
       }
+
+      #banner_text_container
+      {
+        position: relative;
+        top: 140px;
+        margin: auto;
+
+        p#joe_noonan, p#what_i_does{
+          margin-bottom: 0px;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+        }
+
+        #joe_noonan{ font-size: $name_font_size; }
+
+        #what_i_does{ font-size: $what_i_does_font_size; }
+      }
+
+
+
+      .topic{
+        // position: relative;
+        // top: 85px;
+      }
   }
 }
 
@@ -121,9 +119,10 @@ $top_container_top_padding: ($svg_height / 2);
 
 //  BUSINESS CARD
 #top_container {
-  // position: absolute;
+  margin-top: $banner_height / 2;
   background: #fff image-url("background_1.jpg") repeat;
   padding: $top_container_top_padding 0px 25px 0px;
+  // z-index: -1;
 
   #formal_pictures_container {
     border: $formal_images_border_thickness silver inset;
@@ -187,6 +186,11 @@ $top_container_top_padding: ($svg_height / 2);
   }
 }
 
+
+#social_media_row{
+  text-align: center;
+  height: 50px;
+}
 
 
 
