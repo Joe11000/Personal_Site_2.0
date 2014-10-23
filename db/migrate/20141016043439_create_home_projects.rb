@@ -5,7 +5,6 @@ class CreateHomeProjects < ActiveRecord::Migration
       t.text       :language
       t.text       :description
       t.text       :images, array: true, default: [], null: false
-      t.references :coding_language
 
       t.timestamps
     end

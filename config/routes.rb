@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :home do
-  get 'projects/show'
+    get 'projects/show', to: "projects#show"
   end
 
 namespace :home do
@@ -12,7 +12,7 @@ end
 
   namespace :blog do
     resources :entries, except: :index, shallow: true do
-      resources :comments, only: [:create, :dstroy]
+      resources :comments, only: [:create, :destroy]
     end
   end
 
@@ -20,8 +20,8 @@ end
 
   namespace :resume do
     get '',                      to: "resumes#overview"
-    get '/download/:references', to: "resumes#download"
     get '/download',             to: "resumes#download", references: "false"
+    get '/download/:references', to: "resumes#download"
   end
 
 

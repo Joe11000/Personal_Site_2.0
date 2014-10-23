@@ -1,3 +1,1 @@
-json.(@project, :title, :language, :description, :images)
-
-debugger
+json.(@project, :name, :language, :description, :images)

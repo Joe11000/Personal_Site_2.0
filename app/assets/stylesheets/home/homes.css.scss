@@ -1,9 +1,4 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $banner_height: 450px;
-
 
 $formal_images_height: 510px;
 $formal_images_width: 355px;
@@ -16,7 +11,7 @@ $formal_images_container_width: $formal_images_width + ($formal_images_border_th
 // PROJECT CONTAINER VARIABLES
 $projects_container_height: 800px;
 $projects-container-width: 100%;
-$projects_top_padding: 300px;
+$projects_top_padding: 15px;
 //
 
 
@@ -33,34 +28,52 @@ $business_card_container_width: $business_card_width + ($business_card_border_th
 $svg_height: 400px;
 $svg_min_height: 300px;
 $svg_max_height: 400px;
-// $svg_width: 800px; // $svg_max_width: 800px; // $svg_min_width: 400px;
 $name_font_size: 50px;
 $what_i_does_font_size: 38px;
 //
 
 // TOP CONTAINER VARIABLES
-// $top_container_height: 800px;
 $top_container_width: 100%;
 $top_container_top_padding: ($svg_height / 2) + 50;
 
-.container-fluid { margin: 0px; padding: 0px; }
 
 
+body{
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
 
+//run in chrome
+@-webkit-keyframes draw_intro{
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
+}
+
+// run in firefox
+@keyframes draw_intro{
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
+}
 
 #banner_row{
-  // height: $svg_height / 2;
   z-index: 2;
   position: absolute;
   width: 100%;
 
+
   #banner_container{
 
-      position: relative;
-      top:   0px;
-      width: 100%;
-      margin: auto;
-      // overflow: hidden;
+    position: relative;
+    bottom:   0px;
+    width: 100%;
+    margin: auto;
+
+    animation-fill-mode: forwards;
+
+    #banner{
+      height: 400px;
+      font-weight: bold;
 
       svg{
         position: absolute;
@@ -72,14 +85,19 @@ $top_container_top_padding: ($svg_height / 2) + 50;
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
-        // opacity:0.95;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation: draw_intro 4s 1;  // animation-name: draw_intro;
-        // animation-delay: 11s;
-        // animation-play-state: running;
-        // animation-iteration-count: 3;
-        // animation-direction: normal;
-        // animation-duration: 5s;
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+
+        #svg_path_1, #svg_path_2, #svg_path_3 {
+          stroke: red;
+          stroke-width: 5;
+          stroke-dasharray: 4000;
+          animation-delay: 5s;
+          -webkit-animation-delay: 2s;
+
+          -webkit-animation: draw_intro 4s linear forwards;
+          animation: draw_intro 4s linear forwards;
+        }
       }
 
       #banner_text_container
@@ -99,21 +117,27 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 
         #what_i_does{ font-size: $what_i_does_font_size; }
       }
+    }
+    .move_up_topic {
+      position: relative;
+      top: -50px;
 
+      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;; }
 
+    }
+    .topic{
+      top: 15px;
+      text-align: center;
+          line-height: 25px;
+      font-size: 20px;
 
-      .topic{
-        // position: relative;
-        // top: 85px;
-      }
+      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; }
+    }
   }
 }
 
-@keyframes draw_intro{
-  0% { stroke-dasharray: 1 2200 ;     fill: rgba(241, 158, 26,  0); }
-  75% { stroke-dasharray: 2200 2200;  fill: rgba(241, 158, 26,  0);}
-  100% { stroke-dasharray: 2200 2200; fill: rgba(241, 158, 26, .9); }
-}
+
+
 
 
 
@@ -121,8 +145,7 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 #top_container {
   margin-top: $banner_height / 2;
   background: #fff image-url("background_1.jpg") repeat;
-  padding: $top_container_top_padding 0px 25px 0px;
-  // z-index: -1;
+  padding: $top_container_top_padding 0px 50px 0px;
 
   #formal_pictures_container {
     border: $formal_images_border_thickness silver inset;
@@ -136,14 +159,15 @@ $top_container_top_padding: ($svg_height / 2) + 50;
     }
   }
 
-.business_col{
-  height: $formal_images_height;
-}
+  .business_col{
+    height: $formal_images_container_height;
+  }
 
 
-.business_col:nth-child(2){
-  min-width: $business_card_width + 8;
-}
+  .business_col:nth-child(2){
+    min-width: $business_card_width + 8;
+  }
+
   #business_card_container {
     margin-left: auto;
     margin-right: auto;
@@ -187,9 +211,26 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 }
 
 
-#social_media_row{
-  text-align: center;
-  height: 50px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#middle_portion{
+  #social_media_row{
+    text-align: center;
+    height: 50px;
+  }
+    display: inline;
 }
 
 
@@ -205,81 +246,94 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 
 
 
-// #middle_portion{
-//   #blog, #bio, #resume, #interests{
-//     display: inline;
-//     width: 110px;
-//     line-height: 25px;
-//     font-weight: 700;
-//     font-size: 20px;
-//   }
+// Projects
+#projects-container{
+  padding-top: $projects_top_padding;
+  background-color: #551A8B;
 
-// }
-
+  height: $projects_container_height;
+  width: $projects-container-width;
+  color: white;
+  height: 700px;
 
 
+  h1{
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+  }
 
+  #projects
+  {
 
+    #projects-side-column
+    {
+      color: black;
+      font-weight: bold;
+      padding: auto;
+      height: 30px;
+      // width: 80%;
 
+      text-align: center;
+      vertical-align: center;
 
+      .panel-group
+      {
+        text-decoration: none;
 
+        .panel
+        {
+          .panel-heading
+          {
+            // background-color: orange; border: 3px red solid;
+            .panel-title{ text-decoration: none; color: purple;  }
+          }
 
+          .panel-body
+          {
+            .glyphicon-folder-open
+            {
+              display: inline-block;
+              text-align: right;
+            }
 
+            .side-bar-project-name
+            {
+              .glyphicon-folder-open
+              {
+                visibility: hidden;
+              }
 
+              &:hover{
+                .glyphicon-folder-open
+                {
+                  visibility: visible;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
+    #project_main
+    {
+      #project-title
+      {
+        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+        background-color: red;
+        height: 500px;
+      }
 
+      #project-body
+      {
+        background-color: green;
+        height: 500px;
 
-// // Projects
-// #projects_container{
-//   padding-top: $projects_top_padding;
-//   background-color: #551A8B;
-
-//   height: $projects_container_height;
-//   width: $projects-container-width;
-
-//   h1{
-//     text-align: center;
-//     vertical-align: center;
-//     color: white;
-//     font-weight: bold;
-//   }
-
-//   #projects
-//   {
-//     #projects_side_column {
-//       height: $projects_container_height;
-
-//       .coding_language {
-//         padding: auto;
-//         height: 30px;
-//         display: block;
-//         background-color: orange;
-//         color: black;
-//         text-align: center;
-//         vertical-align: center;
-//         border-bottom: 2px black solid;
-//       }
-//       .coding_language:last-child {
-//         border-bottom: 0px black solid;
-//       }
-//       .coding_language:hover {
-
-//       }
-//       .coding_language.active{
-//         background-color: purple;
-//       }
-//     }
-
-//     #project_title {
-//       background-color: red;
-//     }
-
-//     #project_body{
-//       background-color: green;
-//     }
-//   }
-// }
-
-
-
-
+        .glyphicon-folder-open{visibility: hidden;}
+      }
+    }
+  }
+}

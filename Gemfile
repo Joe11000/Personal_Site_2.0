@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 ## I ADDED THESE BELOW
 gem 'thin'
 gem 'jquery-ui-rails'
+
 gem 'jquery-color', '~> 2.1.2'
 
 gem "protected_attributes"
@@ -73,6 +74,7 @@ end
 
 # group :assets do
   gem 'twitter-bootstrap-rails'
+  # gem 'jquery-ui-bootstrap'
   gem 'less-rails-bootstrap'
 # end
 
