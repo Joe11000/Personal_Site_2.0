@@ -11,32 +11,30 @@
           <div id="banner_text_container">
             <p id="joe_noonan">Joe Noonan</p>
             <p id="what_i_does">- Web Developer -</p>
-      <div class=" social_media_icon">
 
-        <div class="row" id="social_media_row">
+            <div class="row categories">
+              <div class="col-sm-offset-2 col-sm-8 col-lg-offset-0 col-lg-12">
+                <div class="row">
+                  <div class="col-sm-2 col-lg-offset-2 col-lg-1 topic">
+                    <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info", id: "blog",  method: :get %>
+                  </div>
 
-          <div class="social_media_icons col-sm-offset-3 col-sm-3">
-            <%= link_to "https://github.com/joe11000" do %>
-              <%= image_tag "social_media/github.png", size: "50x50" %>
-            <% end %>
-          </div>
+                  <div class="col-sm-2 topic">
+                    <%= button_to "Bio", "http://www.nfl.com", class: "btn btn-info", id: "bio" %>
+                  </div>
 
-          <div class="social_media_icons col-sm-2">
-            <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
-              <%= image_tag "social_media/linkedin.png", size: "50x50" %>
-            <% end %>
-          </div>
+                  <div class="col-sm-2 topic">
+                    <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info", id: "resume" %>
+                  </div>
 
-          <div class="social_media_icons col-sm-3">
-            <%= link_to "http://www.twitter.com/LiveItUp227" do %>
-              <%= image_tag "social_media/twitter.png", size: "50x50" %>
-            <% end %>
-          </div>
+                  <div class="col-sm-2 topic">
+                    <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info", id: "interests" %>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div class="clearfix visible-xs-block visible-sm-block"></div>
-        </div>
-        <div class="col-xs-offset-2"></div>
-      </div>
+
           </div>
 
 
@@ -87,29 +85,32 @@
 
   </div>
 
-  <div class="row categories">
 
-    <div class="col-sm-offset-2 col-sm-7">
+  <div class=" social_media_icon">
 
-      <div class="row">
+    <div class="row" id="social_media_row">
 
-        <div class="col-sm-3 center">
-          <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info", id: "blog",  method: :get %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Bio", "http://www.nfl.com", class: "btn btn-info", id: "bio" %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info", id: "resume" %>
-        </div>
-
-        <div class="col-sm-3 center">
-          <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info", id: "interests" %>
-        </div>
+      <div class="social_media_icons col-sm-offset-3 col-sm-3">
+        <%= link_to "https://github.com/joe11000" do %>
+          <%= image_tag "social_media/github.png", size: "50x50" %>
+        <% end %>
       </div>
+
+      <div class="social_media_icons col-sm-2">
+        <%= link_to "http://www.linkedin.com/in/joenoonan27/" do %>
+          <%= image_tag "social_media/linkedin.png", size: "50x50" %>
+        <% end %>
+      </div>
+
+      <div class="social_media_icons col-sm-3">
+        <%= link_to "http://www.twitter.com/LiveItUp227" do %>
+          <%= image_tag "social_media/twitter.png", size: "50x50" %>
+        <% end %>
+      </div>
+
+      <div class="clearfix visible-xs-block visible-sm-block"></div>
     </div>
+    <div class="col-xs-offset-2"></div>
   </div>
 
 

@@ -79,11 +79,14 @@ $top_container_top_padding: ($svg_height / 2);
         #what_i_does{ font-size: $what_i_does_font_size; }
 
         #social_media_row{
-          position: relative;
-          top: 0;
+          // top: 0;
           text-align: center;
           height: 50px;
-          .social_media_icons { height: 100px; }
+
+          .topic{
+            position: relative;
+            top: 85px;
+          }
         }
       }
       svg{
@@ -118,6 +121,7 @@ $top_container_top_padding: ($svg_height / 2);
 
 //  BUSINESS CARD
 #top_container {
+  // position: absolute;
   background: #fff image-url("background_1.jpg") repeat;
   padding: $top_container_top_padding 0px 25px 0px;
 
