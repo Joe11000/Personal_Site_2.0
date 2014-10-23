@@ -5,6 +5,8 @@
 // TOP CONTAINER VARIABLES
 // $top_container_height: 800px;
 $top_container_width: 100%;
+$top_padding_bottom: 200px;
+
 
 $formal_images_height: 510px;
 $formal_images_width: 355px;
@@ -47,7 +49,7 @@ $what_i_does_font_size: 38px;
 //  BUSINESS CARD
 #top_container {
   background: #fff image-url("background_1.jpg") repeat;
-  padding: 50px 0px 225px 0px;
+  padding: 50px 0px $top_padding_bottom 0px;
 
 
   #formal_pictures_container {
@@ -180,7 +182,7 @@ $what_i_does_font_size: 38px;
       stroke-dasharray: 0 3000;
       // opacity:0.95;
       -webkit-animation-timing-function: linear;
-      -webkit-animation: draw_intro 3s 1;  // animation-name: draw_intro;
+      -webkit-animation: draw_intro 4s 1;  // animation-name: draw_intro;
       // animation-delay: 11s;
       // animation-play-state: running;
       // animation-iteration-count: 3;
