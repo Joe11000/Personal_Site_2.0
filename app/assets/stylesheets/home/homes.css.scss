@@ -54,13 +54,20 @@ $top_container_top_padding: ($svg_height / 2) + 50;
   position: absolute;
   width: 100%;
 
+
+
   #banner_container{
 
-      position: relative;
-      top:   0px;
-      width: 100%;
-      margin: auto;
-      // overflow: hidden;
+    position: relative;
+    bottom:   0px;
+    width: 100%;
+    margin: auto;
+    // height: 400px;
+    // overflow: hidden;
+
+
+    #banner{
+      height: 400px;
 
       svg{
         position: absolute;
@@ -99,13 +106,15 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 
         #what_i_does{ font-size: $what_i_does_font_size; }
       }
-
-
-
-      .topic{
-        // position: relative;
-        // top: 85px;
-      }
+    }
+    .move_up_topic {
+      position: relative;
+      top: -50px;
+    }
+    .topic{
+      top: 15px;
+      text-align: center;
+    }
   }
 }
 

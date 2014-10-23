@@ -18,20 +18,20 @@
             <div class="row categories">
               <div class="col-sm-offset-2 col-sm-8 col-lg-offset-0 col-lg-12">
                 <div class="row">
-                  <div class="col-sm-2 col-lg-offset-2 col-lg-1 topic">
-                    <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info", id: "blog",  method: :get %>
+                  <div class="col-sm-2 col-lg-offset-2 col-lg-1">
+                    <%= button_to "Blog", blog_entry_path(0), class: "btn btn-info move_up_topic", id: "blog",  method: :get %>
                   </div>
 
-                  <div class="col-sm-2 topic">
+                  <div class="col-sm-2 col-lg-offset-1 col-lg-2 topic">
                     <%= button_to "Bio", "http://www.nfl.com", class: "btn btn-info", id: "bio" %>
                   </div>
 
-                  <div class="col-sm-2 topic">
-                    <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info", id: "resume" %>
+                  <div class="col-sm-2">
+                    <%= button_to "Resume", "http://www.chicagobears.com", class: "btn btn-info topic", id: "resume" %>
                   </div>
 
-                  <div class="col-sm-2 topic">
-                    <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info", id: "interests" %>
+                  <div class="col-sm-2">
+                    <%= button_to "Interests", "http://www.chicagobears.com", class: "btn btn-info move_up_topic", id: "interests" %>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@
       <div class="clearfix visible-xs-block visible-sm-block"></div>
 
       <div class="col-xs-12 col-sm-offset-1 col-sm-4 business_col" >
-        <div id="business_card_container">
+        <div id="business_card_container">f
           <div id="business_card" class="shadow">
             <div class="front face">
               <%= image_tag "Formal_Me/business_card_front_big.jpg" %>
