@@ -1,9 +1,4 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $banner_height: 450px;
-
 
 $formal_images_height: 510px;
 $formal_images_width: 355px;
@@ -16,7 +11,7 @@ $formal_images_container_width: $formal_images_width + ($formal_images_border_th
 // PROJECT CONTAINER VARIABLES
 $projects_container_height: 800px;
 $projects-container-width: 100%;
-$projects_top_padding: 300px;
+$projects_top_padding: 15px;
 //
 
 
@@ -43,21 +38,30 @@ $what_i_does_font_size: 38px;
 $top_container_width: 100%;
 $top_container_top_padding: ($svg_height / 2) + 50;
 
-.container-fluid { margin: 0px; padding: 0px; }
 
 
+body{
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+
+//run in chrome
 @-webkit-keyframes draw_intro{
   0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
   75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
   100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
 }
 
+// run in firefox
+@keyframes draw_intro{
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
+}
+
 #banner_row{
-  // height: $svg_height / 2;
   z-index: 2;
   position: absolute;
   width: 100%;
-
 
 
   #banner_container{
@@ -66,13 +70,12 @@ $top_container_top_padding: ($svg_height / 2) + 50;
     bottom:   0px;
     width: 100%;
     margin: auto;
-    // height: 400px;
-    // overflow: hidden;
 
     animation-fill-mode: forwards;
 
     #banner{
       height: 400px;
+      font-weight: bold;
 
       svg{
         position: absolute;
@@ -84,19 +87,19 @@ $top_container_top_padding: ($svg_height / 2) + 50;
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
-        animation-delay: 5s;
-        -webkit-animation-delay: 12s;
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
 
         #svg_path_1, #svg_path_2, #svg_path_3 {
           stroke: red;
           stroke-width: 5;
-          stroke-dasharray: 30;
+          stroke-dasharray: 4000;
           animation-delay: 5s;
-          -webkit-animation-delay: 12s;
+          -webkit-animation-delay: 2s;
+
           -webkit-animation: draw_intro 4s linear forwards;
+          animation: draw_intro 4s linear forwards;
         }
-
-
       }
 
       #banner_text_container
@@ -120,10 +123,17 @@ $top_container_top_padding: ($svg_height / 2) + 50;
     .move_up_topic {
       position: relative;
       top: -50px;
+
+      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;; }
+
     }
     .topic{
       top: 15px;
       text-align: center;
+          line-height: 25px;
+      font-size: 20px;
+
+      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; }
     }
   }
 }
@@ -137,8 +147,7 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 #top_container {
   margin-top: $banner_height / 2;
   background: #fff image-url("background_1.jpg") repeat;
-  padding: $top_container_top_padding 0px 25px 0px;
-  // z-index: -1;
+  padding: $top_container_top_padding 0px 50px 0px;
 
   #formal_pictures_container {
     border: $formal_images_border_thickness silver inset;
@@ -203,34 +212,27 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 }
 
 
-#social_media_row{
-  text-align: center;
-  height: 50px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#middle_portion{
+  #social_media_row{
+    text-align: center;
+    height: 50px;
+  }
+    display: inline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #middle_portion{
-//   #blog, #bio, #resume, #interests{
-//     display: inline;
-//     width: 110px;
-//     line-height: 25px;
-//     font-weight: 700;
-//     font-size: 20px;
-//   }
-
-// }
 
 
 
@@ -252,25 +254,29 @@ $top_container_top_padding: ($svg_height / 2) + 50;
 
   height: $projects_container_height;
   width: $projects-container-width;
+  color: white;
+
 
   h1{
     text-align: center;
     vertical-align: center;
     color: white;
     font-weight: bold;
+    font-size: 70px;
   }
 
   #projects
   {
     #projects_side_column {
-      height: $projects_container_height;
+      height: ;
+      border-right: 5px orange ridge;
 
       .coding_language {
         padding: auto;
         height: 30px;
         display: block;
         background-color: orange;
-        color: black;
+        // color: black;
         text-align: center;
         vertical-align: center;
         border-bottom: 2px black solid;
@@ -287,6 +293,7 @@ $top_container_top_padding: ($svg_height / 2) + 50;
     }
 
     #project_title {
+      // font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
       background-color: red;
     }
 
@@ -295,6 +302,7 @@ $top_container_top_padding: ($svg_height / 2) + 50;
     }
   }
 }
+
 
 
 

@@ -9,7 +9,7 @@ Home::Project.attr_accessible :name, :language, :description, :images
 end
 
 
-3.times do |i|
-  project = Home::Project.create(name: "Javascript Racer", language: "Language#{i}", description: "It races across the screen")
-  project.update(images: [ "http://localhost:3000/assets/Beach/#{i}1.jpg", "http://localhost:3000/assets/Beach/#{i}2.jpg" ]);
+%w[ C++ Java Javascript Rails Ruby  ].each_with_index do |lang, index|
+  project = Home::Project.create(name: "App #{index}", language: lang, description: "It does what I made it do")
+  project.update(images: [ "http://localhost:3000/assets/Beach/#{index}1.jpg", "http://localhost:3000/assets/Beach/#{index}2.jpg" ]);
 end
