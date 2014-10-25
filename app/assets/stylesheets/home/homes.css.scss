@@ -161,14 +161,15 @@ body{
     }
   }
 
-.business_col{
-  height: $formal_images_height;
-}
+  .business_col{
+    height: $formal_images_container_height;
+  }
 
 
-.business_col:nth-child(2){
-  min-width: $business_card_width + 8;
-}
+  .business_col:nth-child(2){
+    min-width: $business_card_width + 8;
+  }
+
   #business_card_container {
     margin-left: auto;
     margin-right: auto;
@@ -255,6 +256,7 @@ body{
   height: $projects_container_height;
   width: $projects-container-width;
   color: white;
+  height: 700px;
 
 
   h1{
@@ -267,16 +269,44 @@ body{
 
   #projects
   {
-    #projects_side_column {
-      height: ;
-      border-right: 5px orange ridge;
 
-      .coding_language {
+    #projects_side_column {
+      // height: ;
+      border-right: 5px orange ridge;
+      width: 725px;
+
+      // background-color: black;
+
+      .panel-group
+      {
+
+        .panel-collapse {
+          text-decoration: none;
+
+        .panel {
+          .panel-heading{ background-color: orange;border: 3px red solid; }
+          .panel-title{ background-color: orange; text-decoration: none;}
+          .in{
+            #project_name{
+              height: 25px;
+              border: 3px purple inset;
+              width: 100%;
+              padding-bottom: 15px;
+            }
+
+          }
+        }
+      }
+
+        color: black;
+        font-weight: bold;
         padding: auto;
         height: 30px;
+        width: 125px;
+
         display: block;
         background-color: orange;
-        // color: black;
+        color: black;
         text-align: center;
         vertical-align: center;
         border-bottom: 2px black solid;
@@ -307,3 +337,54 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+// // from POCKET!!!!!!!!!
+// #side_col{
+
+//   @media screen and (max-width: $break-not-large) {
+//     max-width: 200px;
+//     margin: auto;
+
+
+//   }
+
+//   @media screen and (min-width: $break-large) {
+
+//     position: fixed !important;
+//     top: 350px !important;
+//     width: $width;
+//     margin: 0px 0px;
+//     // left: 45%;
+//   }
+// }
+
+
+// $(function(){
+//   { // hide tables when side_col item clicked
+//     $(".list-group-item").each(function()
+//     {
+//       $(this).click(function(){
+//         if($(this).hasClass("active"))
+//         {
+//           $(this).removeClass("active");                                 // deselect the side_col item
+//           table_id = "#" + this.text.match(/\W*(\w+)/)[1].toLowerCase() + "_table"   // hide cooresponding table
+//           $(table_id).addClass("hide")
+//         }
+//         else
+//         {
+//           $(this).addClass("active");                                   // hide cooresponding table
+//           table_id = "#" + this.text.match(/\W*(\w+)/)[1].toLowerCase() + "_table"
+//           $(table_id).removeClass("hide")
+//         }
+//       });
+//     });
+//   }
+// });
