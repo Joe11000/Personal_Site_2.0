@@ -73,8 +73,8 @@ group :production do
 end
 
 # group :assets do
-  gem 'twitter-bootstrap-rails'
-  # gem 'jquery-ui-bootstrap'
+  # gem 'twitter-bootstrap-rails'
+  gem 'jquery-ui-bootstrap'
   gem 'less-rails-bootstrap'
 # end
 

@@ -249,7 +249,7 @@ body{
 
 
 // Projects
-#projects_container{
+#projects-container{
   padding-top: $projects_top_padding;
   background-color: #551A8B;
 
@@ -270,10 +270,7 @@ body{
   #projects
   {
 
-    #projects_side_column {
-      // height: ;
-      border-right: 5px orange ridge;
-      width: 725px;
+    #projects-side-column {
 
       // background-color: black;
 
@@ -283,20 +280,17 @@ body{
         .panel-collapse {
           text-decoration: none;
 
-        .panel {
-          .panel-heading{ background-color: orange;border: 3px red solid; }
-          .panel-title{ background-color: orange; text-decoration: none;}
-          .in{
-            #project_name{
-              height: 25px;
-              border: 3px purple inset;
-              width: 100%;
-              padding-bottom: 15px;
+          .panel {
+            .panel-heading{ background-color: orange; border: 3px red solid; }
+            .panel-title{ text-decoration: none; color: purple; background-color: orange; }
+            .project-name{
+              // height: 25px;
+              // border: 3px purple inset;
+              // width: 100%;
+              // padding-bottom: 15px;
             }
-
           }
         }
-      }
 
         color: black;
         font-weight: bold;
@@ -304,31 +298,27 @@ body{
         height: 30px;
         width: 125px;
 
-        display: block;
-        background-color: orange;
-        color: black;
         text-align: center;
         vertical-align: center;
-        border-bottom: 2px black solid;
       }
-      .coding_language:last-child {
-        border-bottom: 0px black solid;
-      }
-      .coding_language:hover {
 
-      }
-      .coding_language.active{
-        background-color: purple;
+      .project-name:hover {
+
       }
     }
 
-    #project_title {
+
+
+    #project-title {
       // font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
       background-color: red;
+      height: 500px;
     }
 
-    #project_body{
+    #project-body{
       background-color: green;
+      height: 500px;
+
     }
   }
 }
