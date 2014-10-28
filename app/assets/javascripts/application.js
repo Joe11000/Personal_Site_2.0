@@ -17,4 +17,5 @@
 
 //= require_directory .
 
-
+//= require jquery
+//= require jquery.stellar.min

@@ -1,10 +1,30 @@
 #Bypass mass-assignment
-Blog::Entry.attr_accessible :title, :body
+Blog::Entry.attr_accessible   :title, :body
 Blog::Comment.attr_accessible :author_name, :body
+Home::Project.attr_accessible :name, :language, :description, :images
 
+def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
+  num_entries.times do |entry_num|
+    entry = Blog::Entry.create(title: "Entry_#{entry_num}", body: "#{100 - (entry_num)} bottles of ginger beer\n" * 50)
 
-1.upto(4) do |num|
-  e = Blog::Entry.create(title: "Entry_#{num}", body: "#{100 - (num)} bottles of ginger beer\n" * 50)
-  e.comments.create(author_name: "author_#{num}", body: "I am the ##{num} nerd\n" * 4)
+    num_comments_per_entry.times do |comment_num|
+      Blog::Comment.create(author_name: "author_#{comment_num}", body: "I am the ##{comment_num} nerd\n" * 4)
+    end
+  end
 end
 
+def create_languages_with_projects(languages_arr, num_projects_to_create)
+  languages_arr.each_with_index do |lang, lang_index |
+    num_projects_to_create.times do | proj_index |
+      index = proj_index + (lang_index.size * lang_index)
+      project = Home::Project.create(name: "App #{index}", language: lang, description: "It does what I made it do")
+      project.update(images: [ "http://localhost:3000/assets/Beach/#{index}1.jpg", "http://localhost:3000/assets/Beach/#{index}2.jpg" ]);
+    end
+  end
+end
+
+
+
+create_blog_entries_with_comments(3, 3);
+
+create_languages_with_projects(%w[ C++ Java Javascript Rails Ruby  ], 3)
