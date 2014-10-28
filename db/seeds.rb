@@ -20,6 +20,13 @@ def create_languages_with_projects(languages_arr, num_projects_to_create)
       project = Home::Project.create(name: "App #{index}", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
       project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
     end
+      project = Home::Project.create(name: "APPAPPAPPAPP App", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
+      project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+
+      project = Home::Project.create(name: "APPAPPAPPAPPApp", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
+      project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+
+
   end
 end
 

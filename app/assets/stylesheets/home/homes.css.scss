@@ -1,40 +1,40 @@
-$banner_height: 450px;
+$banner-height: 450px;
 
-$formal_images_height: 510px;
-$formal_images_width: 355px;
-$formal_images_border_thickness: 4px;
-$formal_images_container_height: $formal_images_height + ($formal_images_border_thickness * 2);
-$formal_images_container_width: $formal_images_width + ($formal_images_border_thickness * 2);
+$formal-images-height: 510px;
+$formal-images-width: 355px;
+$formal-images-border-thickness: 4px;
+$formal-images-container-height: $formal-images-height + ($formal-images-border-thickness * 2);
+$formal-images-container-width: $formal-images-width + ($formal-images-border-thickness * 2);
 
 //
 
 // PROJECT CONTAINER VARIABLES
-$projects_container_height: 800px;
+$projects-container-height: 800px;
 $projects-container-width: 100%;
-$projects_top_padding: 15px;
+$projects-top-padding: 15px;
 //
 
 
 // BUSINESS CARD VARIABLES
-$business_card_height: 247px;
-$business_card_width: 433px;
-$business_card_border_thickness: 4px;
-$business_card_container_height: $business_card_height + ($business_card_border_thickness * 2);
-$business_card_container_width: $business_card_width + ($business_card_border_thickness * 2);
+$business-card-height: 247px;
+$business-card-width: 433px;
+$business-card-border-thickness: 4px;
+$business-card-container-height: $business-card-height + ($business-card-border-thickness * 2);
+$business-card-container-width: $business-card-width + ($business-card-border-thickness * 2);
 //
 
 
 // SVG VARIABLES
-$svg_height: 400px;
-$svg_min_height: 300px;
-$svg_max_height: 400px;
-$name_font_size: 50px;
-$what_i_does_font_size: 38px;
+$svg-height: 400px;
+$svg-min-height: 300px;
+$svg-max-height: 400px;
+$name-font-size: 50px;
+$what-i-does-font-size: 38px;
 //
 
 // TOP CONTAINER VARIABLES
-$top_container_width: 100%;
-$top_container_top_padding: ($svg_height / 2) + 50;
+$top-container-width: 100%;
+$top-container-top-padding: ($svg-height / 2) + 50;
 
 
 
@@ -43,26 +43,26 @@ body{
 }
 
 //run in chrome
-@-webkit-keyframes draw_intro{
+@-webkit-keyframes draw-intro{
   0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
   75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
   100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
 }
 
 // run in firefox
-@keyframes draw_intro{
+@keyframes draw-intro{
   0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
   75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
   100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
 }
 
-#banner_row{
+#banner-row{
   z-index: 2;
   position: absolute;
   width: 100%;
 
 
-  #banner_container{
+  #banner-container{
 
     position: relative;
     bottom:   0px;
@@ -78,9 +78,9 @@ body{
       svg{
         position: absolute;
         top: 0px;
-        height: $svg_height;
+        height: $svg-height;
         width: 100%;
-        min-height: $svg_min_height;
+        min-height: $svg-min-height;
 
         stroke: red;
         stroke-width: 5;
@@ -88,37 +88,36 @@ body{
         animation-delay: 2s;
         -webkit-animation-delay: 2s;
 
-        #svg_path_1, #svg_path_2, #svg_path_3 {
+        #svg-path-1, #svg-path-2, #svg-path-3 {
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
           animation-delay: 5s;
           -webkit-animation-delay: 2s;
 
-          -webkit-animation: draw_intro 4s linear forwards;
-          animation: draw_intro 4s linear forwards;
+          -webkit-animation: draw-intro 4s linear forwards;
+          animation: draw-intro 4s linear forwards;
         }
       }
 
-      #banner_text_container
+      #banner-text-container
       {
         position: relative;
         top: 140px;
         margin: auto;
 
-        p#joe_noonan, p#what_i_does{
+        p#joe-noonan, p#what-i-does{
           margin-bottom: 0px;
-          text-align: center;
           color: white;
           font-weight: bold;
         }
 
-        #joe_noonan{ font-size: $name_font_size; }
+        #joe-noonan{ font-size: $name-font-size; }
 
-        #what_i_does{ font-size: $what_i_does_font_size; }
+        #what-i-does{ font-size: $what-i-does-font-size; }
       }
     }
-    .move_up_topic {
+    .move-up-topic {
       position: relative;
       top: -50px;
 
@@ -142,42 +141,42 @@ body{
 
 
 //  BUSINESS CARD
-#top_container {
-  margin-top: $banner_height / 2;
-  background: #fff image-url("background_1.jpg") repeat;
-  padding: $top_container_top_padding 0px 50px 0px;
+#top-container {
+  margin-top: $banner-height / 2;
+  background: #fff image-url("background-1.jpg") repeat;
+  padding: $top-container-top-padding 0px 50px 0px;
 
-  #formal_pictures_container {
-    border: $formal_images_border_thickness silver inset;
-    height: $formal_images_container_height;
-    width: $formal_images_container_width;
+  #formal-pictures-container {
+    border: $formal-images-border-thickness silver inset;
+    height: $formal-images-container-height;
+    width: $formal-images-container-width;
     margin: auto;
 
     img {
-      height: $formal_images_height;
-      width: $formal_images_width;
+      height: $formal-images-height;
+      width: $formal-images-width;
     }
   }
 
-  .business_col{
-    height: $formal_images_container_height;
+  .business-col{
+    height: $formal-images-container-height;
   }
 
 
-  .business_col:nth-child(2){
-    min-width: $business_card_width + 8;
+  .business-col:nth-child(2){
+    min-width: $business-card-width + 8;
   }
 
-  #business_card_container {
+  #business-card-container {
     margin-left: auto;
     margin-right: auto;
-    margin-top: $business_card_height / 2;
-    height: $business_card_height + ($business_card_border_thickness * 2);
-    width: $business_card_width + ($business_card_border_thickness * 2);
+    margin-top: $business-card-height / 2;
+    height: $business-card-height + ($business-card-border-thickness * 2);
+    width: $business-card-width + ($business-card-border-thickness * 2);
 
     perspective: 1000;
 
-    #business_card {
+    #business-card {
 
       transform-style: preserve-3d;
       transition: all 1.0s linear;
@@ -190,7 +189,7 @@ body{
     }
   }
 
-  #business_card_container:hover #business_card {
+  #business-card-container:hover #business-card {
     transform: rotateY(180deg);
   }
   .face {
@@ -199,8 +198,8 @@ body{
     backface-visibility: hidden;
 
     img{
-      height: $business_card_height;
-      width: $business_card_width;
+      height: $business-card-height;
+      width: $business-card-width;
     }
   }
   .face.back {
@@ -225,8 +224,8 @@ body{
 
 
 
-#middle_portion{
-  #social_media_row{
+#middle-portion{
+  #social-media-row{
     text-align: center;
     height: 50px;
   }
@@ -248,10 +247,10 @@ body{
 
 // Projects
 #projects-container{
-  padding-top: $projects_top_padding;
+  padding-top: $projects-top-padding;
   background-color: #551A8B;
 
-  height: $projects_container_height;
+  height: $projects-container-height;
   width: $projects-container-width;
   color: white;
   // height: 700px;
@@ -295,11 +294,13 @@ body{
           {
             .glyphicon-folder-open
             {
+              position: absolute;
+              left: 50%;
               display: inline-block;
               text-align: right;
             }
 
-            .side-bar-project-name
+            .side-bar-listed-project-names
             {
               .glyphicon-folder-open
               {
@@ -321,13 +322,28 @@ body{
       }
     }
 
-    #project_main
+    #project-main
     {
-      #project-title
+      #project-pictures
       {
-        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
         background-color: red;
         height: 400px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        vertical-align: middle;
+
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          height: auto;
+          width: auto;
+        }
+
+      }
+
+      #project-name
+      {
+        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
       }
 
       #project-body
