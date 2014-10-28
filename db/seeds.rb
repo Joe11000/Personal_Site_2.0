@@ -1,7 +1,7 @@
 #Bypass mass-assignment
 Blog::Entry.attr_accessible   :title, :body
 Blog::Comment.attr_accessible :author_name, :body
-Home::Project.attr_accessible :name, :language, :description, :images
+Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures
 
 def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
   num_entries.times do |entry_num|
@@ -17,9 +17,12 @@ def create_languages_with_projects(languages_arr, num_projects_to_create)
   languages_arr.each_with_index do |lang, lang_index |
     num_projects_to_create.times do | proj_index |
       index = proj_index + (lang_index.size * lang_index)
-      project = Home::Project.create(name: "App #{index}", language: lang, description: "It does what I made it do")
-      project.update(images: [ "http://localhost:3000/assets/Beach/#{index}1.jpg", "http://localhost:3000/assets/Beach/#{index}2.jpg" ]);
+      project = Home::Project.create(name: "Beach #{index}", language: lang, description: "Beach Pictures Here", objective: "I set out to make the crocodiles into ducks on the BEACH")
+      project.update(pictures: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
     end
+
+      project = Home::Project.create(name: "Printer back", language: lang, description: "Printer Background Desc", objective: "Printer and Background")
+      project.update(pictures: [ "http://localhost:3000/assets/printer.png", "http://localhost:3000/assets/background_4.jpg" ]);
   end
 end
 
@@ -27,4 +30,20 @@ end
 
 create_blog_entries_with_comments(3, 3);
 
-create_languages_with_projects(%w[ C++ Java Javascript Rails Ruby  ], 3)
+create_languages_with_projects(%w[ Cpp Java Javascript Rails Ruby  ], 3)
+
+# Home::Project.last.update(description: "This is all the things
+
+#   I want to do
+
+#     \num_comments_per_entry
+
+#     yup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewayup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewayup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewa
+#     yup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewayup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewayup yup fdsajklf;dhsalgkr;ae efhiwof;en wjaifove;wanhiovwaprv ewhrnvw;ahjrcaeinowcrhaewfioupch epuw9r hewuiprf ewhreiopwa rehwuiaoprv hewuiapr ewa")
+
+
+# Name of project
+
+# objective - WHat I wanted to solve, do, etc
+
+# What my application does and how goal is accomplished
