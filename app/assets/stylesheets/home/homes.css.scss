@@ -254,7 +254,7 @@ body{
   height: $projects_container_height;
   width: $projects-container-width;
   color: white;
-  height: 700px;
+  // height: 700px;
 
 
   h1{
@@ -307,6 +307,9 @@ body{
               }
 
               &:hover{
+
+                cursor: pointer;
+
                 .glyphicon-folder-open
                 {
                   visibility: visible;
@@ -324,13 +327,16 @@ body{
       {
         font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
         background-color: red;
-        height: 500px;
+        height: 400px;
       }
 
       #project-body
       {
+        padding-top: 15px;
+        vertical-align: middle;
+
         background-color: green;
-        height: 500px;
+        min-height: 200px;
 
         .glyphicon-folder-open{visibility: hidden;}
       }

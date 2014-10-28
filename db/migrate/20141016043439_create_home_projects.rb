@@ -3,6 +3,7 @@ class CreateHomeProjects < ActiveRecord::Migration
     create_table :home_projects do |t|
       t.string     :name
       t.text       :language
+      t.text       :objective
       t.text       :description
       t.text       :images, array: true, default: [], null: false
 

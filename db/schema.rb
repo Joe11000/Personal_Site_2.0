@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20141016043439) do
   create_table "home_projects", force: true do |t|
     t.string   "name"
     t.text     "language"
+    t.text     "objective"
     t.text     "description"
     t.text     "images",      default: [], null: false, array: true
     t.datetime "created_at"
