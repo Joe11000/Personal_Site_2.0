@@ -1,5 +1,4 @@
 <div class="container-fluid">
-                        <span class="glyphicon glyphicon-fire"></span>
 
   <div class="row" id="banner-row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
@@ -60,7 +59,7 @@
       <div class="clearfix visible-xs-block visible-sm-block"></div>
 
       <div class="col-xs-12 col-sm-offset-1 col-sm-4 business-col" >
-        <div id="business-card-container">f
+        <div id="business-card-container">
           <div id="business-card" class="shadow">
             <div class="front face">
               <%= image_tag "Formal_Me/business_card_front_big.jpg" %>
@@ -87,7 +86,7 @@
 
         <div class="social-media-icons col-xs-4 col-sm-4">
           <%= link_to "https://github.com/joe11000" do %>
-            <%= image_tag "social_media/github.png", size: "50x50" %>
+            <%= image_tag "social_media/octocat.png", size: "50x50" %>
           <% end %>
         </div>
 
@@ -139,11 +138,12 @@
                         <div class="side-bar-listed-project-names">
                           <div class="row">
                             <div class="col-xs-4 col-sm-4 text-right">
+                              <span class="glyphicon glyphicon-hand-right"></span>
                               <span class="glyphicon glyphicon-folder-open"></span>
                             </div>
 
                             <div class="col-xs-12 col-sm-12 text-center">
-                              <p class="listed-project-name"><%= project.name %></p>
+                              <p class="listed-project-name" data-id="<%= project.id %>"><%= project.name %></p>
                             </div>
                           </div>
                         </div>
@@ -162,6 +162,7 @@
 
     <div class="col-xs-9 col-sm-9 col-md-8 col-md-8">
       <div class="row" id="project-main">
+
         <div class="col-xs-12 col-sm-12" >
           <div class="row" id="project-main">
             <% Home::Project.last.images.each do |image| %></p>
@@ -169,6 +170,7 @@
                 <%= image_tag image, height: "100%"%>
               </div>
             <% end %>
+            <div class="clearfix"></div>
           </div>
 
         </div>
@@ -176,16 +178,15 @@
 
         <div class="col-xs-12 col-sm-12" id="project-body">
           <div class="row">
-          <div class="col-xs-12 col-sm-12" id="project-name">
-            <p>Project Name</p>
-            <p><%= Home::Project.last.name %></p>
-          </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-name">
+              <p>Project Name</p>
+              <p><%= Home::Project.last.name %></p>
+            </div>
+
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-objective">
               <p>Objective:</p>
               <p><%= Home::Project.last.objective %></p>
             </div>
-
-            <div class="clearfix"></div>
 
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-description">
               <p>Description:</p>

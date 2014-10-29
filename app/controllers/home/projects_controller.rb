@@ -2,10 +2,8 @@ class Home::ProjectsController < ApplicationController
   def show
 
     debugger
-    debugger
     respond_to do |format|
-      format.json { debugger;
-                    debugger;
+      format.json {
                     debugger;
                     @project = Home::Project.last;}
 

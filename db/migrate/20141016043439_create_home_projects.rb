@@ -6,6 +6,8 @@ class CreateHomeProjects < ActiveRecord::Migration
       t.text       :objective
       t.text       :description
       t.text       :images, array: true, default: [], null: false
+      t.text       :github_link
+      t.text       :live_link
 
       t.timestamps
     end

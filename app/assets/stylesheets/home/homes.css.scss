@@ -9,7 +9,7 @@ $formal-images-container-width: $formal-images-width + ($formal-images-border-th
 //
 
 // PROJECT CONTAINER VARIABLES
-$projects-container-height: 800px;
+// $projects-container-height: 800px;
 $projects-container-width: 100%;
 $projects-top-padding: 15px;
 //
@@ -38,8 +38,9 @@ $top-container-top-padding: ($svg-height / 2) + 50;
 
 
 
-body{
+body p, body h1{
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-weight: 700;
 }
 
 //run in chrome
@@ -121,7 +122,6 @@ body{
       position: relative;
       top: -50px;
 
-      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;; }
 
     }
     .topic{
@@ -130,7 +130,6 @@ body{
           line-height: 25px;
       font-size: 20px;
 
-      input { font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; }
     }
   }
 }
@@ -143,7 +142,7 @@ body{
 //  BUSINESS CARD
 #top-container {
   margin-top: $banner-height / 2;
-  background: #fff image-url("background-1.jpg") repeat;
+  background: #fff image-url("background_1.jpg") repeat;
   padding: $top-container-top-padding 0px 50px 0px;
 
   #formal-pictures-container {
@@ -216,14 +215,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
 #middle-portion{
   #social-media-row{
     text-align: center;
@@ -238,22 +229,13 @@ body{
 
 
 
-
-
-
-
-
-
-
 // Projects
 #projects-container{
   padding-top: $projects-top-padding;
   background-color: #551A8B;
 
-  height: $projects-container-height;
   width: $projects-container-width;
   color: white;
-  // height: 700px;
 
 
   h1{
@@ -292,17 +274,19 @@ body{
 
           .panel-body
           {
-            .glyphicon-folder-open
+            .glyphicon
             {
               position: absolute;
-              left: 50%;
+              left: 40%;
               display: inline-block;
               text-align: right;
             }
 
             .side-bar-listed-project-names
             {
-              .glyphicon-folder-open
+              // p { max-width: 210px; }
+
+              .glyphicon
               {
                 visibility: hidden;
               }
@@ -311,10 +295,27 @@ body{
 
                 cursor: pointer;
 
-                .glyphicon-folder-open
+                .glyphicon-hand-right
                 {
                   visibility: visible;
                 }
+              }
+
+              .current-project{
+                visibility: visible;
+              }
+            }
+
+
+            .side-bar-listed-project-names.current-project
+            {
+              .glyphicon-folder-open
+              {
+                visibility: visible;
+              }
+              .glyphicon-hand-right
+              {
+                visibility: hidden;
               }
             }
           }
@@ -324,13 +325,19 @@ body{
 
     #project-main
     {
+        border: 3px white solid;
+        border-radius: 5px;
+        font-weight: 600;
+
+
       #project-pictures
       {
-        background-color: red;
+        // background-color: red;
         height: 400px;
         padding-top: 15px;
         padding-bottom: 15px;
         vertical-align: middle;
+        text-align: center;
 
         img{
           max-width: 100%;
@@ -338,23 +345,33 @@ body{
           height: auto;
           width: auto;
         }
-
       }
 
       #project-name
       {
-        font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
       }
 
       #project-body
       {
+
         padding-top: 15px;
         vertical-align: middle;
-
-        background-color: green;
+        color: black;
+        background-color: white;
         min-height: 200px;
+        font-size: 16px;
 
-        .glyphicon-folder-open{visibility: hidden;}
+        p:nth-of-type(1)
+        {
+          color: purple;
+        }
+
+        p:nth-of-type(2){
+          padding-left: 15px;
+          margin-bottom: 20px;
+        }
+
+        .glyphicon-folder-open { visibility: hidden; }
       }
     }
   }
