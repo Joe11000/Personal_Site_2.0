@@ -5,7 +5,7 @@ class CreateHomeProjects < ActiveRecord::Migration
       t.text       :language
       t.text       :objective
       t.text       :description
-      t.text       :images, array: true, default: [], null: false
+      t.text       :pictures, array: true, default: [], null: false
       t.text       :github_link
       t.text       :live_link
 

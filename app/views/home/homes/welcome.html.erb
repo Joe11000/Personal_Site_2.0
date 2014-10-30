@@ -140,6 +140,7 @@
                             <div class="col-xs-4 col-sm-4 text-right">
                               <span class="glyphicon glyphicon-hand-right"></span>
                               <span class="glyphicon glyphicon-folder-open"></span>
+                              <span class="glyphicon glyphicon-ban-circle"></span>
                             </div>
 
                             <div class="col-xs-12 col-sm-12 text-center">
@@ -165,9 +166,9 @@
 
         <div class="col-xs-12 col-sm-12" >
           <div class="row" id="project-main">
-            <% Home::Project.last.images.each do |image| %></p>
-              <div class="col-xs-<%= (12 / Home::Project.last.images.size).floor %> col-sm-<%= (12 / Home::Project.last.images.size).floor %> text-center" id="project-pictures">
-                <%= image_tag image, height: "100%"%>
+            <% Home::Project.last.pictures.each do |picture| %></p>
+              <div class="col-xs-<%= (12 / Home::Project.last.pictures.size).floor %> col-sm-<%= (12 / Home::Project.last.pictures.size).floor %> text-center project-pictures">
+                <%= image_tag picture, height: "100%"%>
               </div>
             <% end %>
             <div class="clearfix"></div>

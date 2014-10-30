@@ -1,7 +1,7 @@
 #Bypass mass-assignment
 Blog::Entry.attr_accessible   :title, :body
 Blog::Comment.attr_accessible :author_name, :body
-Home::Project.attr_accessible :name, :language, :description, :objective,  :images
+Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures
 
 def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
   num_entries.times do |entry_num|
@@ -18,13 +18,13 @@ def create_languages_with_projects(languages_arr, num_projects_to_create)
     num_projects_to_create.times do | proj_index |
       index = proj_index + (lang_index.size * lang_index)
       project = Home::Project.create(name: "App #{index}", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
-      project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+      project.update(pictures: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
     end
       project = Home::Project.create(name: "APPAPPAPPAPP App", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
-      project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+      project.update(pictures: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
 
       project = Home::Project.create(name: "APPAPPAPPAPPApp", language: lang, description: "I polymerized them into crocoducks", objective: "I set out to make the crocodiles into ducks")
-      project.update(images: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+      project.update(pictures: [ "http://localhost:3000/assets/printer.png", "http://localhost:3000/assets/background_4.jpg" ]);
 
 
   end

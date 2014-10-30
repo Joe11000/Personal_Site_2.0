@@ -318,6 +318,22 @@ body p, body h1{
                 visibility: hidden;
               }
             }
+
+            .side-bar-listed-project-names.current-project.unavailable
+            {
+              .glyphicon-folder-open
+              {
+                visibility: hidden;
+              }
+              .glyphicon-hand-right
+              {
+                visibility: hidden;
+              }
+              .glyphicon-ban-circle
+              {
+                visibility: visible;
+              }
+            }
           }
         }
       }
@@ -330,7 +346,7 @@ body p, body h1{
         font-weight: 600;
 
 
-      #project-pictures
+      .project-pictures
       {
         // background-color: red;
         height: 400px;

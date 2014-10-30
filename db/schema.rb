@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20141016043439) do
     t.text     "language"
     t.text     "objective"
     t.text     "description"
-    t.text     "images",      default: [], null: false, array: true
+    t.text     "pictures",    default: [], null: false, array: true
     t.text     "github_link"
     t.text     "live_link"
     t.datetime "created_at"
