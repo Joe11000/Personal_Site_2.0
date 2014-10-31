@@ -1,0 +1,317 @@
+/* line 41, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+body p, body h1 {
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-weight: 700;
+}
+
+@-webkit-keyframes draw-intro {
+  /* line 48, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  0% {
+    stroke-dasharray: 1 4000;
+    fill: rgba(241, 158, 26, 0);
+  }
+
+  /* line 49, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  75% {
+    stroke-dasharray: 4000 1;
+    fill: rgba(241, 158, 26, 0);
+  }
+
+  /* line 50, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  100% {
+    stroke-dasharray: 4000 1;
+    fill: rgba(241, 158, 26, 0.95);
+  }
+}
+
+@keyframes draw-intro {
+  /* line 55, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  0% {
+    stroke-dasharray: 1 4000;
+    fill: rgba(241, 158, 26, 0);
+  }
+
+  /* line 56, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  75% {
+    stroke-dasharray: 4000 1;
+    fill: rgba(241, 158, 26, 0);
+  }
+
+  /* line 57, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+  100% {
+    stroke-dasharray: 4000 1;
+    fill: rgba(241, 158, 26, 0.95);
+  }
+}
+
+/* line 60, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+}
+/* line 66, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  margin: auto;
+  animation-fill-mode: forwards;
+}
+/* line 75, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner {
+  height: 400px;
+  font-weight: bold;
+}
+/* line 79, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner svg {
+  position: absolute;
+  top: 0px;
+  height: 400px;
+  width: 100%;
+  min-height: 300px;
+  stroke: red;
+  stroke-width: 5;
+  stroke-dasharray: 0 2200;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+/* line 92, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner svg #svg-path-1, #banner-row #banner-container #banner svg #svg-path-2, #banner-row #banner-container #banner svg #svg-path-3 {
+  stroke: red;
+  stroke-width: 5;
+  stroke-dasharray: 4000;
+  animation-delay: 5s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation: draw-intro 4s linear forwards;
+  animation: draw-intro 4s linear forwards;
+}
+/* line 105, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner #banner-text-container {
+  position: relative;
+  top: 140px;
+  margin: auto;
+}
+/* line 110, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner #banner-text-container p#joe-noonan, #banner-row #banner-container #banner #banner-text-container p#what-i-does {
+  margin-bottom: 0px;
+  color: white;
+  font-weight: bold;
+}
+/* line 116, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner #banner-text-container #joe-noonan {
+  font-size: 50px;
+}
+/* line 118, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container #banner #banner-text-container #what-i-does {
+  font-size: 38px;
+}
+/* line 121, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container .move-up-topic {
+  position: relative;
+  top: -50px;
+}
+/* line 127, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#banner-row #banner-container .topic {
+  top: 15px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;
+}
+
+/* line 143, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container {
+  margin-top: 225px;
+  background: white url(/assets/background_1.jpg) repeat;
+  padding: 250px 0px 50px 0px;
+}
+/* line 148, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #formal-pictures-container {
+  border: 4px silver inset;
+  height: 518px;
+  width: 363px;
+  margin: auto;
+}
+/* line 154, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #formal-pictures-container img {
+  height: 510px;
+  width: 355px;
+}
+/* line 160, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container .business-col {
+  height: 518px;
+}
+/* line 165, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container .business-col:nth-child(2) {
+  min-width: 441px;
+}
+/* line 169, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #business-card-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 123.5px;
+  height: 255px;
+  width: 441px;
+  perspective: 1000;
+}
+/* line 178, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #business-card-container #business-card {
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+/* line 182, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #business-card-container #business-card div {
+  height: inherit;
+  width: inherit;
+  border: 4px silver inset;
+}
+/* line 191, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container #business-card-container:hover #business-card {
+  transform: rotateY(180deg);
+}
+/* line 194, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container .face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+/* line 199, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container .face img {
+  height: 247px;
+  width: 433px;
+}
+/* line 204, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#top-container .face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+
+/* line 218, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#middle-portion {
+  display: inline;
+}
+/* line 219, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#middle-portion #social-media-row {
+  text-align: center;
+  height: 50px;
+}
+
+/* line 233, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container {
+  padding-top: 15px;
+  background-color: #551A8B;
+  width: 100%;
+  color: white;
+}
+/* line 241, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container h1 {
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+}
+/* line 253, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column {
+  color: black;
+  font-weight: bold;
+  padding: auto;
+  height: 30px;
+  text-align: center;
+  vertical-align: center;
+}
+/* line 264, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group {
+  text-decoration: none;
+}
+/* line 272, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-heading .panel-title {
+  text-decoration: none;
+  color: purple;
+}
+/* line 278, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .glyphicon {
+  position: absolute;
+  left: 40%;
+  display: inline-block;
+  text-align: right;
+}
+/* line 290, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names .glyphicon {
+  visibility: hidden;
+}
+/* line 294, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names:hover {
+  cursor: pointer;
+}
+/* line 299, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names:hover .glyphicon-hand-right {
+  visibility: visible;
+}
+/* line 304, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names .current-project {
+  visibility: visible;
+}
+/* line 313, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names.current-project .glyphicon-folder-open {
+  visibility: visible;
+}
+/* line 317, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names.current-project .glyphicon-hand-right {
+  visibility: hidden;
+}
+/* line 325, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names.current-project.unavailable .glyphicon-folder-open {
+  visibility: hidden;
+}
+/* line 329, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names.current-project.unavailable .glyphicon-hand-right {
+  visibility: hidden;
+}
+/* line 333, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #projects-side-column .panel-group .panel .panel-body .side-bar-listed-project-names.current-project.unavailable .glyphicon-ban-circle {
+  visibility: visible;
+}
+/* line 343, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main {
+  border: 3px white solid;
+  border-radius: 5px;
+  font-weight: 600;
+}
+/* line 350, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main .project-pictures {
+  height: 400px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 358, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main .project-pictures img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+/* line 371, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main #project-body {
+  padding-top: 15px;
+  vertical-align: middle;
+  color: black;
+  background-color: white;
+  min-height: 200px;
+  font-size: 16px;
+}
+/* line 381, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main #project-body p:nth-of-type(1) {
+  color: purple;
+}
+/* line 385, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main #project-body p:nth-of-type(2) {
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+/* line 390, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
+#projects-container #projects #project-main #project-body .glyphicon-folder-open {
+  visibility: hidden;
+}
