@@ -2,7 +2,7 @@ $(function(){
 
   GLOBAL_VAR = {
     PROJECTS: {
-      projects_show_path: "http://localhost:3000/home/projects/show/",
+      // projects_show_path: "<%= Rails.application.routes.url_helpers.show_path %>", //http://localhost:3000/home/projects/show/
       previous_current_project: undefined
     }
   }
@@ -14,14 +14,14 @@ $(function(){
       // return if they clicked the project they are currently viewing
       if($(this) == GLOBAL_VAR.PROJECTS.previous_current_project)
       {
-        alert('same thing');
+        // alert('same thing');
         return;
       }
 
       // retrieve new project info
       $.ajax({
         type: "GET",
-        url: GLOBAL_VAR.PROJECTS.projects_show_path + $(this).find('p').attr('data-id'),
+        url: "<%= Rails.application.routes.url_helpers.home_show_project %>" + $(this).find('p').attr('data-id'), //home_show_project()
         success: function(data, status, jqXHR){ updateProjectData(data, 800); updateSideColIcons(project_clicked_element, status);}, //success/error/complete
         error: function(jqXHR, status, errorThrown){ /*alert("Project Info Failed To Be Retrieved. Please, Try Again Later");*/ updateSideColIcons(project_clicked_element, status);},
         dataType: "json"
@@ -32,9 +32,6 @@ $(function(){
   // After the ajax call for new content, fade old content to 0% opacity, replace it, then fade new content 100% opacity
   function updateProjectData(data, speed){
 
-    el1 = undefined
-    // console.log("pictures html = " + data.pictures)
-    // console.log(speed, data.pictures)
     el1 = $('#project-pictures-row')
     el1.fadeOut(speed, function(){ el1.replaceWith(data.pictures); el1.fadeIn(speed)});
 
