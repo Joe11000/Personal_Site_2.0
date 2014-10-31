@@ -3,11 +3,11 @@ $(function(){
   GLOBAL_VAR = {
     PROJECTS: {
       previous_current_project: undefined,
-      host: "<% (Rails.env == :production) ? 'http://localhost:3000/' : 'http://www.joe-noonan-101.herokuapp.com/' %>"
+      host: "http://www.joe-noonan-101.herokuapp.com/"
     }
   }
 
-
+  ""
 
   // when new project on side_col clicked
   $(".side-bar-listed-project-names").each(function(){

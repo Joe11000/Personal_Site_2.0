@@ -28,6 +28,7 @@ $business-card-container-width: $business-card-width + ($business-card-border-th
 $svg-height: 400px;
 $svg-min-height: 300px;
 $svg-max-height: 400px;
+$svg-delay: 1s;
 $name-font-size: 50px;
 $what-i-does-font-size: 38px;
 //
@@ -52,7 +53,7 @@ body p, body h1{
 
 // run in firefox
 @keyframes draw-intro{
-  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible; }
   75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
   100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
 }
@@ -82,22 +83,32 @@ body p, body h1{
         height: $svg-height;
         width: 100%;
         min-height: $svg-min-height;
-
+        visibility: hidden;
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
-        animation-delay: 2s;
-        -webkit-animation-delay: 2s;
+        animation-delay: $svg-delay;
+
+        // -webkit-animation-delay: $svg-delay;
+        // animation-delay: $svg-delay;
 
         #svg-path-1, #svg-path-2, #svg-path-3 {
+          -webkit-animation: draw-intro 4s linear forwards;
+          animation: draw-intro 4s linear forwards;
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
-          animation-delay: 5s;
-          -webkit-animation-delay: 2s;
+          // -webkit-animation-delay: $svg-delay;
+          // animation-delay: $svg-delay;
 
-          -webkit-animation: draw-intro 4s linear forwards;
-          animation: draw-intro 4s linear forwards;
+        }
+        #svg-path-1, #svg-path-2{
+        -webkit-animation-delay: $svg-delay;
+        animation-delay: $svg-delay;
+        }
+        #svg-path-3{
+        -webkit-animation-delay: $svg-delay + 1;
+        animation-delay: $svg-delay + 1;
         }
       }
 
@@ -129,7 +140,6 @@ body p, body h1{
       text-align: center;
       line-height: 25px;
       font-size: 20px;
-
     }
   }
 }
