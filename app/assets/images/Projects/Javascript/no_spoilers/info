@@ -1,0 +1,7 @@
+github-link = https://github.com/Joe11000/No_Spoilers
+
+name = No Spoilers
+
+objective = Let me just watch highlights without RUINING the final score in advance!!!
+
+description = This code removes spoilers from the video.nhl.com page + tells page to ignores live game updates as they come in. Paste JS in console after page loads.

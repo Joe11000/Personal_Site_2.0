@@ -1,0 +1,7 @@
+github-link = https://github.com/Joe11000/ASCII_Racer
+
+name = ASCII Racer
+
+objective = Create a racing game with ASCII characters.
+
+description = Using Ruby create a terminal based racing game with ASCII characters to watch. Just Because.
