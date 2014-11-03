@@ -46,23 +46,22 @@ body p, body h1{
 
 //run in chrome
 @-webkit-keyframes draw-intro{
-  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0); }
-  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
 }
 
 // run in firefox
 @keyframes draw-intro{
-  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible; }
-  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); }
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
 }
 
 #banner-row{
   z-index: 2;
   position: absolute;
   width: 100%;
-
 
   #banner-container{
 
@@ -72,6 +71,7 @@ body p, body h1{
     margin: auto;
 
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 
     #banner{
       height: 400px;
@@ -87,28 +87,24 @@ body p, body h1{
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
-        animation-delay: $svg-delay;
-
-        // -webkit-animation-delay: $svg-delay;
-        // animation-delay: $svg-delay;
+        -webkit-animation-delay: $svg-delay;
+                animation-delay: $svg-delay;
 
         #svg-path-1, #svg-path-2, #svg-path-3 {
           -webkit-animation: draw-intro 4s linear forwards;
-          animation: draw-intro 4s linear forwards;
+                  animation: draw-intro 4s linear forwards;
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
-          // -webkit-animation-delay: $svg-delay;
-          // animation-delay: $svg-delay;
 
         }
         #svg-path-1, #svg-path-2{
         -webkit-animation-delay: $svg-delay;
-        animation-delay: $svg-delay;
+                animation-delay: $svg-delay;
         }
         #svg-path-3{
         -webkit-animation-delay: $svg-delay + 1;
-        animation-delay: $svg-delay + 1;
+                animation-delay: $svg-delay + 1;
         }
       }
 
@@ -143,9 +139,6 @@ body p, body h1{
     }
   }
 }
-
-
-
 
 
 
@@ -354,6 +347,7 @@ body p, body h1{
         border: 3px white solid;
         border-radius: 5px;
         font-weight: 600;
+        margin-bottom: 50px;
 
 
       .project-pictures
