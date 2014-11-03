@@ -1,0 +1,12 @@
+Today I am reading the rails guides and piecing together my first rails engine application.
+
+Main Source : http://guides.rubyonrails.org/engines.html
+
+Help Drawn From : http://viget.com/extend/rails-engine-testing-with-rspec-capybara-and-factorygirl
+
+Projects Github : https://github.com/Joe11000/Engines_Rails_Guide
+
+  Extra Features I Added beyond guide:
+    * Postgresql DB
+    * RSPEC tesing
+    * Factory Girl

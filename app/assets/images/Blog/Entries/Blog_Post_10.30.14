@@ -1,0 +1,10 @@
+I struggle bused HARD in a couple topics that took me all day to fight through.
+
+1) $(#element).fadeOut(1500, function(){ replace content }).fadeIn(1500) was suppose to be
+   $(#element).fadeOut(1500, function(){ replace content; $(this).fadeIn(1500) }). It first line simply wouldn't replace the contect. It killed me.
+
+2) I kept trying to incorperate a partial view as a string inside a file.json.jbuilder ....I kept thinking when the documentation talked about including partials that it meant partial views and not partials of other .json ...UUUGH!
+
+Instead I found render_to_string which can be rendered from any respond_to format. It goes through the normal rendering process, except it doesn't set the content to the response.body. Instead it returns what is rendered as a string.
+  ie
+    @partial_i_want = render_to_string('html_partial', layout: false); render json: { content: @partial_i_want }

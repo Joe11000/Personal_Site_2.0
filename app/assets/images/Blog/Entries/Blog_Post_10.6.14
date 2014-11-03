@@ -1,0 +1,79 @@
+Today I am trying to do a lot of things
+
+
+Topics Covered :
+  A) Heroku backup PostgreSQL db using add-on "pgbackups". Allows Import and Export of PostgreSQL DB and more.
+  B) Connecting remotely to heroku application Postgresql DB
+  C) Reading Travis documentation to set up my new web page, this website, 'www.joe-noonan-102.herokuapp.com'.
+  D) Attach my
+
+A)
+  Guide:  https://devcenter.heroku.com/articles/pgbackups#downloading-a-backup
+            1. Sign into account either on site or through Heroku CLI
+            2. heroku addons:add pgbackups --app APP_NAME_HERE  # Attach add-on to application
+
+          (IT IS FREE, BUT YOU HAVE A CREDIT CARD CONNECTED TO YOUR HEROKU ACCOUNT TO PROCEED......I KNOW. I KNOW.)
+
+  Guide:  https://devcenter.heroku.com/articles/heroku-postgres-import-export
+            3. heroku pgbackups:capture --app APP_NAME_HERE
+            4. heroku pgbackups # See the db backups so far. Manual backups start with a 'b' and any automatically scheduled backup starts with an 'a'.
+            5. heroku pgbackups:url --app APP_NAME_HERE  # check out the temporary url of the backed up db. hosted by heroku on AWS that you any manual backup
+            6. curl -o latest.dump $(heroku pgbackups:url --app APP_NAME_HERE)
+            7. pg_restore  --verbose --clean --no-acl --no-owner -h localhost -d RAILS_POSTGRESQL_TEST_NAME latest.dump
+
+
+
+B)
+  Pre-Recs
+  Guide:  https://devcenter.heroku.com/articles/pgbackups#downloading-a-backup
+            1. Sign into account either on site or through Heroku CLI
+            2. heroku addons:add pgbackups --app APP_NAME_HERE  # Attach add-on to application
+
+  Guide:
+    3. heroku pgbackups --app APP_NAME_HERE # !!! Grab the name of your HEROKU_POSTGRESQL_(COLOR) !!!
+    4. heroku pg:promote HEROKU_POSTGRESQL_(COLOR) --app APP_NAME_HERE #  sets DATABASE as your DATABASE_URL.
+    5.
+
+
+
+
+
+
+
+D)
+
+  1) font saved as app/assets/fonts/myFirstFont.ttf
+
+  app/assets/stylesheets/**/*.css
+
+  @font-face {
+      font-family: myFirstFont;
+      src: url(my_font.ttf);
+  }
+
+  p { font-family: myFirstFont }
+
+https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-ruby
+
+
+
+Reading
+Travis and have it deploy passing master pushes to heroku + Travis Documentation
+
+
+HTML5
+
+CSS3
+
+Bootstrap 3
+http://www.w3schools.com/bootstrap/bootstrap_intro.asp
+
+
+Refresh Rspec Feature/Integration/Acceptance DSL
+
+P
+
+Web Sockets - * http://www.html5rocks.com/en/tutorials/websockets/basics/
+                        * Library http://socket.io/
+                       ~ https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_client_applications
+

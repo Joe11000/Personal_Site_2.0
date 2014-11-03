@@ -3,17 +3,25 @@ Blog::Entry.attr_accessible   :title, :body
 Blog::Comment.attr_accessible :author_name, :body
 Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures
 
-def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
-  num_entries.times do |entry_num|
-    entry = Blog::Entry.create(title: "Entry_#{entry_num}", body: "#{100 - (entry_num)} bottles of ginger beer\n" * 50)
+# def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
+#   num_entries.times do |entry_num|
+#     entry = Blog::Entry.create(title: "Entry_#{entry_num}", body: "#{100 - (entry_num)} bottles of ginger beer\n" * 50)
 
-    num_comments_per_entry.times do |comment_num|
-      Blog::Comment.create(author_name: "author_#{comment_num}", body: "I am the ##{comment_num} nerd\n" * 4)
-    end
-  end
-end
+#     num_comments_per_entry.times do |comment_num|
+#       Blog::Comment.create(author_name: "author_#{comment_num}", body: "I am the ##{comment_num} nerd\n" * 4)
+#     end
+#   end
+# end
 
-create_blog_entries_with_comments(3, 3);
+# create_blog_entries_with_comments(3, 3);
+
+  entry = Blog::Entry.create(title: "", body: "")
+
+
+
+  # Blog::Comment.create(author_name: "author_#{comment_num}", body: "I am the ##{comment_num} nerd\n" * 4)
+
+
 
 
   lang = "Javascript"
@@ -77,15 +85,28 @@ create_blog_entries_with_comments(3, 3);
 
   lang = "Rails"
 
+  project = Home::Project.create(name: "Joe Noonan",
+                                 language:   lang,
+                                 objective:   "Create a site to encapsolate me as a developer.",
+                                 description: "A little bit of inception for the audience. This is my web page",
+                                 github_link: "https://github.com/Joe11000/Personal_Site_2.0",
+                                 live_link:   "https://joe-noonan-101.herokuapp.com")
+  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/1.png",
+                             "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/2.png",
+                             "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/3.png"  ]);
 
   project = Home::Project.create(name: "Park Bench Projects",
                                  language:   lang,
                                  objective:   "From pitch to completion, create a final project 8 days to present to potential employers at Dev Bootcamp.",
                                  description: "Our final project",
                                  github_link: "https://github.com/Joe11000/pbp",
-                                 live_link:   "")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/pbp/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/pbp/2.png" ]);
+                                 live_link:   "https://parkbenchprojects.com")
+  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Park_Bench_Projects/1.png",
+                             "http://localhost:3000/assets/Projects/#{lang}/Park_Bench_Projects/2.png" ]);
+
+
+
+
 
   # project = Home::Project.create(name: "Blog",
   #                                language:   lang,
