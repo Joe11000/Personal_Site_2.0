@@ -1,7 +1,53 @@
 #Bypass mass-assignment
 Blog::Entry.attr_accessible   :title, :body
 Blog::Comment.attr_accessible :author_name, :body
-Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures
+Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures, :github_link, :live_link
+
+
+require 'csv'
+
+Dir[Rails.root.join('app', 'assets', 'images', 'Blog', 'Entries', '*')].each do |file|
+  title = ""
+  body = ""
+  line_counter = 0
+
+  File.open(file, "r") do |f|
+    f.each_line do |line|
+      line_counter += 1
+      if line_counter == 1
+        title = line.strip
+      else
+        body += line
+      end
+    end
+  end
+  Blog::Entry.create(title: title, body: body)
+end
+
+
+require 'yaml'
+home_projects_info = Dir[Rails.root.join('app', 'assets', 'images', 'Projects', 'projects_info.yaml')]
+
+projects_to_create = YAML.load_file(home_projects_info.first)
+
+projects_to_create.each do |proj|
+  project = Home::Project.create(proj.symbolize_keys)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# FAKER SEED METHOD
 
 # def create_blog_entries_with_comments(num_entries, num_comments_per_entry)
 #   num_entries.times do |entry_num|
@@ -12,124 +58,6 @@ Home::Project.attr_accessible :name, :language, :description, :objective,  :pict
 #     end
 #   end
 # end
-
-# create_blog_entries_with_comments(3, 3);
-
-  entry = Blog::Entry.create(title: "", body: "")
-
-
-
-  # Blog::Comment.create(author_name: "author_#{comment_num}", body: "I am the ##{comment_num} nerd\n" * 4)
-
-
-
-
-  lang = "Javascript"
-  project = Home::Project.create(name: "No Spoilers",
-                                 language:   lang,
-                                 description: "This code removes spoilers from the video.nhl.com page + tells page to ignores live game updates as they come in. Paste JS in console after page loads.",
-                                 objective:   "Let me just watch highlights without RUINING the final score in advance!!!",
-                                 github_link: "https://github.com/Joe11000/No_Spoilers",
-                                 live_link:   "")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/No_Spoilers/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/No_Spoilers/2.png" ]);
-
-
-  project = Home::Project.create(name: "Unbeatable Tic-Tac-Toe",
-                                 language:   lang,
-                                 objective:   "To create an unbeatable Tic Tac Toe game",
-                                 description: "A statically served Unbeatable Tic-Tac-Toe game. UI is HTML/CSS and powered by Javascript with the Jasmine testing framework.",
-                                 github_link: "https://github.com/Joe11000/Tic_Tac_Toe_Unbeatable",
-                                 live_link:   "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Tic_Tac_Toe/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Tic_Tac_Toe/2.png" ]);
-
-
-
-  lang = "Ruby"
-
-  project = Home::Project.create(name: "ASCII Racer",
-                                 language:   lang,
-                                 objective:   "Create a racing game with ASCII characters.",
-                                 description: "Using Ruby create a terminal based racing game with ASCII characters to watch. Just Because.",
-                                 github_link: "https://github.com/Joe11000/ASCII_Racer",
-                                 live_link:   "")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Racer/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Racer/2.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Racer/3.png" ]);
-
-  project = Home::Project.create(name: "Boggle",
-                                 language:   lang,
-                                 objective:   "Create a Boggle Game",
-                                 description: "A Boggle Game run in the Terminal. Coded in Ruby. The game only accepts valid words from the '/usr/share/dict/words' file.",
-                                 github_link: "https://github.com/Joe11000/Boggle",
-                                 live_link:   "")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Boggle/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Boggle/2.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Boggle/3.png"  ]);
-
-
-
-  lang = "Sinatra"
-
-  project = Home::Project.create(name: "Survey Gorilla",
-                                 language:   lang,
-                                 objective:   "To create a site to allow the users to create and take surveys.",
-                                 description: "This was a Dev BootCamp weekend project that was assigned to be completed in a 4 man team.",
-                                 github_link: "https://github.com/Joe11000/SurveyGorilla",
-                                 live_link:   "https://thegorillaonfire.herokuapp.com")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Survey_Gorilla/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Survey_Gorilla/2.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Survey_Gorilla/3.png" ]);
-
-
-  lang = "Rails"
-
-  project = Home::Project.create(name: "Joe Noonan",
-                                 language:   lang,
-                                 objective:   "Create a site to encapsolate me as a developer.",
-                                 description: "A little bit of inception for the audience. This is my web page",
-                                 github_link: "https://github.com/Joe11000/Personal_Site_2.0",
-                                 live_link:   "https://joe-noonan-101.herokuapp.com")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/2.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Joe_Noonan/3.png"  ]);
-
-  project = Home::Project.create(name: "Park Bench Projects",
-                                 language:   lang,
-                                 objective:   "From pitch to completion, create a final project 8 days to present to potential employers at Dev Bootcamp.",
-                                 description: "Our final project",
-                                 github_link: "https://github.com/Joe11000/pbp",
-                                 live_link:   "https://parkbenchprojects.com")
-  project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}/Park_Bench_Projects/1.png",
-                             "http://localhost:3000/assets/Projects/#{lang}/Park_Bench_Projects/2.png" ]);
-
-
-
-
-
-  # project = Home::Project.create(name: "Blog",
-  #                                language:   lang,
-  #                                objective:   "Create a programming blog",
-  #                                description: "",
-  #                                github_link: "",
-  #                                live_link:   "")
-  # project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}//1.png",
-  #                            "http://localhost:3000/assets/Projects/#{lang}//2.png" ]);
-
-
-
-
-
-  # project = Home::Project.create(name: "",
-  #                                language:   lang,
-  #                                objective:   "",
-  #                                description: "",
-  #                                github_link: "",
-  #                                live_link:   "")
-  # project.update(pictures: [ "http://localhost:3000/assets/Projects/#{lang}//1.png",
-  #                            "http://localhost:3000/assets/Projects/#{lang}//2.png" ]);
-
 
 
 
@@ -149,10 +77,23 @@ Home::Project.attr_accessible :name, :language, :description, :objective,  :pict
 # Pathname.new(File.expand_path('../app/assets/images/Projects', __FILE__))
 
 
-
-
+# create_blog_entries_with_comments(3, 3);
 # create_projects(%w[ Cpp Java Javascript Rails Ruby  ], 3)
 
-#       project = Home::Project.create(name: "Beach #{index}", language: lang, description: "Beach Pictures Here", objective: "I set out to make the crocodiles into ducks on the BEACH")
+
+
+
+
+
+
+# IF i WANT TO USE CSV IN THE FUTURE
+
+# CSV.open("myfile.csv", "w") do |csv|
+#   csv << ["row", "of", "CSV", "data"]
+#   csv << ["another", "row"]
+#   # ...
+# end
+
+
 
 

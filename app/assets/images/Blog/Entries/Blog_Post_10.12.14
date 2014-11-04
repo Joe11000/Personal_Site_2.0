@@ -1,3 +1,4 @@
+Post Name
 I was riding the struggle bus for about 5 hours. Wow did that take forever. I couldn't get the assets pipeline to display only the stylesheets I wanted instead of loading every asset file on each page (images, css, js)
 
 Here is what actually worked before we go into all the ways that didn't work. Don't worry about reading those unless you want to. Otherwise just skip that part and just take the nugget of success.

@@ -1,3 +1,4 @@
+Post Name
 Context : my namespaced ActiveRecord model CodingLanguages have_many pictures, but I don't really want to create a whole other model just for storing the asset location...so I am reading about PostgreSQL array type using Active Record.
 
 <a href="http://tastehoneyco.com/blog/postgresql-array-and-hstore-column-reference">source</a>

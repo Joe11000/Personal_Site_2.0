@@ -1,7 +1,43 @@
-github-link = https://github.com/Joe11000/No_Spoilers
 
-name = No Spoilers
+  # { "name": "No Spoilers", "language":   "Javascript", "description": "This code removes spoilers from the video.nhl.com page + tells page to ignores live game updates as they come in. Paste JS in console after page loads.",
+  #  "objective":   "Let me just watch highlights without RUINING the final score in advance!!!",
+  #  "github_link": "https://github.com/Joe11000/No_Spoilers",
+  #   "live_link":   "",
+  # "pictures": [ "http://localhost:3000/assets/Projects/Javascript/No_Spoilers/1.png",
+  #               "http://localhost:3000/assets/Projects/Javascript/No_Spoilers/2.png" ]}
 
-objective = Let me just watch highlights without RUINING the final score in advance!!!
 
-description = This code removes spoilers from the video.nhl.com page + tells page to ignores live game updates as they come in. Paste JS in console after page loads.
+  # {"name": "Unbeatable Tic-Tac-Toe", "language":   "Javascript", "objective":   "To create an unbeatable Tic Tac Toe game", "description": "A statically served Unbeatable Tic-Tac-Toe game. UI is HTML/CSS and powered by Javascript with the Jasmine testing framework.", "github_link": "https://github.com/Joe11000/Tic_Tac_Toe_Unbeatable", "live_link":   "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Javascript/Tic_Tac_Toe/1.png",
+  #                                              "http://localhost:3000/assets/Projects/Javascript/Tic_Tac_Toe/2.png" ]}
+
+  # {"name": "ASCII Racer", "language":   "Ruby", "objective":   "Create a racing game with ASCII characters.", "description": "Using Ruby create a terminal based racing game with ASCII characters to watch. Just Because.", "github_link": "https://github.com/Joe11000/ASCII_Racer", "live_link":   "",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Ruby/Racer/1.png",
+  #                            "http://localhost:3000/assets/Projects/Ruby/Racer/2.png",
+  #                            "http://localhost:3000/assets/Projects/Ruby/Racer/3.png" ]}
+
+  # {"name": "Boggle", "language":   "Ruby", "objective":   "Create a Boggle Game", "description": "A Boggle Game run in the Terminal. Coded in Ruby. The game only accepts valid words from the '/usr/share/dict/words' file.", "github_link": "https://github.com/Joe11000/Boggle", "live_link":   "",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Ruby/Boggle/1.png",
+  #                            "http://localhost:3000/assets/Projects/Ruby/Boggle/2.png",
+  #                            "http://localhost:3000/assets/Projects/Ruby/Boggle/3.png"  ]}
+
+
+
+
+  # {"name": "Survey Gorilla", "language":   "Sinatra", "objective":   "To create a site to allow the users to create and take surveys.", "description": "This was a Dev BootCamp weekend project that was assigned to be completed in a 4 man team.", "github_link": "https://github.com/Joe11000/SurveyGorilla", "live_link":   "https://thegorillaonfire.herokuapp.com",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/1.png",
+  #                            "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/2.png",
+  #                            "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/3.png" ]}
+
+
+
+  # {"name": "Joe Noonan", "language":   "Rails", "objective":   "Create a site to encapsolate me as a developer.", "description": "A little bit of inception for the audience. This is my web page", "github_link": "https://github.com/Joe11000/Personal_Site_2.0", "live_link":   "https://joe-noonan-101.herokuapp.com",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/1.png",
+  #                            "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/2.png",
+  #                            "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/3.png"  ]}
+
+  # {"name": "Park Bench Projects", "language":   "Rails", "objective":   "From pitch to completion, create a final project 8 days to present to potential employers at Dev Bootcamp.", "description": "Our final project", "github_link": "https://github.com/Joe11000/pbp", "live_link":   "https://parkbenchprojects.com",
+  #                                "pictures": [ "http://localhost:3000/assets/Projects/Rails/Park_Bench_Projects/1.png",
+  #                            "http://localhost:3000/assets/Projects/Rails/Park_Bench_Projects/2.png" ]}
+
+
