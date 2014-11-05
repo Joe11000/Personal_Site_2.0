@@ -1,4 +1,4 @@
-$banner-height: 450px;
+$banner-height: 300px;
 
 $formal-images-height: 510px;
 $formal-images-width: 355px;
@@ -25,9 +25,10 @@ $business-card-container-width: $business-card-width + ($business-card-border-th
 
 
 // SVG VARIABLES
-$svg-height: 400px;
-$svg-min-height: 300px;
-$svg-max-height: 400px;
+$banner-min-height: 200px;
+$banner-max-width: 600px;
+$banner-min-width: 400px;
+$banner-max-height: 400px;
 $svg-delay: 1s;
 $name-font-size: 50px;
 $what-i-does-font-size: 38px;
@@ -35,7 +36,8 @@ $what-i-does-font-size: 38px;
 
 // TOP CONTAINER VARIABLES
 $top-container-width: 100%;
-$top-container-top-padding: ($svg-height / 2) + 50;
+$top-container-top-padding: ($banner-height / 2);
+$formal-pics-top-padding-to-clear-topic-buttons: $top-container-top-padding + 75px; // the 50px is a guess at the right size....figure this out later
 
 
 
@@ -64,26 +66,29 @@ body p, body h1{
   width: 100%;
 
   #banner-container{
-
     position: relative;
     bottom:   0px;
     width: 100%;
-    margin: auto;
 
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 
     #banner{
-      height: 400px;
+      height-max: $banner-height;
       font-weight: bold;
+      min-height: $banner-min-height;
+      min-width: $banner-min-width;
+      max-width: $banner-max-width;
+      // padding-left: 25%;
+      margin: auto;
+
 
       svg{
-        position: absolute;
-        top: 0px;
-        height: $svg-height;
+        height: 100%;
         width: 100%;
-        min-height: $svg-min-height;
-        visibility: hidden;
+        margin: auto;
+
+        visibility: visible;
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
@@ -110,14 +115,27 @@ body p, body h1{
 
       #banner-text-container
       {
-        position: relative;
-        top: 140px;
-        margin: auto;
+        position: absolute;
+        top: 22%;
+        // left: 25%;
+        width: 100%;
+        max-width: $banner-max-width;
+
+        // height: 100%;
+        text-align: center;
+        vertical-align: middle;
 
         p#joe-noonan, p#what-i-does{
           margin-bottom: 0px;
           color: white;
           font-weight: bold;
+          width: 100%;
+          max-width: $banner-max-width;
+
+          // text-align: center;
+          float: right;
+
+
         }
 
         #joe-noonan{ font-size: $name-font-size; }
@@ -127,12 +145,10 @@ body p, body h1{
     }
     .move-up-topic {
       position: relative;
-      top: -50px;
-
-
+      top: -40px;
     }
     .topic{
-      top: 15px;
+      top: 5px;
       text-align: center;
       line-height: 25px;
       font-size: 20px;
@@ -142,9 +158,9 @@ body p, body h1{
 
 
 
-//  BUSINESS CARD
+
 #top-container {
-  margin-top: $banner-height / 2;
+  margin-top: $banner-min-height / 2;
   background: #fff image-url("background_1.jpg") repeat;
   padding: $top-container-top-padding 0px 50px 0px;
 
@@ -195,7 +211,6 @@ body p, body h1{
     transform: rotateY(180deg);
   }
   .face {
-
     position: absolute;
     backface-visibility: hidden;
 
@@ -227,9 +242,27 @@ body p, body h1{
 }
 
 
+//  formal picture move lower
+@media screen and (max-width: 991px) {
+    #top-container {
+        padding-top: $formal-pics-top-padding-to-clear-topic-buttons;
+    }
+}
+
+//  formal picture move lower
+@media screen and (max-width: 520px) {
+    #banner p{
+        font-size: 32px !important;
+    }
+}
 
 
-
+// topics movieng
+@media screen and (max-width: 785px) {
+  .move-up-topic, .topic {
+    top: 0px !important;
+  }
+}
 
 
 // Projects
@@ -353,9 +386,10 @@ body p, body h1{
       .project-pictures
       {
         // background-color: red;
-        height: 400px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        max-height: 400px;
+        max-width: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
         vertical-align: middle;
         text-align: center;
 
