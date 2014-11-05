@@ -1,3 +1,13 @@
+// screen sizes////////////
+$lg-width: 1200px;
+$md-high-end: 1199px;
+$md-low-end: 992px;
+$sm-high-end: 991px;
+$sm-low-end: 768px;
+$xs-high-end: 767px;
+// screen sizes////////////
+
+
 $banner-height: 300px;
 
 $formal-images-height: 510px;
@@ -243,14 +253,14 @@ body p, body h1{
 
 
 //  formal picture move lower
-@media screen and (max-width: 991px) {
+@media screen and (max-width: $md-high-end) {
     #top-container {
         padding-top: $formal-pics-top-padding-to-clear-topic-buttons;
     }
 }
 
 //  formal picture move lower
-@media screen and (max-width: 520px) {
+@media screen and (max-width: $xs-high-end) {
     #banner p{
         font-size: 32px !important;
     }
@@ -258,7 +268,7 @@ body p, body h1{
 
 
 // topics movieng
-@media screen and (max-width: 785px) {
+@media screen and (max-width: $md-high-end) {
   .move-up-topic, .topic {
     top: 0px !important;
   }
