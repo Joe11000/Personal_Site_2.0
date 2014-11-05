@@ -2,7 +2,7 @@ $(function(){
 
   GLOBAL_VAR = {
     PROJECTS: {
-      previous_current_project: undefined,
+      previous_current_project: $('div.side-bar-listed-project-names.current-project'),
       host: "<% (Rails.env == :production) ? 'http://localhost:3000/' : 'http://www.joe-noonan-101.herokuapp.com/' %>"
     }
   }
@@ -56,11 +56,8 @@ $(function(){
 
     if(status == 'success')
     {
-        // remove folder from old current project and place it onto the one just clicked
-      if(GLOBAL_VAR.PROJECTS.previous_current_project != undefined)
-      {
-        GLOBAL_VAR.PROJECTS.previous_current_project.removeClass('current-project').removeClass('unavailable')
-      }
+      // remove folder from old current project and place it onto the one just clicked
+      GLOBAL_VAR.PROJECTS.previous_current_project.removeClass('current-project').removeClass('unavailable')
       $(project_clicked_element).addClass('current-project').removeClass('unavailable');
       GLOBAL_VAR.PROJECTS.previous_current_project = $(project_clicked_element);
     }
@@ -70,4 +67,7 @@ $(function(){
       $(project_clicked_element).addClass('current-project').addClass('unavailable');
     }
   }
+
+  // make ea
+  $('#social-media-row > div > a > img').each(function(index, element){$(element).tooltip()});
 });

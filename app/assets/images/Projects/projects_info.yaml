@@ -3,7 +3,7 @@
     name: "No Spoilers"
     language: "Javascript"
     objective: "Let me just watch highlights without RUINING the final score in advance!!!"
-    description: "This code removes spoilers from the video.nhl.com page + tells page to ignores live game updates as they come in. Paste JS in console after page loads."
+    description: "This code blocks spoilers from the video.nhl.com page and tells page to ignores live game updates as they come in. Just paste the Javascript code in browser's console after page loads. I am working on a chrome extension version so you won't have to copy and paste the code in the future."
     github_link: "https://github.com/Joe11000/No_Spoilers"
     live_link: ""
     pictures:
@@ -14,7 +14,7 @@
     name: "Unbeatable Tic-Tac-Toe"
     language: "Javascript"
     objective: "To create an unbeatable Tic Tac Toe game"
-    description: "A statically served Unbeatable Tic-Tac-Toe game. UI is HTML/CSS and powered by Javascript with the Jasmine testing framework."
+    description: "A statically served and unbeatable Tic-Tac-Toe game. The UI is HTML/CSS and powered by Javascript with the Jasmine testing framework."
     github_link: "https://github.com/Joe11000/Tic_Tac_Toe_Unbeatable"
     live_link: "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/"
     pictures:

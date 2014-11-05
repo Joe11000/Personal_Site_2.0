@@ -39,7 +39,7 @@ $banner-min-height: 200px;
 $banner-max-width: 600px;
 $banner-min-width: 400px;
 $banner-max-height: 400px;
-$svg-delay: 1s;
+$svg-delay: .5s;
 $name-font-size: 50px;
 $what-i-does-font-size: 38px;
 //
@@ -47,7 +47,7 @@ $what-i-does-font-size: 38px;
 // TOP CONTAINER VARIABLES
 $top-container-width: 100%;
 $top-container-top-padding: ($banner-height / 2);
-$formal-pics-top-padding-to-clear-topic-buttons: $top-container-top-padding + 75px; // the 50px is a guess at the right size....figure this out later
+$formal-pics-top-padding-to-clear-topic-buttons: $top-container-top-padding + 75px; // the 75px is a guess at the right size....figure this out later
 
 
 
@@ -58,16 +58,30 @@ body p, body h1{
 
 //run in chrome
 @-webkit-keyframes draw-intro{
-  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  backface-visibility: visible;}
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);   backface-visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95);   backface-visibility: visible;}
 }
 
 // run in firefox
 @keyframes draw-intro{
-  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
+  0% { stroke-dasharray: 1 4000 ;  fill: rgba(241, 158, 26,  0);;   backface-visibility: visible;}
+  75% { stroke-dasharray: 4000 1;  fill: rgba(241, 158, 26,  0);;   backface-visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95);   backface-visibility: visible;}
+}
+
+//run in chrome
+@-webkit-keyframes draw-intro-reverse{
+  0% { stroke-dasharray: 1 4000 1; fill: rgba(241, 158, 26, 0);   backface-visibility: visible;}
+  75% { stroke-dasharray: 1 1 4000;  fill: rgba(241, 158, 26,  0);   backface-visibility: visible;}
+  100% { stroke-dasharray: 1 1 4000 ;  fill: rgba(241, 158, 26,  .95);   backface-visibility: visible;}
+}
+
+// run in firefox
+@keyframes draw-intro-reverse{
+  0% { stroke-dasharray: 1 4000 1; fill: rgba(241, 158, 26, 0);  backface-visibility: visible;}
+  75% { stroke-dasharray: 1 1 4000;  fill: rgba(241, 158, 26,  0);   backface-visibility: visible;}
+  100% { stroke-dasharray: 1 1 4000 ;  fill: rgba(241, 158, 26,  .95);   backface-visibility: visible;}
 }
 
 #banner-row{
@@ -89,7 +103,6 @@ body p, body h1{
       min-height: $banner-min-height;
       min-width: $banner-min-width;
       max-width: $banner-max-width;
-      // padding-left: 25%;
       margin: auto;
 
 
@@ -98,7 +111,6 @@ body p, body h1{
         width: 100%;
         margin: auto;
 
-        visibility: visible;
         stroke: red;
         stroke-width: 5;
         stroke-dasharray: 0 2200;
@@ -112,14 +124,27 @@ body p, body h1{
           stroke-width: 5;
           stroke-dasharray: 4000;
 
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+
         }
-        #svg-path-1, #svg-path-2{
+
+        #svg-path-2 {
+          -webkit-animation: draw-intro-reverse 4s linear forwards;
+                  animation: draw-intro-reverse 4s linear forwards;
+          stroke: red;
+          stroke-width: 5;
+          stroke-dasharray: 4000;
+
+        }
+        #svg-path-1{
         -webkit-animation-delay: $svg-delay;
                 animation-delay: $svg-delay;
         }
+
         #svg-path-3{
-        -webkit-animation-delay: $svg-delay + 1;
-                animation-delay: $svg-delay + 1;
+        -webkit-animation-delay: $svg-delay + .6;
+                animation-delay: $svg-delay + .6;
         }
       }
 
@@ -127,11 +152,8 @@ body p, body h1{
       {
         position: absolute;
         top: 22%;
-        // left: 25%;
         width: 100%;
         max-width: $banner-max-width;
-
-        // height: 100%;
         text-align: center;
         vertical-align: middle;
 
@@ -141,11 +163,7 @@ body p, body h1{
           font-weight: bold;
           width: 100%;
           max-width: $banner-max-width;
-
-          // text-align: center;
           float: right;
-
-
         }
 
         #joe-noonan{ font-size: $name-font-size; }
@@ -238,12 +256,10 @@ body p, body h1{
 
 
 
-
-
-
-
-
 #middle-portion{
+  p{
+    font-size: 30px;
+  }
   #social-media-row{
     text-align: center;
     height: 50px;
@@ -260,7 +276,7 @@ body p, body h1{
 }
 
 //  formal picture move lower
-@media screen and (max-width: $xs-high-end) {
+@media screen and (max-width: 564px) { // number should be 510 but if 44px off for some reason!!??
     #banner p{
         font-size: 32px !important;
     }
@@ -301,7 +317,6 @@ body p, body h1{
       font-weight: bold;
       padding: auto;
       height: 30px;
-      // width: 80%;
 
       text-align: center;
       vertical-align: center;
