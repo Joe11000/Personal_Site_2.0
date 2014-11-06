@@ -1,6 +1,6 @@
 body
 {
-  background: image-url('Blog/lap.jpg')  no-repeat center center;
+  background: asset-path('blog/lap.jpg')  no-repeat center center;
 }
 @font-face {
   font-family: joe_font;
@@ -17,7 +17,7 @@ body
 
 #blog_site
 {
-  background: image-url('Blog/OpenBook.jpg') no-repeat center center;
+  background: image-url('blog/OpenBook.jpg') no-repeat center center;
 
   #blog_book
   {

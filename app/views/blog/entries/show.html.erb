@@ -1,7 +1,7 @@
 <div id="blog_site">
   <div class="back_button">
     <%= link_to root_path do %>
-      <%= image_tag "Blog/prev_site.png", size: "60x60", id: "prev_site" %>
+      <%= image_tag "blog/prev_site.png", size: "60x60", id: "prev_site" %>
     <% end %>
   </div>
 
@@ -11,10 +11,10 @@
       <h1>Comments</h1>
       <div class="<%= "hidden" if @is_first_entry %>" id="back_arrows">
         <%= link_to blog_entry_path(1) do %>
-          <%= image_tag "Blog/double_arrow.png", size: "30x30", id: "back_double_arrow" %>
+          <%= image_tag "blog/double_arrow.png", size: "30x30", id: "back_double_arrow" %>
         <% end %>
         <%= link_to blog_entry_path(@blog_entry_w_comments.id - 1) do %>
-          <%= image_tag "Blog/arrow.png", size: "30x30", id: "back_arrow" %>
+          <%= image_tag "blog/arrow.png", size: "30x30", id: "back_arrow" %>
         <% end %>
       </div>
 
@@ -57,10 +57,10 @@
       <div id="forward_arrows">
         <div class="<%= "hidden" if @is_latest_entry %>">
           <%= link_to(blog_entry_path(0)) do%>
-            <%= image_tag "Blog/double_arrow.png", size: "30x30", id: "forward_double_arrow" %>
+            <%= image_tag "blog/double_arrow.png", size: "30x30", id: "forward_double_arrow" %>
           <% end %>
           <%= link_to(blog_entry_path(@blog_entry_w_comments.id + 1)) do%>
-            <%= image_tag "Blog/arrow.png", size: "30x30", id: "forward_arrow" %>
+            <%= image_tag "blog/arrow.png", size: "30x30", id: "forward_arrow" %>
           <% end %>
         </div>
       </div>

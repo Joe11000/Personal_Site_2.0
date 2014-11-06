@@ -1,6 +1,6 @@
 /* line 2, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
 body {
-  background: url(/assets/Blog/lap.jpg) no-repeat center center;
+  background: "/assets/blog/lap.jpg" no-repeat center center;
 }
 
 @font-face {
@@ -22,7 +22,7 @@ body {
 
 /* line 19, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
 #blog_site {
-  background: url(/assets/Blog/OpenBook.jpg) no-repeat center center;
+  background: url(/assets/blog/OpenBook.jpg) no-repeat center center;
 }
 /* line 23, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
 #blog_site #blog_book {

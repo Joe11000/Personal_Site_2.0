@@ -6,7 +6,7 @@ Home::Project.attr_accessible :name, :language, :description, :objective,  :pict
 
 require 'csv'
 
-Dir[Rails.root.join('app', 'assets', 'images', 'Blog', 'Entries', '*')].each do |file|
+Dir[Rails.root.join('app', 'assets', 'images', 'blog', 'entries', '*')].each do |file|
   title = ""
   body = ""
   line_counter = 0
@@ -26,7 +26,7 @@ end
 
 
 require 'yaml'
-home_projects_info = Dir[Rails.root.join('app', 'assets', 'images', 'Projects', 'projects_info.yaml')]
+home_projects_info = Dir[Rails.root.join('app', 'assets', 'images', 'projects', 'projects_info.yaml')]
 
 projects_to_create = YAML.load_file(home_projects_info.first)
 
@@ -66,7 +66,7 @@ end
 #     num_projects_to_create.times do | proj_index |
 #       index = proj_index + (lang_index.size * lang_index)
 #       project = Home::Project.create(name: "Beach #{index}", language: lang, description: "Beach Pictures Here", objective: "I set out to make the crocodiles into ducks on the BEACH")
-#       project.update(pictures: [ "http://localhost:3000/assets/Beach/1.jpg", "http://localhost:3000/assets/Beach/2.jpg" ]);
+#       project.update(pictures: [ "http://localhost:3000/assets/beach/1.jpg", "http://localhost:3000/assets/beach/2.jpg" ]);
 #     end
 
 #       project = Home::Project.create(name: "Printer back", language: lang, description: "Printer Background Desc", objective: "Printer and Background")
@@ -74,7 +74,7 @@ end
 #   end
 # end
 
-# Pathname.new(File.expand_path('../app/assets/images/Projects', __FILE__))
+# Pathname.new(File.expand_path('../app/assets/images/projects', __FILE__))
 
 
 # create_blog_entries_with_comments(3, 3);
