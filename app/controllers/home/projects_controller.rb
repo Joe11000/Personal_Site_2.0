@@ -8,11 +8,11 @@ class Home::ProjectsController < ApplicationController
                       @project = Home::Project.find(params[:id]);
                       @controller_string = {
                                              description: @project.description,
-                                             pictures: render_to_string('show', layout: false, formats: [:html]),
+                                             pictures:    render_to_string('show', layout: false, formats: [:html]),
                                              github_link: @project.github_link,
-                                             live_link: @project.live_link,
-                                             name: @project.name,
-                                             objective: @project.objective
+                                             live_link:   @project.live_link,
+                                             name:        @project.name,
+                                             objective:   @project.objective
                                            }
                        render json: @controller_string and return
                      rescue

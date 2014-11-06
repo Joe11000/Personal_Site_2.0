@@ -198,7 +198,7 @@ body p, body h1 {
 /* line 184, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */
 #top-container {
   margin-top: 100px;
-  background: white "/assets/background_1.jpg" repeat;
+  background: white url(/assets/background_1.jpg) repeat;
   padding: 150px 0px 50px 0px;
 }
 /* line 189, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss */

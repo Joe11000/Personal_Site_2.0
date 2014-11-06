@@ -7,8 +7,8 @@
     github_link: "http://github.com/Joe11000/No_Spoilers"
     live_link: ""
     pictures:
-      - "http://localhost:3000/assets/Projects/Javascript/No_Spoilers/1.png"
-      - "http://localhost:3000/assets/Projects/Javascript/No_Spoilers/2.png"
+      - "Projects/Javascript/No_Spoilers/1.png"
+      - "Projects/Javascript/No_Spoilers/2.png"
 
   -
     name: "Unbeatable Tic-Tac-Toe"
@@ -18,8 +18,8 @@
     github_link: "http://github.com/Joe11000/Tic_Tac_Toe_Unbeatable"
     live_link: "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/"
     pictures:
-      - "http://localhost:3000/assets/Projects/Javascript/Tic_Tac_Toe/1.png"
-      - "http://localhost:3000/assets/Projects/Javascript/Tic_Tac_Toe/2.png"
+      - "Projects/Javascript/Tic_Tac_Toe/1.png"
+      - "Projects/Javascript/Tic_Tac_Toe/2.png"
 
   -
     name: "ASCII Racer"
@@ -29,9 +29,9 @@
     github_link: "http://github.com/Joe11000/ASCII_Racer"
     live_link: ""
     pictures:
-      - "http://localhost:3000/assets/Projects/Ruby/Racer/1.png"
-      - "http://localhost:3000/assets/Projects/Ruby/Racer/2.png"
-      - "http://localhost:3000/assets/Projects/Ruby/Racer/3.png"
+      - "Projects/Ruby/Racer/1.png"
+      - "Projects/Ruby/Racer/2.png"
+      - "Projects/Ruby/Racer/3.png"
 
   -
     name: "Boggle"
@@ -41,9 +41,9 @@
     github_link: "http://github.com/Joe11000/Boggle"
     live_link: ""
     pictures:
-      - "http://localhost:3000/assets/Projects/Ruby/Boggle/1.png"
-      - "http://localhost:3000/assets/Projects/Ruby/Boggle/2.png"
-      - "http://localhost:3000/assets/Projects/Ruby/Boggle/3.png"
+      - "Projects/Ruby/Boggle/1.png"
+      - "Projects/Ruby/Boggle/2.png"
+      - "Projects/Ruby/Boggle/3.png"
 
   -
     name: "Survey Gorilla"
@@ -53,9 +53,9 @@
     github_link: "http://github.com/Joe11000/SurveyGorilla"
     live_link: "http://thegorillaonfire.herokuapp.com"
     pictures:
-      - "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/1.png"
-      - "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/2.png"
-      - "http://localhost:3000/assets/Projects/Sinatra/Survey_Gorilla/3.png"
+      - "Projects/Sinatra/Survey_Gorilla/1.png"
+      - "Projects/Sinatra/Survey_Gorilla/2.png"
+      - "Projects/Sinatra/Survey_Gorilla/3.png"
 
   -
     name: "Joe Noonan"
@@ -65,8 +65,8 @@
     github_link: "http://github.com/Joe11000/Personal_Site_2.0"
     live_link: "http://joe-noonan-101.herokuapp.com"
     pictures:
-      - "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/1.png"
-      - "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/2.png"
+      - "Projects/Rails/Joe_Noonan/1.png"
+      - "Projects/Rails/Joe_Noonan/2.png"
 
   # -
   #   name: "Park Bench Projects"
@@ -76,5 +76,5 @@
   #   github_link: "http://github.com/Joe11000/pbp"
   #   live_link: "http://parkbenchprojects.com"
   #   pictures:
-  #     - "http://localhost:3000/assets/Projects/Rails/Park_Bench_Projects/1.png"
-  #     - "http://localhost:3000/assets/Projects/Rails/Park_Bench_Projects/2.png"
+  #     - "Projects/Rails/Park_Bench_Projects/1.png"
+  #     - "Projects/Rails/Park_Bench_Projects/2.png"
