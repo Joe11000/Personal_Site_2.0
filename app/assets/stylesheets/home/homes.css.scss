@@ -106,7 +106,6 @@ body p, body h1{
       max-width: $banner-max-width;
       margin: auto;
 
-
       svg{
         height: 100%;
         width: 100%;
@@ -118,16 +117,12 @@ body p, body h1{
         -webkit-animation-delay: $svg-delay;
                 animation-delay: $svg-delay;
 
-        #svg-path-1, #svg-path-2, #svg-path-3 {
+        #svg-path-1, #svg-path-3 {
           -webkit-animation: draw-intro 4s linear forwards;
                   animation: draw-intro 4s linear forwards;
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
-
-          // -webkit-backface-visibility: hidden;
-          // backface-visibility: hidden;
-
         }
 
         #svg-path-2 {
@@ -337,7 +332,6 @@ body p, body h1{
         {
           .panel-heading
           {
-            // background-color: orange; border: 3px red solid;
             .panel-title{ text-decoration: none; color: purple;  }
           }
 
@@ -432,7 +426,7 @@ body p, body h1{
           img
           {
             position: absolute;
-            top: 50%;                         /* 3 */
+            top: 50%;
             transform: translate(-50%, -50%);
             margin-top: auto;
             margin-bottom: auto;
