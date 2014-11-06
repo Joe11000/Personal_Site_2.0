@@ -1,7 +1,0 @@
-github-link = https://github.com/Joe11000/Boggle
-
-name = Boggle
-
-objective = Create a Boggle Game
-
-description = A Boggle Game run in the Terminal. Coded in Ruby. The game only accepts valid words from the '/usr/share/dict/words' file.
