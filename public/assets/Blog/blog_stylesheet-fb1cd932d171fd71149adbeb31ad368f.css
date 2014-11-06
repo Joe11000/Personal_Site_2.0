@@ -1,0 +1,135 @@
+/* line 2, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+body {
+  background: url(/assets/Blog/lap.jpg) no-repeat center center;
+}
+
+@font-face {
+  font-family: joe_font;
+  src: url(/assets/Joe_Font_4.ttf);
+}
+
+/* line 10, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+.joe-font {
+  font-family: joe_font;
+  color: green;
+  font-size: 24px;
+}
+
+/* line 16, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#comments_page, #entries_page {
+  padding-top: 35px;
+}
+
+/* line 19, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site {
+  background: url(/images/Blog/OB.jpg) no-repeat center center;
+}
+/* line 23, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book {
+  height: 800px;
+}
+/* line 28, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page > h1 {
+  text-align: center;
+}
+/* line 32, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #new_comment {
+  margin-top: 25px;
+}
+/* line 35, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #back_arrows {
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  z-index: 2;
+}
+/* line 43, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #back_arrow, #blog_site #blog_book #comments_page #back_double_arrow {
+  float: left;
+  margin-bottom: 0px;
+  display: inline;
+}
+/* line 50, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list {
+  margin-top: 30px;
+  height: 415px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 57, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list .comment {
+  min-height: 45px;
+  border-radius: 10px;
+}
+/* line 62, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list .comment .comments_body {
+  margin: 0px;
+  font-size: 16px;
+}
+/* line 64, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list .comment .comments_body p {
+  margin: 0px;
+}
+/* line 69, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list .comment .comment_author_name {
+  text-align: right;
+  font-size: 14px;
+}
+/* line 74, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #comments_page #comments_list .comment .log_date_time {
+  text-align: left;
+  font-size: 14px;
+}
+/* line 85, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #entries_page #forward_arrows {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  z-index: 2;
+}
+/* line 93, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #entries_page #forward_arrow, #blog_site #blog_book #entries_page #forward_double_arrow {
+  float: right;
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  margin-bottom: 0px;
+  display: inline;
+}
+/* line 104, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #entries_page #entry_title {
+  text-align: center;
+  margin-bottom: 0px;
+}
+/* line 111, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #entries_page #entry_body {
+  height: 595px;
+  overflow: scroll;
+}
+/* line 118, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book #page_number {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 18px;
+}
+/* line 125, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#blog_site #blog_book .log_date {
+  font-size: 16px;
+}
+
+/* line 130, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+#prev_site {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+/* line 138, /Users/user/coding/ruby/rails/upgrade_personal_site/app/assets/stylesheets/blog/blog_stylesheet.css.scss */
+.log_date_time {
+  font-size: 15px;
+  margin-top: 0px;
+}

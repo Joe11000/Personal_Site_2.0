@@ -1,0 +1,169 @@
+Post Name
+I just saw the release of the Rspec 3 changes on this site, http://myronmars.to/n/dev-blog/2014/05/notable-changes-in-rspec-3, and the ones I want to remember most are below
+
+
+1) match matcher can be used for data structures
+
+      hash = {
+        :a => {
+          :b => ["foo", 5],
+          :c => { :d => 2.05 }
+        }
+      }
+
+      expect(hash).to match(
+        :a => {
+          :b => a_collection_containing_exactly(
+            an_instance_of(Fixnum),
+            a_string_starting_with("f")
+          ),
+          :c => { :d => (a_value < 3) }
+        }
+      )
+
+
+2) Verifying double behaviour can also be enabled globally on partial doubles. (A partial double is when you mock or stub an existing object: expect(MyClass).to receive(:some_message).)
+spec/spec_helper.rb
+RSpec.configure do |config|
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
+end
+
+
+3) The new types of doubles (instance_double, class_double, and object_double)  will all raise an exception if those conditions aren’t met. If the class has not been loaded (usually when running a unit test in isolation), then no exceptions will be raised.
+
+4) Removed mock and stub aliases of double
+
+5) mock_model and stub_model have been extracted into the rspec-activemodel-mocks gem.
+
+6) new 'all' matcher
+
+  expect([1, 3, 5]).to all( be_odd )
+
+7) New 'output' matcher
+
+  expect { print "foo" }.to output("foo").to_stdout
+  expect { print "foo" }.to output(/fo/).to_stdout
+  expect { warn  "bar" }.to output(/bar/).to_stderr
+
+8) new 'be_between' matcher
+
+    # like `Comparable#between?`, it is inclusive by default
+    expect(10).to be_between(5, 10)
+
+    # ...but you can make it exclusive:
+    expect(10).not_to be_between(5, 10).exclusive
+
+    # ...or explicitly label it inclusive:
+    expect(10).to be_between(5, 10).inclusive
+
+
+9) expect([2, 1, 3]).to contain_exactly(1, 2, 3)
+
+
+10) New names for hooks :example and :context
+   :example is aliased from :each ie before(:example)
+   :suite is aliased from :all ie before(:suite)
+   :all and :each will never be depricated
+
+11) Example groups can now be defined
+
+      RSpec.configure do |config|
+        config.alias_example_group_to :describe_model, :type => :model
+      end
+
+    Rspec 2 introduced
+
+      RSpec.configure do |config|
+        config.alias_example_to :fit, :focus => true
+      end
+
+12) fdescribe
+
+    *) xdescribe/xcontext, like xit for examples, can be used to temporarily skip an example group
+
+    *) fdescribe/fcontext, like fit for examples, can be used to temporarily add :focus => true metadata to an example group so that you can easily filter to the focused examples and groups via config.filter_run :focus
+
+13) Changes to pending semantics (and introduction of skip)
+
+     *) # pending examples will now be run to see they pass. If they don't pass then they will act as before. If they do pass they will cause a failure.
+
+
+  # skip doesn't run the context of
+  skip 'not implemented yet' do
+  end
+
+14) --dry-run
+
+  rspec spec/ --dry-run # don't run any examples. #review your suite’s documentation output without waiting for your specs to run
+
+
+15) 'is_expected' follows expect syntax better than 'should'. Do the first in case 'should' is ever depricated.
+    describe Post do
+      it { is_expected.to allow_mass_assignment_of(:title) }
+    end
+
+    describe Post do
+      it { should allow_mass_assignment_of(:title) }
+    end
+
+16) 'register_ordering' is how to order example execution
+
+    describe MyClass, :order => :description_length do
+      # ...
+    end
+
+17) 'its' has been extracted into the new 'rspec-its' gem
+18) The --debug CLI option has been removed.
+
+19) Compound Matcher Expressions
+
+    expect(alphabet).to start_with("a").and end_with("z")
+    expect(stoplight.color).to eq("red").or eq("green").or eq("yellow")
+
+  These are aliased to the & and | operators:
+
+    expect(alphabet).to start_with("a") & end_with("z")
+    expect(stoplight.color).to eq("red") | eq("green") | eq("yellow")
+
+20)
+
+    s = "food"
+    expect { s = "barn" }.to change { s }.
+      from( a_string_matching(/foo/) ).
+      to( a_string_matching(/bar/) )
+
+    expect { |probe|
+      "food".tap(&probe)
+    }.to yield_with_args( a_string_starting_with("f") )
+
+
+
+21) Rspec3 can refuse all monkey patching
+RSpec.configure do |c|
+  c.disable_monkey_patching!
+end
+
+
+################################### shared_examples_of  and  it_behaves_like
+
+
+    shared_examples_for "a measurable object" do |measurement, measurement_methods|
+      measurement_methods.each do |measurement_method|
+        it "should return #{measurement} from ##{measurement_method}" do
+          subject.send(measurement_method).should == measurement
+        end
+      end
+    end
+
+    describe Array, "with 3 items" do
+      subject { [1, 2, 3] }
+      it_behaves_like "a measurable object", 3, [:size, :length]
+    end
+
+    describe String, "of 6 characters" do
+      subject { "FooBar" }
+      it_behaves_like "a measurable object", 6, [:size, :length]
+    end
+#################################################
