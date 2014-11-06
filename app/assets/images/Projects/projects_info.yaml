@@ -67,7 +67,6 @@
     pictures:
       - "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/1.png"
       - "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/2.png"
-      - "http://localhost:3000/assets/Projects/Rails/Joe_Noonan/3.png"
 
   -
     name: "Park Bench Projects"
