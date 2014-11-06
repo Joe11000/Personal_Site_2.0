@@ -28,6 +28,7 @@ end
 require 'yaml'
 home_projects_info = Dir[Rails.root.join('app', 'assets', 'images', 'projects', 'projects_info.yaml')]
 
+
 projects_to_create = YAML.load_file(home_projects_info.first)
 
 projects_to_create.each do |proj|
