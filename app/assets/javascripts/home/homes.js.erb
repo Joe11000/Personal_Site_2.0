@@ -36,20 +36,31 @@ $(function(){
     el1.fadeOut(speed, function(){ el1.replaceWith(data.pictures); el1.fadeIn(speed)});
 
     el2 = $('#project-name p:nth-child(2)')
-    console.log("project-name from ->" + el2.text() + ", to -> " + data.name)
     el2.fadeOut(speed, function(){ el2.text(data.name); el2.fadeIn(speed); })
 
     el3 = $('#project-objective p:nth-child(2)')
-    console.log("project-objective from ->" + el3.text() + ", to -> " + data.objective)
     el3.fadeOut(speed, function(){ el3.text(data.objective); el3.fadeIn(speed); });
 
     el4 = $('#project-description p:nth-child(2)');
-    console.log("project-description from ->" + el4.text() + ", to -> " + data.description)
     el4.fadeOut(speed, function(){ el4.text(data.description); el4.fadeIn(speed); });
 
-    // $('#project-live_link').fadeOut(speed, function(){ $(this).html(data.live_link) }).fadeIn(speed)
-    // $('#project-github_link').fadeOut(speed, function(){ $(this).html(data.github_link) }).fadeIn(speed)
+    el5 = $('#project-live-link')
+    el5.fadeOut(speed, function(){
+      if(data.live_link != "")
+      {
+        el5.attr('href', data.live_link);
+        el5.fadeIn(speed);
+      }
+    });
 
+    el6 = $('#project-github-link');
+    el6.fadeOut(speed, function(){
+      if(data.github_link != "")
+      {
+        el6.attr('href', data.github_link);
+        el6.fadeIn(speed);
+      }
+    });
   }
   function updateSideColIcons(project_clicked_element, status)
   {
@@ -68,6 +79,9 @@ $(function(){
     }
   }
 
-  // make ea
+  // make each of the tool tips on the screen work
   $('#social-media-row > div > a > img').each(function(index, element){$(element).tooltip()});
+  $('#project-live-link img').tooltip();
+  $('#project-github-link img').tooltip();
+
 });
