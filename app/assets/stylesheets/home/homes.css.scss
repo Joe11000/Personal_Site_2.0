@@ -181,11 +181,9 @@ body p, body h1{
 }
 
 
-
-
 #top-container {
   margin-top: $banner-min-height / 2;
-  background: #fff image-url("background_1.jpg") repeat;
+  background: #fff asset-path("background_1.jpg") repeat;
   padding: $top-container-top-padding 0px 50px 0px;
 
   #formal-pictures-container {
