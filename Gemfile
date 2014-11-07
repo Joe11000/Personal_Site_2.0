@@ -45,6 +45,7 @@ gem 'jquery-color', '~> 2.1.2'
 gem "protected_attributes", '~> 1.0.8'
 gem 'foreman', '~> 0.74.0'
 gem 'whenever', '~> 0.9.4' # cron jobs
+# gem "sprockets-helpers", "~> 0.2" # allows for obtaining digest of an asset in scss file
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
