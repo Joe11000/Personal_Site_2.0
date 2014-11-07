@@ -1,0 +1,7 @@
+Post Name
+Looking at what new features that rails 4 has over rails 3.x.x
+
+
+using arrays or hashes native to postgres in rails migrations
+
+http://jes.al/2013/11/using-postgres-hstore-rails4/
