@@ -1,7 +1,6 @@
 <div class="row" id="project-pictures-row">
   <% @project.pictures.each do |picture| %></p>
     <div class="col-xs-<%= (12 / @project.pictures.size).floor %> col-sm-<%= (12 / @project.pictures.size).floor %> text-center project-pictures">
-      <% debugger %>
       <%= image_tag asset_path(picture), height: "100%"%>
     </div>
   <% end %>

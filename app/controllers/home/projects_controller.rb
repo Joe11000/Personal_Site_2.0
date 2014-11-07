@@ -1,7 +1,6 @@
 class Home::ProjectsController < ApplicationController
   def show
 
-    # debugger
     respond_to do |format|
       format.json {
                     begin

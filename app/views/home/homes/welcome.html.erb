@@ -53,7 +53,7 @@
 
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-1 business-col">
-        <div id="formal-pictures-container"><%= image_tag asset_path("formal_me/1.jpg") %></div>
+        <div id="formal-pictures-container"><%= image_tag asset_url("formal_me/1.jpg") %></div>
       </div>
 
       <div class="clearfix visible-xs-block visible-sm-block"></div>
@@ -62,10 +62,10 @@
         <div id="business-card-container">
           <div id="business-card" class="shadow">
             <div class="front face">
-              <%= image_tag asset_path("formal_me/business_card_front_big.jpg") %>
+              <%= image_tag asset_url("formal_me/business_card_front_big.jpg") %>
             </div>
             <div class="back face">
-              <%= image_tag asset_path("formal_me/business_card_back_big.jpg")%>
+              <%= image_tag asset_url("formal_me/business_card_back_big.jpg")%>
             </div>
           </div>
         </div>
@@ -89,19 +89,19 @@
 
         <div class="social-media-icons col-xs-4 col-sm-4">
             <%= link_to "https://github.com/joe11000" do %>
-              <%= image_tag asset_path("github.png"), size: "50x50", title: "Github", data: { placement: "bottom", toggle: "tooltip"} %>
+              <%= image_tag asset_url("github.png"), size: "50x50", title: "Github", data: { placement: "bottom", toggle: "tooltip"} %>
             <% end %>
         </div>
 
         <div class="social-media-icons col-xs-4 col-sm-4">
           <%= link_to "http://www.linkedin.com/in/joenoonan27/", title: "linkedIn", data: { placement: "top", toggle: "tooltip"} do %>
-            <%= image_tag asset_path("social_media/linkedin.png"), size: "50x50", title: "LinkedIn", data: { placement: "bottom", toggle: "tooltip"}%>
+            <%= image_tag asset_url("social_media/linkedin.png"), size: "50x50", title: "LinkedIn", data: { placement: "bottom", toggle: "tooltip"}%>
           <% end %>
         </div>
 
         <div class="social-media-icons col-xs-4 col-sm-4">
           <%= link_to "http://www.twitter.com/LiveItUp227", title: "Twitter", data: { placement: "top", toggle: "tooltip"} do %>
-            <%= image_tag asset_path("social_media/twitter.png"), size: "50x50", title: "Twitter", data: { placement: "bottom", toggle: "tooltip"} %>
+            <%= image_tag asset_url("social_media/twitter.png"), size: "50x50", title: "Twitter", data: { placement: "bottom", toggle: "tooltip"} %>
           <% end %>
         </div>
 
@@ -194,7 +194,7 @@
           <div class="row" id="project-pictures-row">
             <% @featured_project.pictures.each do |picture| %></p>
               <div class="col-xs-12 col-sm-<%= (12 / @featured_project.pictures.size).floor %> text-center project-pictures">
-                <%= image_tag asset_path(picture), height: "100%"%>
+                <%= image_tag asset_url(picture), height: "100%"%>
               </div>
             <% end %>
           </div>
@@ -207,13 +207,13 @@
 
             <div class="col-xs-6 col-sm-6 text-right">
               <%= link_to (@featured_project.live_link.blank? ? 'http://google.com' : @featured_project.live_link), id: "project-live-link" do %>
-                <%= image_tag asset_path("live-link.png"), size: "50x50", title: "View Live Site", data: { placement: "bottom", toggle: "tooltip"} %>
+                <%= image_tag asset_url("live-link.png"), size: "50x50", title: "View Live Site", data: { placement: "bottom", toggle: "tooltip"} %>
               <% end %>
             </div>
 
             <div class="col-xs-6 col-sm-6 text-left">
               <%= link_to (@featured_project.github_link.blank? ? 'http://google.com' : @featured_project.github_link),  id: "project-github-link" do %>
-                <%= image_tag asset_path("github.png"), size: "50x50", title: "View Code", data: { placement: "bottom", toggle: "tooltip"} %>
+                <%= image_tag asset_url("github.png"), size: "50x50", title: "View Code", data: { placement: "bottom", toggle: "tooltip"} %>
               <% end %>
             </div>
             <div class="clearfix"></div>
