@@ -7,9 +7,9 @@ Home::Project.attr_accessible :name, :language, :description, :objective,  :pict
 require 'csv'
 
 if Rails.env.development?
-  blog_entries_folder = Dir[Rails.root.to_s + '/app/assets/files/blog/entries/*']
+  blog_entries_folder = Dir[Rails.root.to_s + '/app/assets/files/' + 'blog/entries/*']
 elsif Rails.env.production?
-  blog_entries_folder = Dir[Rails.root.to_s + '/public/assets/blog/entries/*']
+  blog_entries_folder = Dir[Rails.root.to_s +  '/public/assets/'   + 'blog/entries/*']
 end
 
 
@@ -32,13 +32,12 @@ blog_entries_folder.each do |file|
 end
 
 
-
 require 'yaml'
 
 if Rails.env.development?
-  home_projects_info = Dir[Rails.root.to_s + '/app/assets/files/home/projects/projects_info*']
+  home_projects_info = Dir[Rails.root.to_s + '/app/assets/files/' + 'home/projects/projects_info*']
 elsif Rails.env.production?
-  home_projects_info = Dir[Rails.root.to_s + '/public/assets/home/projects/projects_info*']
+  home_projects_info = Dir[Rails.root.to_s + '/public/assets/' +    'home/projects/projects_info*']
 end
 
 

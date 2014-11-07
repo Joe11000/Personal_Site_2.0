@@ -7,8 +7,8 @@
     github_link: "http://github.com/Joe11000/No_Spoilers"
     live_link: ""
     pictures:
-      - "projects/javascript/no_spoilers/1.png"
-      - "projects/javascript/no_spoilers/2.png"
+      - "images/projects/javascript/no_spoilers/1.png"
+      - "images/projects/javascript/no_spoilers/2.png"
 
   -
     name: "Unbeatable Tic-Tac-Toe"
@@ -18,8 +18,8 @@
     github_link: "http://github.com/Joe11000/Tic_Tac_Toe_Unbeatable"
     live_link: "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/"
     pictures:
-      - "projects/javascript/tic_tac_toe/1.png"
-      - "projects/javascript/tic_tac_toe/2.png"
+      - "images/projects/javascript/tic_tac_toe/1.png"
+      - "images/projects/javascript/tic_tac_toe/2.png"
 
   -
     name: "ASCII Racer"
@@ -29,9 +29,9 @@
     github_link: "http://github.com/Joe11000/ASCII_Racer"
     live_link: ""
     pictures:
-      - "projects/ruby/racer/1.png"
-      - "projects/ruby/racer/2.png"
-      - "projects/ruby/racer/3.png"
+      - "images/projects/ruby/racer/1.png"
+      - "images/projects/ruby/racer/2.png"
+      - "images/projects/ruby/racer/3.png"
 
   -
     name: "Boggle"
@@ -41,9 +41,9 @@
     github_link: "http://github.com/Joe11000/Boggle"
     live_link: ""
     pictures:
-      - "projects/ruby/boggle/1.png"
-      - "projects/ruby/boggle/2.png"
-      - "projects/ruby/boggle/3.png"
+      - "images/projects/ruby/boggle/1.png"
+      - "images/projects/ruby/boggle/2.png"
+      - "images/projects/ruby/boggle/3.png"
 
   -
     name: "Survey Gorilla"
@@ -53,9 +53,9 @@
     github_link: "http://github.com/Joe11000/SurveyGorilla"
     live_link: "http://thegorillaonfire.herokuapp.com"
     pictures:
-      - "projects/sinatra/survey_gorilla/1.png"
-      - "projects/sinatra/survey_gorilla/2.png"
-      - "projects/sinatra/survey_gorilla/3.png"
+      - "images/projects/sinatra/survey_gorilla/1.png"
+      - "images/projects/sinatra/survey_gorilla/2.png"
+      - "images/projects/sinatra/survey_gorilla/3.png"
 
   -
     name: "Joe Noonan"
@@ -65,8 +65,8 @@
     github_link: "http://github.com/Joe11000/Personal_Site_2.0"
     live_link: "http://joe-noonan-101.herokuapp.com"
     pictures:
-      - "projects/rails/joe_noonan/1.png"
-      - "projects/rails/joe_noonan/2.png"
+      - "images/projects/rails/joe_noonan/1.png"
+      - "images/projects/rails/joe_noonan/2.png"
 
   # -
   #   name: "Park Bench Projects"
