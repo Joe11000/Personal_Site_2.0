@@ -4,29 +4,35 @@ Blog::Comment.attr_accessible :author_name, :body
 Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures, :github_link, :live_link
 
 
-require 'csv'
+# require 'csv'
 
-Dir[Rails.root.join('app', 'assets', 'images', 'blog', 'entries', '*')].each do |file|
-  title = ""
-  body = ""
-  line_counter = 0
+# Dir[Rails.root.join('app', 'assets', 'images', 'blog', 'entries', '*')].each do |file|
+#   title = ""
+#   body = ""
+#   line_counter = 0
 
-  File.open(file, "r") do |f|
-    f.each_line do |line|
-      line_counter += 1
-      if line_counter == 1
-        title = line.strip
-      else
-        body += line
-      end
-    end
-  end
-  Blog::Entry.create(title: title, body: body)
-end
+#   File.open(file, "r") do |f|
+#     f.each_line do |line|
+#       line_counter += 1
+#       if line_counter == 1
+#         title = line.strip
+#       else
+#         body += line
+#       end
+#     end
+#   end
+#   Blog::Entry.create(title: title, body: body)
+# end
 
 
 require 'yaml'
-home_projects_info = Dir[Rails.root.join('app', 'assets', 'images', 'projects', 'projects_info.yaml')]
+
+# if Rails.env.development?
+  # home_projects_info = Dir[Rails.root.to_s + '/app/assets/images/projects/projects_info.yaml']
+# elsif Rails.env.production?
+  # debugger
+  home_projects_info = Dir[Rails.root.to_s + '/public/assets/projects/projects_info*']
+# end
 
 
 projects_to_create = YAML.load_file(home_projects_info.first)
