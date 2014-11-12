@@ -41,7 +41,7 @@ $banner-min-height: 200px;
 $banner-max-width: 600px;
 $banner-min-width: 400px;
 $banner-max-height: 400px;
-$svg-delay: .5s;
+$svg-delay: 1s;
 $name-font-size: 50px;
 $what-i-does-font-size: 38px;
 //
@@ -135,13 +135,13 @@ body p, body h1{
 
         }
         #svg-path-1{
-        -webkit-animation-delay: $svg-delay;
-                animation-delay: $svg-delay;
+        -webkit-animation-delay: $svg-delay / 2;
+                animation-delay: $svg-delay / 2;
         }
 
         #svg-path-3{
-        -webkit-animation-delay: $svg-delay + .6;
-                animation-delay: $svg-delay + .6;
+        -webkit-animation-delay: $svg-delay;
+                animation-delay: $svg-delay;
         }
       }
 
