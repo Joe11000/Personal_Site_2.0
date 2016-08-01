@@ -1,5 +1,15 @@
 ---
   -
+    name: "Youtube Troll Starver"
+    language: "Javascript"
+    objective: "Starve the Trolls."
+    description: "Create Chrome Extension to inject JS and CSS Don't show trolls comments from a saved list of black listed trolls in Youtube's Live Chat Rooms."
+    github_link: "https://github.com/Joe11000/Troll-Starver-for-Youtube-Live-Chat"
+    live_link: "https://chrome.google.com/webstore/detail/youtube-live-chat-troll-s/bcikajlocgcppeihfloalfdnpgfibdpk"
+    pictures:
+      - "projects/javascript/troll_starver/large.png"
+
+  -
     name: "No Spoilers"
     language: "Javascript"
     objective: "Let me just watch highlights without RUINING the final score in advance!!!"
@@ -56,6 +66,18 @@
       - "projects/sinatra/survey_gorilla/1.png"
       - "projects/sinatra/survey_gorilla/2.png"
       - "projects/sinatra/survey_gorilla/3.png"
+
+  -
+    name: "Telestrations"
+    language: "Rails"
+    objective: "Create fun drawing game."
+    description: "A Rails 5 application that utilizes the Action Cable’s websocket capabilities to play a fun drawing game with your friends."
+    github_link: "https://github.com/Joe11000/telestrations"
+    live_link: "http://telestrations.herokuapp.com"
+    pictures:
+      - "projects/rails/telestrations/1.png"
+      - "projects/rails/telestrations/2.png"
+      - "projects/rails/telestrations/3.png"
 
   -
     name: "Joe Noonan"

@@ -13,8 +13,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-
   namespace :resume do
     get '',                      to: "resumes#overview"
     get '/download',             to: "resumes#download", references: "false"
