@@ -37,11 +37,11 @@ require 'yaml'
 if Rails.env.development?
   home_projects_info = Dir[Rails.root.to_s + '/app/assets/files/' + 'home/projects/projects_info*']
 elsif Rails.env.production?
-  home_projects_info = Dir[Rails.root.to_s + '/public/assets/' +    'home/projects/projects_info*']
+  home_projects_info = Dir[Rails.root.to_s + '/public/assets/' + 'home/projects/projects_info*']
 end
 
 
-projects_to_create = YAML.load_file(home_projects_info.first)
+projects_to_create = YAML.load_file(home_projects_info.last)
 
 projects_to_create.each do |proj|
   project = Home::Project.create(proj.symbolize_keys)
