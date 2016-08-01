@@ -1,0 +1,102 @@
+---
+  -
+    name: "Youtube Troll Starver"
+    language: "Javascript"
+    objective: "Starve the Trolls."
+    description: "Create Chrome Extension to inject JS and CSS Don't show trolls comments from a saved list of black listed trolls in Youtube's Live Chat Rooms."
+    github_link: "https://github.com/Joe11000/Troll-Starver-for-Youtube-Live-Chat"
+    live_link: "https://chrome.google.com/webstore/detail/youtube-live-chat-troll-s/bcikajlocgcppeihfloalfdnpgfibdpk"
+    pictures:
+      - "projects/javascript/troll_starver/large.png"
+
+  -
+    name: "No Spoilers"
+    language: "Javascript"
+    objective: "Let me just watch highlights without RUINING the final score in advance!!!"
+    description: "This code blocks spoilers from the video.nhl.com page and tells page to ignores live game updates as they come in. Just paste the Javascript code in browser's console after page loads. I am working on a chrome extension version so you won't have to copy and paste the code in the future."
+    github_link: "http://github.com/Joe11000/No_Spoilers"
+    live_link: ""
+    pictures:
+      - "projects/javascript/no_spoilers/1.png"
+      - "projects/javascript/no_spoilers/2.png"
+
+  -
+    name: "Unbeatable Tic-Tac-Toe"
+    language: "Javascript"
+    objective: "To create an unbeatable Tic Tac Toe game"
+    description: "A statically served and unbeatable Tic-Tac-Toe game. The UI is HTML/CSS and powered by Javascript with the Jasmine testing framework."
+    github_link: "http://github.com/Joe11000/Tic_Tac_Toe_Unbeatable"
+    live_link: "http://www.joe-tic-tac-toe.s3-website-us-east-1.amazonaws.com/"
+    pictures:
+      - "projects/javascript/tic_tac_toe/1.png"
+      - "projects/javascript/tic_tac_toe/2.png"
+
+  -
+    name: "ASCII Racer"
+    language: "Ruby"
+    objective: "Create a racing game with ASCII characters."
+    description: "Using Ruby create a terminal based racing game with ASCII characters to watch. Just Because."
+    github_link: "http://github.com/Joe11000/ASCII_Racer"
+    live_link: ""
+    pictures:
+      - "projects/ruby/racer/1.png"
+      - "projects/ruby/racer/2.png"
+      - "projects/ruby/racer/3.png"
+
+  -
+    name: "Boggle"
+    language: "Ruby"
+    objective: "Create a Boggle Game"
+    description: "A Boggle Game run in the Terminal. Coded in Ruby. The game only accepts valid words from the '/usr/share/dict/words' file."
+    github_link: "http://github.com/Joe11000/Boggle"
+    live_link: ""
+    pictures:
+      - "projects/ruby/boggle/1.png"
+      - "projects/ruby/boggle/2.png"
+      - "projects/ruby/boggle/3.png"
+
+  -
+    name: "Survey Gorilla"
+    language: "Sinatra"
+    objective: "To create a site to allow the users to create and take surveys."
+    description: "This was a Dev BootCamp weekend project that was assigned to be completed in a 4 man team."
+    github_link: "http://github.com/Joe11000/SurveyGorilla"
+    live_link: "http://thegorillaonfire.herokuapp.com"
+    pictures:
+      - "projects/sinatra/survey_gorilla/1.png"
+      - "projects/sinatra/survey_gorilla/2.png"
+      - "projects/sinatra/survey_gorilla/3.png"
+
+  -
+    name: "Telestrations"
+    language: "Rails"
+    objective: "Create fun drawing game."
+    description: "A Rails 5 application that utilizes the Action Cable’s websocket capabilities to play a fun drawing game with your friends."
+    github_link: "https://github.com/Joe11000/telestrations"
+    live_link: "http://telestrations.herokuapp.com"
+    pictures:
+      - "projects/rails/telestrations/1.png"
+      - "projects/rails/telestrations/2.png"
+      - "projects/rails/telestrations/3.png"
+
+  -
+    name: "Joe Noonan"
+    language: "Rails"
+    objective: "Create a site to encapsolate me as a developer."
+    description: "A little bit of inception for the audience. This is my web page"
+    github_link: "http://github.com/Joe11000/Personal_Site_2.0"
+    live_link: "http://joe-noonan-101.herokuapp.com"
+    pictures:
+      - "projects/rails/joe_noonan/1.png"
+      - "projects/rails/joe_noonan/2.png"
+
+  # -
+  #   name: "Park Bench Projects"
+  #   language: "Rails"
+  #   objective: "From pitch to completion, create a final project 8 days to present to potential employers at Dev Bootcamp."
+  #   description: "Our final project"
+  #   github_link: "http://github.com/Joe11000/pbp"
+  #   live_link: "http://parkbenchprojects.com"
+  #   pictures:
+  #     - "projects/rails/park_bench_projects/1.png"
+  #     - "projects/rails/park_bench_projects/2.png"
