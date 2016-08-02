@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :home do
     get '/', to: 'homes#welcome'
     get 'projects/show/:id', to: "projects#show", as: :show_project
+    get 'get_test', to: 'homes#get_test'
   end
 
   root to: "home/homes#welcome"

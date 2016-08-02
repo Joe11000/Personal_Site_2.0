@@ -1,6 +1,5 @@
 class Home::ProjectsController < ApplicationController
   def show
-
     respond_to do |format|
       format.json {
                     begin
@@ -19,9 +18,9 @@ class Home::ProjectsController < ApplicationController
                      end
                   }
 
-      format.js { }
+      format.js { render text: "format.js here"}
 
-      format.html { }
+      format.html { render text: "format.html here" }
     end
   end
 end

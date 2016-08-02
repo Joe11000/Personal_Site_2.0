@@ -11,5 +11,58 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe Home::ProjectsHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  class Awesome
+    attr_reader :whoisawesome
+
+    def initialize whoisawesome
+      @whoisawesome = whoisawesome
+    end
+
+    def say_it
+      "#{whoisawesome} is awesome!"
+    end
+
+    def self.info
+      "I say who is awesome"
+    end
+  end
+
+
+  subject(:joe) { Awesome.new "Joe"}
+
+  # does is observe or intercept?
+  # does spying still allow original functionality
+
+  context "object" do
+    it "determines if call received" do
+      awesome_spy = spy('joe')
+      awesome_spy.say_it
+      expect(awesome_spy).to have_received(:say_it)
+    end
+
+    # it "stays out of the way" do
+    #   awesome_spy = spy('awesome')
+    #   expect(awesome_spy.say_it).to eq "Joe is awesome!"
+    # end
+  end
+
+
+  context "class" do
+    it "determines if call received" do
+      awesome_spy = spy('awesome')
+      awesome_spy.info
+      expect(awesome_spy).to have_received(:info)
+    end
+
+    it "stays out of the way" do
+      expect(Awesome).to receive(:info).and_call_original
+      # debugger
+      expect(Awesome.info).to eq "I say who is awesome"
+      expect(Awesome).to have_received(:info)
+
+    end
+  end
+
+
 end

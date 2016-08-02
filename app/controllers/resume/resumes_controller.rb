@@ -1,7 +1,6 @@
 class Resume::ResumesController < ApplicationController
   before_action :resume_params, only: [:download]
 
-
   def overview
   end
 
