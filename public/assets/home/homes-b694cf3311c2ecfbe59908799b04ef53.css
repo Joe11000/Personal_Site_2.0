@@ -392,7 +392,6 @@ body p, body h1 {
   position: relative;
   max-height: 400px;
   height: 400px;
-  max-width: 90%;
   text-align: center;
 }
 /* line 425, /Users/user/coding/ruby/rails/finished/upgrade_personal_site/app/assets/stylesheets/home/homes.css.scss.erb */

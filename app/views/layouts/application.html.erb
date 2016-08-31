@@ -4,7 +4,7 @@
 
   <!-- # generic assets, styles, and js needed for all pages -->
   <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true , debug: true%>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true , debug: true%>
+  <%# javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 
   <!-- # page specific assets, styles, and js needed per page -->
@@ -25,6 +25,23 @@
 
       <%= javascript_include_tag 'resume/resume', 'data-turbolinks-track' => true %>
       <title>Blog</title>
+
+    <% elsif params[:controller] == "ar" %>
+      <%= stylesheet_link_tag  'ar', 'data-turbolinks-track' => true %>
+
+      <%= javascript_include_tag 'ar/awe-loader-min', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-loader', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-standard', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-standard-dependencies', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-standard-object_clicked', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-standard-window_resized', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/awe-v8', 'data-turbolinks-track' => true %>
+
+      <%= javascript_include_tag 'ar/marker_ar/awe-jsartoolkit-dependencies', 'data-turbolinks-track' => true %>
+
+      <%= javascript_include_tag 'ar/ar_page', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'ar/marker_ar/awe.marker_ar', 'data-turbolinks-track' => true %>
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
     <% else %>
       <h1><%= params[:controller] %> is not a real controller</h1>

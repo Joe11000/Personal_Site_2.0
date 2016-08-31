@@ -28,6 +28,9 @@ Rails.application.configure do
   config.assets.debug = true
   # config.assets.compile = false
 
+   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+  # config.force_ssl = true
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
