@@ -7,9 +7,9 @@ class Resume::ResumesController < ApplicationController
 
   def download
     if @references
-      send_file "app/assets/pdfs/Joe_Noonan_Resume_07.30.16.pdf" and return
+      send_file "app/assets/pdfs/Joe_Noonan_Resume_09.01.16.pdf" and return
     else
-      send_file "app/assets/pdfs/Joe_Noonan_Resume_07.30.16.pdf" and return
+      send_file "app/assets/pdfs/Joe_Noonan_Resume_09.01.16.pdf" and return
     end
   end
 
