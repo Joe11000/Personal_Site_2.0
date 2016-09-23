@@ -20,8 +20,8 @@ $(function(){
       $.ajax({
         type: "GET",
         url: GLOBAL_VAR.PROJECTS.host + "home/projects/show/" + $(this).find('p').attr('data-id'),
-        success: function(data, status, jqXHR){ updateProjectData(data, 800); updateSideColIcons(project_clicked_element, status);}, //success/error/complete
-        error: function(jqXHR, status, errorThrown){ updateSideColIcons(project_clicked_element, status);},
+        success: function(data, status, jqXHR){ updateProjectData(data, 800); updateSideColIcons(project_clicked_element, status); }, //success/error/complete
+        error: function(jqXHR, status, errorThrown){ updateSideColIcons(project_clicked_element, status); },
         dataType: "json"
       });
     });

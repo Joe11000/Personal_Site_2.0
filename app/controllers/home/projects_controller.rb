@@ -7,7 +7,7 @@ class Home::ProjectsController < ApplicationController
                       @project = Home::Project.find(params[:id]);
                       @controller_string = {
                                              description: @project.description,
-                                             pictures:    render_to_string('show', layout: false, formats: [:html]),
+                                             pictures:    render_to_string('home/projects/_row_of_project_pictures', layout: false, formats: [:html], locals: { project: @project }),
                                              github_link: @project.github_link,
                                              live_link:   @project.live_link,
                                              name:        @project.name,
@@ -18,10 +18,6 @@ class Home::ProjectsController < ApplicationController
                        render status: :error and return
                      end
                   }
-
-      format.js { }
-
-      format.html { }
     end
   end
 end

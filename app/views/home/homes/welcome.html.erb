@@ -194,13 +194,7 @@
       <div class="row" id="project-main">
 
         <div class="col-xs-12 col-sm-12 project-pictures-container" >
-          <div class="row" id="project-pictures-row">
-            <% @featured_project.pictures.each do |picture| %>
-              <div class="col-xs-12 col-sm-<%= (12 / @featured_project.pictures.size).floor %> text-center project-pictures">
-                <%= image_tag picture, height: "100%"%>
-              </div>
-            <% end %>
-          </div>
+          <%= render partial: 'home/projects/row_of_project_pictures', locals: { project: @featured_project } %>
 
         </div>
         <div class="clearfix"></div>
