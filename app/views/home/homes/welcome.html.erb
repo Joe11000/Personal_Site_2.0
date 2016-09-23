@@ -195,8 +195,8 @@
 
         <div class="col-xs-12 col-sm-12 project-pictures-container" >
           <div class="row" id="project-pictures-row">
-            <% @featured_project.pictures.each do |picture| %></p>
-              <div class="col-xs-12 col-sm-6 text-center project-pictures">
+            <% @featured_project.pictures.each do |picture| %>
+              <div class="col-xs-12 col-sm-<%= (12 / @featured_project.pictures.size).floor %> text-center project-pictures">
                 <%= image_tag picture, height: "100%"%>
               </div>
             <% end %>
