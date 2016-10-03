@@ -37,11 +37,11 @@ gem 'spring', '~> 1.1.3',       group: :development
 
 # gem 'travis'
 ## I ADDED THESE BELOW
-gem 'thin', '~> 1.6.3'
 gem 'jquery-ui-rails', '~> 5.0.2'
 
 gem 'jquery-color', '~> 2.1.2'
 
+gem 'puma'
 gem "protected_attributes", '~> 1.0.8'
 gem 'foreman', '~> 0.74.0'
 gem 'whenever', '~> 0.9.4' # cron jobs
@@ -52,17 +52,20 @@ group :development, :test do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'guard-rspec', '~> 4.3.1'
   gem 'debugger', '~> 1.6.8'
+  gem 'dotenv-rails'
   #gem 'its'
 end
 
 group :test do
-  gem 'selenium-webdriver', '~> 2.43.0', require: false
   gem 'poltergeist', '~> 1.5.1', require: false
   gem 'database_cleaner', '~> 1.3.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   #gem 'rspec-mocks'
   gem 'shoulda', '~> 3.5.0'
   gem 'launchy', '~> 2.4.2'
+
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do

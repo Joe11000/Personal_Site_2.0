@@ -33,13 +33,13 @@ $(function(){
     el1 = $('#project-pictures-row')
     el1.fadeOut(speed, function(){ el1.replaceWith(data.pictures); el1.fadeIn(speed)});
 
-    el2 = $('#project-name p:nth-child(2)')
+    el2 = $("#project-name-container [data-id='project-name']")
     el2.fadeOut(speed, function(){ el2.text(data.name); el2.fadeIn(speed); })
 
-    el3 = $('#project-objective p:nth-child(2)')
+    el3 = $("#project-objective-container [data-id='project-objective']")
     el3.fadeOut(speed, function(){ el3.text(data.objective); el3.fadeIn(speed); });
 
-    el4 = $('#project-description p:nth-child(2)');
+    el4 = $("#project-description-container [data-id='project-description']");
     el4.fadeOut(speed, function(){ el4.text(data.description); el4.fadeIn(speed); });
 
     el5 = $('#project-live-link')

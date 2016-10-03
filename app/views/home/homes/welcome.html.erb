@@ -215,19 +215,19 @@
             </div>
             <div class="clearfix"></div>
 
-            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-name">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-name-container">
               <p>Project Name</p>
-              <p><%= @featured_project.name %></p>
+              <p data-id='project-name'><%= @featured_project.name %></p>
             </div>
 
-            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-objective">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-objective-container">
               <p>Objective:</p>
-              <p><%= @featured_project.objective %></p>
+              <p data-id='project-objective'><%= @featured_project.objective %></p>
             </div>
 
-            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-description">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10" id="project-description-container">
               <p>Description:</p>
-              <p><%= @featured_project.description %></p>
+              <p data-id='project-description'><%= @featured_project.description %></p>
             </div>
           </div>
         </div>
