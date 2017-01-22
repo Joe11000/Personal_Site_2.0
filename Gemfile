@@ -51,7 +51,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'guard-rspec', '~> 4.3.1'
-  gem 'debugger', '~> 1.6.8'
+  # gem 'debugger', '~> 1.6.8'
   gem 'dotenv-rails'
   #gem 'its'
 end
