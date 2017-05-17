@@ -48,6 +48,6 @@ end
 
 
 
-Blog::Entry.destroy_all
-Blog::Comment.destroy_all
-Home::Project.destroy_all
+# Blog::Entry.destroy_all
+# Blog::Comment.destroy_all
+# Home::Project.destroy_all
