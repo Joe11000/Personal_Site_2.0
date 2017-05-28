@@ -26,5 +26,5 @@ deploy:
     # rvm: 2.1.1
     # repo: joe11000/Personal_Site_2.0
   run:
-      - rake db:migrate
-      - rake db:seed
+      - bin/rake db:migrate
+      - bin/rake db:seed

@@ -6,6 +6,6 @@ class Home::HomesController < ApplicationController
   end
 
   def status
-    render text: "26%" and return
+    render text: "26%" && return
   end
 end
