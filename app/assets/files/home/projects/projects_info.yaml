@@ -105,14 +105,13 @@
   -
     name: "Election Rigging"
     language: "MySQL"
-    objective: "Rig an 'close election' result by 2%"
+    objective: "Rig a 'close election' result"
     description: "Display election results for a valid election and other possible views that you can cheat for an electoral victory."
     github_link: "https://github.com/Joe11000/Election-Rigging-SQL/blob/master/election_rigging.sql"
-    live_link:
+    live_link: ''
     pictures:
       - "projects/mysql/election_rigging/mysql.png"
       - "projects/mysql/election_rigging/sequel_pro_1.png"
-      - "projects/mysql/election_rigging/sequel_pro_2.png"
 
 
 
