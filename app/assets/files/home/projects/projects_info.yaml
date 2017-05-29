@@ -10,7 +10,7 @@
       - "projects/javascript/troll_starver/large.png"
 
   -
-    name: "No Spoilers"
+    name: "No Spoilers (DEPRECATED!!)"
     language: "Javascript"
     objective: "Let me just watch highlights without RUINING the final score in advance!!!"
     description: "( Video.nhl.com overhalled their website. This isn't applicable to the new site ) This code blocks spoilers from the video.nhl.com page and tells page to ignores live game updates as they come in. Just paste the Javascript code in browser's console after page loads. I am working on a chrome extension version so you won't have to copy and paste the code in the future."

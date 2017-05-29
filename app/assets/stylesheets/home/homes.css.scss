@@ -1,5 +1,7 @@
 //= depend_on_asset "background_1.jpg"
 
+$off-white: #ebebeb;
+
 // screen sizes////////////
 $lg-width: 1200px;
 $md-high-end: 1199px;
@@ -42,6 +44,9 @@ $banner-max-width: 600px;
 $banner-min-width: 400px;
 $banner-max-height: 400px;
 $svg-delay: 1s;
+$svg-drawing-duration: 4s;
+$svg-words-delay: $svg-delay + $svg-drawing-duration;
+$svg-words-duration: 1s;
 $name-font-size: 50px;
 $what-i-does-font-size: 38px;
 //
@@ -62,28 +67,49 @@ body p, body h1{
 @-webkit-keyframes draw-intro{
   0%   { stroke-dasharray: 1 4000; fill: rgba(241, 158, 26,  0);  visibility: visible;}
   75%  { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, 0.95); visibility: visible;}
 }
 
 // run in firefox
 @keyframes draw-intro{
   0%   { stroke-dasharray: 1 4000; fill: rgba(241, 158, 26,  0);  visibility: visible;}
   75%  { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26,  0);  visibility: visible;}
-  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, .95); visibility: visible;}
+  100% { stroke-dasharray: 4000 1; fill: rgba(241, 158, 26, 0.95); visibility: visible;}
 }
 
 //run in chrome
 @-webkit-keyframes draw-intro-reverse{
   0%   { stroke-dasharray: 1 4000 1;  fill: rgba(241, 158, 26, 0);   visibility: visible;}
   75%  { stroke-dasharray: 1 1 4000;  fill: rgba(241, 158, 26, 0);   visibility: visible;}
-  100% { stroke-dasharray: 1 1 4000;  fill: rgba(241, 158, 26, .95); visibility: visible;}
+  100% { stroke-dasharray: 1 1 4000;  fill: rgba(241, 158, 26, 0.95); visibility: visible;}
 }
 
 // run in firefox
 @keyframes draw-intro-reverse{
   0%   { stroke-dasharray: 1 4000 1; fill: rgba(241, 158, 26, 0);   visibility: visible;}
   75%  { stroke-dasharray: 1 1 4000; fill: rgba(241, 158, 26, 0);   visibility: visible;}
-  100% { stroke-dasharray: 1 1 4000; fill: rgba(241, 158, 26, .95); visibility: visible;}
+  100% { stroke-dasharray: 1 1 4000; fill: rgba(241, 158, 26, 0.95); visibility: visible;}
+}
+
+
+// run in firefox
+@keyframes draw-intro-reverse{
+  0%   { stroke-dasharray: 1 4000 1; fill: rgba(241, 158, 26, 0);   visibility: visible;}
+  75%  { stroke-dasharray: 1 1 4000; fill: rgba(241, 158, 26, 0);   visibility: visible;}
+  100% { stroke-dasharray: 1 1 4000; fill: rgba(241, 158, 26, 0.95); visibility: visible;}
+}
+
+
+//run in chrome
+@-webkit-keyframes display-name{
+  from { opacity: 0;}
+  to {opacity: 0.9;}
+}
+
+//run in firefox
+@keyframes display-name{
+  from { opacity: 0;}
+  to {opacity: 0.9;}
 }
 
 #banner-row{
@@ -119,16 +145,16 @@ body p, body h1{
                 animation-delay: $svg-delay;
 
         #svg-path-1, #svg-path-3 {
-          -webkit-animation: draw-intro 4s linear forwards;
-                  animation: draw-intro 4s linear forwards;
+          -webkit-animation: draw-intro $svg-drawing-duration linear forwards;
+                  animation: draw-intro $svg-drawing-duration linear forwards;
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
         }
 
         #svg-path-2 {
-          -webkit-animation: draw-intro-reverse 4s linear forwards;
-                  animation: draw-intro-reverse 4s linear forwards;
+          -webkit-animation: draw-intro-reverse $svg-drawing-duration linear forwards;
+                  animation: draw-intro-reverse $svg-drawing-duration linear forwards;
           stroke: red;
           stroke-width: 5;
           stroke-dasharray: 4000;
@@ -153,10 +179,15 @@ body p, body h1{
         max-width: $banner-max-width;
         text-align: center;
         vertical-align: middle;
+        opacity: 0;
+        // here
+        animation: display-name  $svg-words-duration $svg-words-delay forwards ;
+            animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 
         p#joe-noonan, p#what-i-does{
           margin-bottom: 0px;
-          color: white;
+          color: $off-white;
           font-weight: bold;
           width: 100%;
           max-width: $banner-max-width;
@@ -297,13 +328,13 @@ body p, body h1{
   background-color: #551A8B;
 
   width: $projects-container-width;
-  color: white;
+  color: $off-white;
 
 
   h1{
     text-align: center;
     vertical-align: center;
-    color: white;
+    color: $off-white;
     font-weight: bold;
     font-size: 70px;
   }
@@ -399,7 +430,7 @@ body p, body h1{
 
     #project-main
     {
-      border: 3px white solid;
+      border: 3px $off-white solid;
       border-radius: 5px;
       font-weight: 600;
       margin-bottom: 50px;
@@ -441,7 +472,7 @@ body p, body h1{
         padding-top: 15px;
         vertical-align: middle;
         color: black;
-        background-color: white;
+        background-color: $off-white;
         min-height: 200px;
         font-size: 16px;
 
