@@ -83,7 +83,7 @@
     name: "Telestrations"
     language: "Rails"
     objective: "Create fun drawing game."
-    description: "A Rails 5 application that utilizes the Action Cable’s websocket capabilities to play a fun drawing game with your friends."
+    description: "A Rails 5 application that utilizes the Action Cable’s websocket capabilities to play a fun drawing game with your friends. (A new user must click a direct authorization link to be sent to a new user from me.) "
     github_link: "https://github.com/Joe11000/telestrations"
     live_link: "http://telestrations.herokuapp.com"
     pictures:
