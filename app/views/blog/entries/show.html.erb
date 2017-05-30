@@ -19,10 +19,14 @@
       </div>
 
       <div id="new_comment" class="form col-lg-12" role="form">
-        <%= form_for @comment,  url: blog_entry_comments_path( @blog_entry_w_comments), remote: true do |f| %>
-          <%= f.text_area "body", rows: "3", class: "form-control", placeholder: "Add Comments Here!" %>
-          <%= f.text_field "author_name", class: "form-control", placeholder: "Enter your name." %>
-          <%= f.submit "submit", class: "btn btn-info" %>
+        <%= form_for @comment, url: blog_entry_comments_path(@blog_entry_w_comments), remote: true do |f| %>
+          <div class="form-group">
+            <%= f.text_area "body", rows: "3", class: "form-control", placeholder: "Add Comments Here!",  data: { id: :new_comment_body } %>
+          </div>
+          <div class="form-group">
+          <%= f.text_field "author_name", class: "form-control", placeholder: "Enter your name.",  data: { id: :new_comment_author_name } %>
+          </div>
+          <%= f.submit "submit", class: "btn btn-primary disabled", data: { id: :new_comment_submit } %>
         <% end %>
       </div>
 

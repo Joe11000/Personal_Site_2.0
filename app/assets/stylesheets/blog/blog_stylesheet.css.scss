@@ -1,6 +1,8 @@
 body
 {
-  background: asset-path('blog/lap.jpg')  no-repeat center center;
+  background: image-url('blog/desktop.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 @font-face {
   font-family: joe_font;
