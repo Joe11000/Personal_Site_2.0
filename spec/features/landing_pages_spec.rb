@@ -4,6 +4,7 @@ feature "LandingPages", :type => :feature do
   before :each do
     set_host ENV['DOMAIN']
     visit root_path
+    byebug
   end
 
   it 'visits landing page' do

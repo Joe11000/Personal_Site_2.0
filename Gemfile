@@ -6,7 +6,7 @@ gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.17.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -37,6 +37,7 @@ gem 'spring', '~> 1.1.3',       group: :development
 
 # gem 'travis'
 ## I ADDED THESE BELOW
+gem 'byebug'
 gem 'jquery-ui-rails', '~> 5.0.2'
 
 gem 'jquery-color', '~> 2.1.2'
@@ -66,6 +67,7 @@ group :test do
 
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
 end
 
 group :development do
@@ -78,14 +80,9 @@ group :production do
 end
 
 # group :assets do
-  gem 'twitter-bootstrap-rails', '~> 3.2.0'
+  gem 'bootstrap-sass'
   # gem 'jquery-ui-bootstrap'
-  gem 'less-rails-bootstrap', '~> 3.2.0'
+
 # end
 
 gem 'stellar-js-rails', '~> 0.6.2.1' # parallax effect
-
-
-
-
-

@@ -28,7 +28,9 @@ blog_entries_folder.each do |file|
       end
     end
   end
-  Blog::Entry.create(title: title, body: body)
+  created_on = file.to_s.match(/Blog_Post_(.*)$/)[1]
+  binding.pry
+  Blog::Entry.create( title: title, body: body, created_on: Date.parse(created_on) )
 end
 
 
