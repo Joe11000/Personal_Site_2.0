@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170530213555) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_comments", force: true do |t|
+  create_table "blog_comments", force: :cascade do |t|
     t.string   "author_name"
     t.text     "body"
     t.integer  "blog_entries_id"
@@ -24,15 +24,15 @@ ActiveRecord::Schema.define(version: 20170530213555) do
     t.datetime "updated_at"
   end
 
-  create_table "blog_entries", force: true do |t|
+  create_table "blog_entries", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "created_on", default: '2017-05-30 21:38:04'
+    t.datetime "created_on", default: '2017-05-31 23:54:57'
   end
 
-  create_table "home_projects", force: true do |t|
+  create_table "home_projects", force: :cascade do |t|
     t.string   "name"
     t.text     "language"
     t.text     "objective"

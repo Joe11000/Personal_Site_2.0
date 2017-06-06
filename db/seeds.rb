@@ -1,9 +1,3 @@
-#Bypass mass-assignment
-Blog::Entry.attr_accessible   :title, :body
-Blog::Comment.attr_accessible :author_name, :body
-Home::Project.attr_accessible :name, :language, :description, :objective,  :pictures, :github_link, :live_link
-
-
 require 'csv'
 
 if Rails.env.production?
@@ -29,8 +23,7 @@ blog_entries_folder.each do |file|
     end
   end
   created_on = file.to_s.match(/Blog_Post_(.*)$/)[1]
-  binding.pry
-  Blog::Entry.create( title: title, body: body, created_on: Date.parse(created_on) )
+  Blog::Entry.create( title: title, body: body, created_on: Date.strptime(created_on, '%m.%d.%Y') )
 end
 
 

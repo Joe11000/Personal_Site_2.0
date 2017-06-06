@@ -68,18 +68,6 @@
       - "projects/ruby/game_of_life/3.png"
 
   -
-    name: "Survey Gorilla"
-    language: "Sinatra"
-    objective: "To create a site to allow the users to create and take surveys."
-    description: "This was a Dev BootCamp weekend project that was assigned to be completed in a 4 man team."
-    github_link: "http://github.com/Joe11000/SurveyGorilla"
-    live_link: "http://thegorillaonfire.herokuapp.com"
-    pictures:
-      - "projects/sinatra/survey_gorilla/1.png"
-      - "projects/sinatra/survey_gorilla/2.png"
-      - "projects/sinatra/survey_gorilla/3.png"
-
-  -
     name: "Telestrations"
     language: "Rails"
     objective: "Create fun drawing game."
@@ -125,3 +113,16 @@
   #   pictures:
   #     - "projects/rails/park_bench_projects/1.png"
   #     - "projects/rails/park_bench_projects/2.png"
+
+
+  # -
+  #   name: "Survey Gorilla"
+  #   language: "Sinatra"
+  #   objective: "To create a site to allow the users to create and take surveys."
+  #   description: "This was a Dev BootCamp weekend project that was assigned to be completed in a 4 man team."
+  #   github_link: "http://github.com/Joe11000/SurveyGorilla"
+  #   live_link: "http://thegorillaonfire.herokuapp.com"
+  #   pictures:
+  #     - "projects/sinatra/survey_gorilla/1.png"
+  #     - "projects/sinatra/survey_gorilla/2.png"
+  #     - "projects/sinatra/survey_gorilla/3.png"
