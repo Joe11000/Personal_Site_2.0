@@ -10,17 +10,6 @@
       - "projects/javascript/troll_starver/large.png"
 
   -
-    name: "Rainbow Text"
-    language: "Javascript"
-    objective: "Create a cool, custom message for a friend to see."
-    description: "Create a wysiwyg editor to generate a custom messages contents and appearance. Copy the generated link and send it to a friend. They will see the same site without the (wysiwyg editor). This will be recreated in React."
-    github_link: "https://github.com/Joe11000/rainbow-text"
-    live_link: 'https://rainbow-text.herokuapp.com/index.html'
-    pictures:
-      - "projects/javascript/rainbow_text/default_setting.png"
-      - "projects/javascript/rainbow_text/white_sox_joe.png"
-
-  -
     name: "No Spoilers (DEPRECATED!!)"
     language: "Javascript"
     objective: "Let me just watch highlights without RUINING the final score in advance!!!"
@@ -113,6 +102,15 @@
       - "projects/mysql/election_rigging/sequel_pro_1.png"
 
 
+    name: "Rainbow Text"
+    language: "JS"
+    objective: "Create a cool, custom message for a friend to see."
+    description: "The site has an easy wysiwyg editor to generate the message and customize it's appearance. Copy the generated link and send it to a friend. They will see the same site without the (wysiwyg editor)"
+    github_link: "https://github.com/Joe11000/rainbow-text"
+    live_link: 'https://rainbow-text.herokuapp.com/index.html'
+    pictures:
+      - "projects/js/rainbow_text/default_setting.png"
+      - "projects/js/rainbow_text/white_sox_joe.png"
 
 
   # -

@@ -360,7 +360,7 @@ body p, body h1{
         {
           .panel-heading
           {
-            .panel-title{ text-decoration: none; color: purple;  }
+            .panel-title { text-decoration: none; color: purple; }
           }
 
           .panel-body
@@ -446,6 +446,10 @@ body p, body h1{
           height: $project-pictures-max-height;
           text-align: center;
 
+          iframe {
+            transform-origin: 0 0;
+           transform: scale(0.25);
+          }
 
           img
           {
