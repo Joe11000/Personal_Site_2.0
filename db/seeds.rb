@@ -23,7 +23,7 @@ blog_entries_folder.each do |file|
     end
   end
   created_on = file.to_s.match(/Blog_Post_(.*)$/)[1]
-  puts line
+  puts created_on
   Blog::Entry.create( title: title, body: body, created_on: Date.strptime(created_on, '%m.%d.%y') )
 end
 
