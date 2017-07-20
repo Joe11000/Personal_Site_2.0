@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170530213555) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "created_on", default: '2017-07-20 20:07:36'
+    t.datetime "created_on", default: '2017-07-20 20:13:31'
   end
 
   create_table "home_projects", force: :cascade do |t|
