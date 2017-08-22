@@ -56,7 +56,10 @@ $top-container-width: 100%;
 $top-container-top-padding: ($banner-height / 2);
 $formal-pics-top-padding-to-clear-topic-buttons: $top-container-top-padding + 75px; // the 75px is a guess at the right size....figure this out later
 
+body {
+  background: image-url('welcome_background_3.jpg') no-repeat center center fixed;
 
+}
 
 body p, body h1{
   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
@@ -211,7 +214,12 @@ body p, body h1{
     }
   }
 }
+
+
 #top-container {
+   background: image-url('background_1.jpg') repeat;
+
+
   margin-top: $banner-min-height / 2;
   padding: $top-container-top-padding 0px 50px 0px;
 
@@ -287,7 +295,17 @@ body p, body h1{
   #social-media-row{
     text-align: center;
     height: 50px;
+
+    .contect-me {
+      color: $off-white;
+    }
+
+    .social-media-icons {
+      box-shadow: 0px 0px 20px white;
+      border-radius: 5px;
+    }
   }
+
 
   #project-github-link, #project-live-link{
     height: 50px;
