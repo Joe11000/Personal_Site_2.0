@@ -301,11 +301,14 @@ body p, body h1{
     }
 
     .social-media-icons {
-      box-shadow: 0px 0px 20px white;
+      box-shadow: 0px 0px 20px 5px #e6e4e4;
       border-radius: 5px;
+
+      &:hover {
+        background-color: #e6e4e4;
+      }
     }
   }
-
 
   #project-github-link, #project-live-link{
     height: 50px;
